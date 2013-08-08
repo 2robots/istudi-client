@@ -1,0 +1,11 @@
+
+.icn {
+  width: 22px;
+  height: 48px;
+  @include inline-block;
+}
+
+.icn.menu {
+  background: url("img/icons/menu.png") no-repeat center center;
+  @include background-size(contain);
+}

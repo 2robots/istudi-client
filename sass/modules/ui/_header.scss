@@ -1,0 +1,51 @@
+
+.header {
+  height: 50px;
+  text-align: center;
+  @include background-image(linear-gradient(#FFFFFF, #F6F6F6 97%, #C2C2C2 98%, #DFDFDF 98%));
+
+  h2 {
+    margin: 13px 0;
+    @include user-select(none);
+  }
+
+  .button {
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 2px;
+
+    &:hover, &.active {
+      @include header_button_hover();
+    }
+
+    .sep {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      right: auto;
+      width: 1px;
+      @include header_button_seperator();
+    }
+
+    &.left {
+      .sep {
+        right: 0;
+      }
+    }
+
+    &.right {
+      left: 0;
+    }
+  }
+}
+
+.menu_open .header .button {
+  @include header_button_hover();
+}

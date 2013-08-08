@@ -1,0 +1,136 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  font-size: 1em;
+}
+
+.c {
+  clear: both;
+  margin: 0;
+  padding: 0;
+}
+
+p, ul, ol, dl, h1, h2, h3, h4, h5, h6, table, pre, blockquote, hr {
+  margin: 20px 0;
+}
+
+h2 {
+  color: $main;
+  font-size: 1.4em;
+}
+
+p {
+
+}
+
+em {
+}
+
+i {
+  font-style: italic;
+}
+
+hr {
+}
+
+pre, blockquote {
+}
+
+dl {
+
+  dt, dd {
+  }
+
+  dt {
+  }
+
+  dd {
+  }
+}
+
+ol, ul {
+  margin: 0 0 20px 20px;
+
+  li {
+
+  }
+}
+
+ol {
+  list-style: decimal;
+}
+
+ul {
+  list-style: disc;
+}
+
+p {
+}
+
+table {
+
+  thead {
+  }
+
+  tbody {
+  }
+
+  tfoot {
+  }
+
+  tr {
+    td {
+      padding: 2px;
+    }
+
+    th {
+    }
+  }
+}
+
+img {
+}
+
+abbr {
+}
+
+acronym {
+}
+
+address {
+}
+
+
+/* FORMUALR AND USER INPUTS */
+form {
+  legend {
+  }
+
+  p, .form-item, .form-actions {
+  }
+
+  label {
+  }
+
+  input, textarea, button {
+  }
+
+  input, textarea {
+  }
+
+  button, input[type="submit"], input.button {
+  }
+
+  input {
+  }
+
+  select {
+  }
+
+  option {
+  }
+
+  textarea {
+  }
+}
+
+
