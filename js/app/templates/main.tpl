@@ -3,7 +3,7 @@
     <span class="icn menu"></span>
     <span class="sep"></span>
   </a>
-  <h2>Neuigkeiten</h2>
+  <h2><%= title %></h2>
 </div>
 
 <div class="content">

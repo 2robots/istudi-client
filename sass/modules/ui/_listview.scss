@@ -1,0 +1,41 @@
+
+.content .inner {
+  ul.list, ol.list {
+    border-top: 1px solid #C7C7C7;
+    margin: 5px 0 20px 0;
+
+    li {
+      width: 100%;
+      background: white;
+      border-bottom: 1px solid #C7C7C7;
+      position: relative;
+
+      .listInner {
+        padding: 18px 15px;
+
+        .title {
+          font-size: 1.2em;
+          font-weight: 200;
+          color: #000000;
+        }
+
+        .navigation {
+          position: absolute;
+          top: 50%;
+          margin-top: -6px;
+          right: 15px;
+        }
+      }
+
+      &:active {
+        @include background-image(linear-gradient(#0099FF, #0089E7));
+
+        .listInner {
+          .title {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

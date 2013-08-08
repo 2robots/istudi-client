@@ -1,5 +1,5 @@
 
-define(['text!templates/mainTemplate.tpl'], function(Template) {
+define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/contentViews/newsView'], function(Template) {
 
   return Backbone.View.extend({
 
@@ -7,6 +7,7 @@ define(['text!templates/mainTemplate.tpl'], function(Template) {
     id: 'main',
     className: 'snap-content',
     template: _.template(Template),
+    title: "iStudi",
 
     events: {
       "click .button.left": "toggleMenu"
@@ -14,11 +15,9 @@ define(['text!templates/mainTemplate.tpl'], function(Template) {
 
     render: function(){
 
-      this.$el.html(this.template);
+      this.$el.html(this.template({ title: this.title }));
       this.header = this.$el.children(".header");
       this.content = this.$el.children(".content");
-
-      //this.content.append('<div style="height: 4000px; background: blue;">lalalal</div>');
 
       return this;
     },
@@ -31,13 +30,45 @@ define(['text!templates/mainTemplate.tpl'], function(Template) {
     },
 
     toggleMenu: function(e) {
-
       if(this.options.app.menuOpen()) {
         this.options.app.closeMenu();
       } else {
         this.options.app.openMenu();
       }
+    },
+
+    openContent: function(item) {
+
+      var key = "";
+      var title = "";
+
+
+      if(item instanceof Backbone.Model) {
+        key = item.get("key");
+        title = item.get("title");
+      } else {
+        key = item.key;
+        title = item.title;
+      }
+
+      var name = 'views/contentViews/' + key + 'View';
+      var t = this;
+
+      try {
+        require([name], function(view){
+          t.title = title;
+          t.render();
+          t.afterRender();
+          t.contentView = new view({ app: t.options.app });
+          t.content.html(t.contentView.render().$el);
+        });
+
+        return true;
+      } catch(error) {
+        return false;
+      }
     }
+
   });
 
 });

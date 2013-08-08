@@ -109,6 +109,28 @@ html, body {
   background-size: contain;
 }
 
+/* line 13, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.navigation {
+  width: 12px;
+  height: 12px;
+  background: url("img/icons/navigation.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 20, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.navigation {
+  width: 12px;
+  height: 12px;
+  background: url("img/icons/navigation.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -194,32 +216,75 @@ h2 {
   font-size: 1.4em;
 }
 
-/* line 28, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 21, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+h4 {
+  font-weight: 200;
+  color: #666666;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+/* line 35, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
 i {
   font-style: italic;
 }
 
-/* line 50, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 57, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
 ol, ul {
   margin: 0 0 20px 20px;
 }
 
-/* line 58, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 65, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 62, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 69, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
 ul {
   list-style: disc;
 }
 
-/* line 81, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 88, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
 table tr td {
   padding: 2px;
 }
 
 /* FORMUALR AND USER INPUTS */
+/* line 124, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+form input, form textarea {
+  font-size: 1em;
+  font-weight: 200;
+  font-family: 'Helvetica Neue', Helvetica, Arial;
+  background: white;
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #B3B3B3;
+  border: none;
+}
+/* line 134, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+form input:focus, form textarea:focus {
+  color: #111111;
+}
+/* line 142, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+form input {
+  height: 30px;
+}
+
+/* line 156, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+#splash {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1000;
+}
+
 /* ui elements */
 /* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
 #app {
@@ -324,6 +389,76 @@ table tr td {
   background-size: 100% 100%;
 }
 
+/* line 5, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner .spacer {
+  height: 15px;
+  width: 100%;
+  margin: 0;
+}
+/* line 11, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner h1, .content .inner h2, .content .inner h3, .content .inner h4, .content .inner h5, .content .inner h6, .content .inner p, .content .inner ol, .content .inner ul {
+  margin: 15px;
+}
+/* line 15, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner h1, .content .inner h2, .content .inner h3, .content .inner h4, .content .inner h5, .content .inner h6 {
+  margin-bottom: 0;
+}
+/* line 19, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner ol, .content .inner ul {
+  margin-left: 35px;
+}
+
+/* line 3, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list, .content .inner ol.list {
+  border-top: 1px solid #C7C7C7;
+  margin: 5px 0 20px 0;
+}
+/* line 7, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li, .content .inner ol.list li {
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #C7C7C7;
+  position: relative;
+}
+/* line 13, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner, .content .inner ol.list li .listInner {
+  padding: 18px 15px;
+}
+/* line 16, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner .title, .content .inner ol.list li .listInner .title {
+  font-size: 1.2em;
+  font-weight: 200;
+  color: #000000;
+}
+/* line 22, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner .navigation, .content .inner ol.list li .listInner .navigation {
+  position: absolute;
+  top: 50%;
+  margin-top: -6px;
+  right: 15px;
+}
+/* line 30, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li:active, .content .inner ol.list li:active {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
+  background-image: -webkit-linear-gradient(#0099ff, #0089e7);
+  background-image: -moz-linear-gradient(#0099ff, #0089e7);
+  background-image: -o-linear-gradient(#0099ff, #0089e7);
+  background-image: -ms-linear-gradient(#0099ff, #0089e7);
+  background-image: linear-gradient(#0099ff, #0089e7);
+}
+/* line 34, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li:active .listInner .title, .content .inner ol.list li:active .listInner .title {
+  color: white;
+}
+
+/* line 3, /Users/franzwilding/Sites/istudi/sass/modules/ui/_detailview.scss */
+.content .inner .article {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  background: white;
+}
+
 /* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
 #menu {
   width: 100%;
@@ -370,4 +505,26 @@ table tr td {
 #menu .content ol li.active, #menu .content ol li:active {
   background: #111111;
   border-top: 1px solid #111111;
+}
+
+/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_search.scss */
+#search {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #C7C7C7;
+}
+/* line 8, /Users/franzwilding/Sites/istudi/sass/modules/ui/_search.scss */
+#search input {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding-left: 30px;
+  background: white url("img/icons/search.png") no-repeat 10px center;
+  -webkit-background-size: 12px 12px;
+  -moz-background-size: 12px 12px;
+  -o-background-size: 12px 12px;
+  background-size: 12px 12px;
 }

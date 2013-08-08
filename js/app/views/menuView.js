@@ -1,5 +1,5 @@
 
-define(['text!templates/menuTemplate.tpl'], function(Template) {
+define(['text!templates/menu.tpl', 'views/menuItemView'], function(Template, menuItemView) {
 
   return Backbone.View.extend({
 
@@ -8,15 +8,17 @@ define(['text!templates/menuTemplate.tpl'], function(Template) {
     className: 'snap-drawer',
     template: _.template(Template),
 
-    events: {
-      "click ol li": "open"
-    },
-
     render: function(){
+      var t = this;
 
       this.$el.html(this.template);
       this.header = this.$el.children(".header");
       this.content = this.$el.children(".content");
+
+      /* render menu item s*/
+      this.options.app.menuItems.each(function(item){
+        t.content.find("ol").append(new menuItemView({ model: item, app: t.options.app }).render().$el);
+      });
 
       return this;
     },
@@ -27,14 +29,6 @@ define(['text!templates/menuTemplate.tpl'], function(Template) {
         toolbar: this.header[0],
         scroller: this.content[0]
       });
-    },
-
-    open: function(e) {
-      var el = e.toElement;
-      $(el).siblings().removeClass("active");
-      $(el).addClass("active");
-
-      this.options.app.closeMenu();
     }
 
   });
