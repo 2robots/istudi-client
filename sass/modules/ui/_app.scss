@@ -26,4 +26,11 @@
 #main {
   background: #EDEDED;
   @include box-shadow(0 0 10px #000000);
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+
+  .inner {
+    background: #EDEDED;
+  }
 }

@@ -19,11 +19,8 @@ define(['text!templates/content/listItemView.tpl'], function(Template) {
     },
 
     navigate: function() {
-
-      console.log("navigate");
-
       if(this.options.navigation) {
-        this.options.app.openContent({ key: "detail", title: this.model.get("title") });
+        this.options.app.openContent({ key: "_detail", title: this.model.get("title"), id: "_details_" + this.model.cid }, this.model, "slideRight");
       }
     }
   });

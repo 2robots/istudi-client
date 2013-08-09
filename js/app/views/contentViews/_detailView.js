@@ -1,11 +1,16 @@
 
-define(function(){
+define(['text!templates/content/detailView.tpl'], function(Template) {
 
   return Backbone.View.extend({
 
+    template: _.template(Template),
     tagName: 'div',
     className: 'inner',
     templateOptions: {},
+
+    events: {
+      "click": "navigateBack"
+    },
 
     alterTemplateOptions: function(templateOptions) {
       return templateOptions;
@@ -14,7 +19,7 @@ define(function(){
     initialize: function() {
       this.templateOptions = {
         showFavIcon: false,
-        content: ""
+        content: this.model.get("content")
       };
       this.templateOptions = this.alterTemplateOptions(this.templateOptions);
     },
@@ -25,6 +30,10 @@ define(function(){
     },
 
     afterRender: function() {
+    },
+
+    navigateBack: function() {
+      this.options.app.openContent(this.options.app.menuItems.get("index"), undefined, "slideLeft");
     }
   });
 

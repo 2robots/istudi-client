@@ -31,6 +31,9 @@ require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'v
     $("body").append(window.appView.render().$el);
     window.appView.afterRender();
 
+    // render index-page
+    //window.appView.openContent(window.appView.menuItems.get("index"));
+
     $("#splash").animate({
       opacity: 0
     }, 300, 'ease-out', function(){

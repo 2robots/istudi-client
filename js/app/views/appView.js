@@ -55,8 +55,8 @@ define(['views/menuView', 'views/mainView'], function(menuView, mainView) {
       return (this.snapper.state().state == "left");
     },
 
-    openContent: function(item) {
-      return this.main.openContent(item);
+    openContent: function(item, model, transition) {
+      return this.main.openContent(item, model, transition);
     }
   });
 
