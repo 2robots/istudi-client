@@ -1,3 +1,3 @@
-<h4><%= group.get("title") %></h4>
+<% if(title){ %><h4><%= title %></h4><% } %>
 <ul class="list">
 </ul>

@@ -16,7 +16,7 @@ define(function() {
 
     open: function(e) {
 
-      if(this.options.app.openContent(this.model)) {
+      if(this.options.app.openContent(this.model, this.model.get("object"))) {
         this.$el.siblings().removeClass("active");
         this.$el.addClass("active");
         this.options.app.closeMenu();

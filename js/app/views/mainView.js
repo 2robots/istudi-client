@@ -11,10 +11,27 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
     currentPage: undefined,
     page_container: undefined,
     old_id: undefined,
+    contentView: undefined,
     scrollPosition: {},
+    left_button: undefined,
+    right_button: undefined,
+    left_button_el: undefined,
+    right_button_el: undefined,
+    currentContentSet: undefined,
+    lastContentSet: undefined,
 
     events: {
-      "click .button.left": "toggleMenu"
+      "click .button.left": "leftButtonAction",
+      "click .button.right": "rightButtonAction"
+    },
+
+    initialize: function() {
+      this.on({
+        "leftButtonSetActive": this.leftButtonSetActive,
+        "rightButtonSetActive": this.rightButtonSetActive,
+        "leftButtonSetInactive": this.leftButtonSetInactive,
+        "rightButtonSetInactive": this.rightButtonSetInactive
+      });
     },
 
     render: function(){
@@ -27,8 +44,11 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
     },
 
     addPage: function() {
-      this.page_container.append(this.template({ title: this.title }));
+      this.page_container.append(this.template({ title: this.title, left_button: this.left_button, right_button: this.right_button }));
       this.header = this.page_container.find(".header").last();
+      this.left_button_el = this.header.find(".button.left");
+      this.right_button_el = this.header.find(".button.right");
+
       this.content = this.page_container.find(".content").last();
 
       this.currentPage = this.page_container.children(".pt-page").last();
@@ -47,7 +67,35 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
       }
     },
 
-    toggleMenu: function(e) {
+    leftButtonAction: function() {
+      if(!this.left_button_el.hasClass("inactive")) {
+        this.contentView.trigger("leftButtonAction");
+      }
+    },
+
+    rightButtonAction: function() {
+      if(!this.right_button_el.hasClass("inactive")) {
+        this.contentView.trigger("rightButtonAction");
+      }
+    },
+
+    leftButtonSetActive: function() {
+      this.left_button_el.removeClass("inactive");
+    },
+
+    rightButtonSetActive: function() {
+      this.right_button_el.removeClass("inactive");
+    },
+
+    leftButtonSetInactive: function() {
+      this.left_button_el.addClass("inactive");
+    },
+
+    rightButtonSetInactive: function() {
+      this.right_button_el.addClass("inactive");
+    },
+
+    toggleMenu: function() {
       if(this.options.app.menuOpen()) {
         this.options.app.closeMenu();
       } else {
@@ -56,6 +104,10 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
     },
 
     openContent: function(item, model, transition) {
+
+      // save this content-set
+      this.lastContentSet = this.currentContentSet;
+      this.currentContentSet = {item: item, model: model};
 
       // manage vars
       var key = "";
@@ -66,10 +118,14 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
         key = item.get("key");
         title = item.get("title");
         id = item.get("id");
+        this.left_button = item.get("left_button");
+        this.right_button = item.get("right_button");
       } else {
         key = item.key;
         title = item.title;
         id = item.id;
+        this.left_button = item.left_button;
+        this.right_button = item.right_button;
       }
 
       if(typeof(id) == "undefined") {
@@ -165,12 +221,17 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
 
           // make this page the current page
           newPage.addClass("pt-page-current");
+          t.contentView.afterRender();
         });
 
         return true;
       } catch(error) {
         return false;
       }
+    },
+
+    navigateBack: function() {
+      this.openContent(this.lastContentSet.item,this.lastContentSet.model, "slideLeft");
     }
 
   });

@@ -1,8 +1,9 @@
 
-define(['models/menuItem'], function(Model) {
+define(['models/menuitem'], function(Model) {
 
   return Backbone.Collection.extend({
-    model: Model
+    model: Model,
+    app: undefined
   });
 
 });

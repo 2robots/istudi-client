@@ -8,6 +8,15 @@ define(['text!templates/menu.tpl', 'views/menuItemView'], function(Template, men
     className: 'snap-drawer',
     template: _.template(Template),
 
+    initialize: function() {
+
+      var t = this;
+
+      this.options.app.menuItems.bind("add", function(){
+        t.render();
+      });
+    },
+
     render: function(){
       var t = this;
 

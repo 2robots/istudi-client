@@ -8,15 +8,16 @@ define(['text!templates/content/detailView.tpl'], function(Template) {
     className: 'inner',
     templateOptions: {},
 
-    events: {
-      "click": "navigateBack"
-    },
-
     alterTemplateOptions: function(templateOptions) {
       return templateOptions;
     },
 
     initialize: function() {
+
+      var t = this;
+
+      this.on("leftButtonAction", function(){ t.navigateBack(); });
+
       this.templateOptions = {
         showFavIcon: false,
         content: this.model.get("content")
@@ -33,8 +34,7 @@ define(['text!templates/content/detailView.tpl'], function(Template) {
     },
 
     navigateBack: function() {
-      this.options.app.openContent(this.options.app.menuItems.get("index"), undefined, "slideLeft");
+      this.options.app.main.navigateBack();
     }
   });
-
 });

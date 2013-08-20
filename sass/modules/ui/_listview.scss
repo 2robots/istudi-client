@@ -10,6 +10,9 @@
       border-bottom: 1px solid #C7C7C7;
       position: relative;
 
+      @include transition-property(all);
+      @include transition-duration(0.2s);
+
       .listInner {
         padding: 18px 15px;
 
@@ -19,11 +22,15 @@
           color: #000000;
         }
 
-        .navigation {
+        .navigation, .checkbox {
           position: absolute;
           top: 50%;
           margin-top: -6px;
           right: 15px;
+
+          &.checkbox {
+            margin-top: -4px;
+          }
         }
       }
 

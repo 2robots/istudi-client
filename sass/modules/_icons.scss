@@ -10,10 +10,13 @@
   @include background-size(contain);
 }
 
-.icn.navigation {
-  width: 12px;
-  height: 12px;
-  background: url("img/icons/navigation.png") no-repeat center center;
+.icn.ok {
+  background: url("img/icons/ok.png") no-repeat center center;
+  @include background-size(contain);
+}
+
+.icn.back {
+  background: url("img/icons/back.png") no-repeat center center;
   @include background-size(contain);
 }
 
@@ -22,4 +25,16 @@
   height: 12px;
   background: url("img/icons/navigation.png") no-repeat center center;
   @include background-size(contain);
+}
+
+.icn.checkbox {
+  width: 16px;
+  height: 16px;
+  background: url("img/icons/checkbox.png") no-repeat center center;
+  @include background-size(contain);
+
+  &.active {
+    background: url("img/icons/checkbox_active.png") no-repeat center center;
+    @include background-size(contain);
+  }
 }

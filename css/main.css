@@ -3316,6 +3316,24 @@ html, body {
 }
 
 /* line 13, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.ok {
+  background: url("img/icons/ok.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 18, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.back {
+  background: url("img/icons/back.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
 .icn.navigation {
   width: 12px;
   height: 12px;
@@ -3326,11 +3344,19 @@ html, body {
   background-size: contain;
 }
 
-/* line 20, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
-.icn.navigation {
-  width: 12px;
-  height: 12px;
-  background: url("img/icons/navigation.png") no-repeat center center;
+/* line 30, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.checkbox {
+  width: 16px;
+  height: 16px;
+  background: url("img/icons/checkbox.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+/* line 36, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.checkbox.active {
+  background: url("img/icons/checkbox_active.png") no-repeat center center;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -3561,16 +3587,25 @@ form input {
   left: 0;
   top: 0;
   bottom: 2px;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  /*&:hover, &.active {
+    @include header_button_hover();
+  }*/
 }
-/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
-.header .button:hover, .header .button.active {
-  background: url("img/assets/header_button_hover.png") repeat-x center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
+/* line 25, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+.header .button.inactive {
+  opacity: 0.2;
 }
-/* line 27, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 33, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
 .header .button .sep {
   position: absolute;
   top: 0;
@@ -3584,24 +3619,23 @@ form input {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
-/* line 38, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 44, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
 .header .button.left .sep {
   right: 0;
 }
-/* line 43, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 49, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
 .header .button.right {
+  left: auto;
+  right: 0;
+}
+/* line 53, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+.header .button.right .sep {
   left: 0;
 }
 
-/* line 49, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
-.menu_open .header .button {
-  background: url("img/assets/header_button_hover.png") repeat-x center center;
-  -webkit-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  background-size: 100% 100%;
-}
-
+/*.menu_open .header .button {
+  @include header_button_hover();
+}*/
 /* line 4, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
 .content .inner .spacer {
   height: 15px;
@@ -3617,6 +3651,15 @@ form input {
   margin-bottom: 0;
 }
 /* line 18, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner h3 {
+  font-weight: bold;
+  text-align: center;
+}
+/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+.content .inner p {
+  text-align: center;
+}
+/* line 27, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
 .content .inner ol, .content .inner ul {
   margin-left: 35px;
 }
@@ -3632,25 +3675,39 @@ form input {
   background: white;
   border-bottom: 1px solid #C7C7C7;
   position: relative;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -ms-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
 }
-/* line 13, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 16, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner, .content .inner ol.list li .listInner {
   padding: 18px 15px;
 }
-/* line 16, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 19, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .title, .content .inner ol.list li .listInner .title {
   font-size: 1.2em;
   font-weight: 200;
   color: #000000;
 }
-/* line 22, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
-.content .inner ul.list li .listInner .navigation, .content .inner ol.list li .listInner .navigation {
+/* line 25, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner .navigation, .content .inner ul.list li .listInner .checkbox, .content .inner ol.list li .listInner .navigation, .content .inner ol.list li .listInner .checkbox {
   position: absolute;
   top: 50%;
   margin-top: -6px;
   right: 15px;
 }
-/* line 30, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 31, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner .navigation.checkbox, .content .inner ul.list li .listInner .checkbox.checkbox, .content .inner ol.list li .listInner .navigation.checkbox, .content .inner ol.list li .listInner .checkbox.checkbox {
+  margin-top: -4px;
+}
+/* line 37, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active, .content .inner ol.list li:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
   background-image: -webkit-linear-gradient(#0099ff, #0089e7);
@@ -3659,18 +3716,17 @@ form input {
   background-image: -ms-linear-gradient(#0099ff, #0089e7);
   background-image: linear-gradient(#0099ff, #0089e7);
 }
-/* line 34, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 41, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active .listInner .title, .content .inner ol.list li:active .listInner .title {
   color: white;
 }
 
 /* line 3, /Users/franzwilding/Sites/istudi/sass/modules/ui/_detailview.scss */
 .content .inner .article {
-  width: 100%;
   min-height: 100%;
   overflow: hidden;
   background: white;
-  height: 2000px;
+  padding: 15px;
 }
 
 /* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
@@ -3741,4 +3797,32 @@ form input {
   -moz-background-size: 12px 12px;
   -o-background-size: 12px 12px;
   background-size: 12px 12px;
+}
+
+/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_loading.scss */
+.loading {
+  margin: 20px;
+  background: #DFDFDF;
+}
+/* line 6, /Users/franzwilding/Sites/istudi/sass/modules/ui/_loading.scss */
+.loading .status {
+  display: block;
+  height: 30px;
+  width: 0;
+  -webkit-transition-property: width;
+  -moz-transition-property: width;
+  -ms-transition-property: width;
+  -o-transition-property: width;
+  transition-property: width;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -ms-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
+  background-image: -webkit-linear-gradient(#0099ff, #0089e7);
+  background-image: -moz-linear-gradient(#0099ff, #0089e7);
+  background-image: -o-linear-gradient(#0099ff, #0089e7);
+  background-image: -ms-linear-gradient(#0099ff, #0089e7);
+  background-image: linear-gradient(#0099ff, #0089e7);
 }

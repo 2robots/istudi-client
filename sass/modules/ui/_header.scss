@@ -19,10 +19,16 @@
     left: 0;
     top: 0;
     bottom: 2px;
+    @include transition-property(opacity);
+    @include transition-duration(0.5s);
 
-    &:hover, &.active {
-      @include header_button_hover();
+    &.inactive {
+      opacity: 0.2;
     }
+
+    /*&:hover, &.active {
+      @include header_button_hover();
+    }*/
 
     .sep {
       position: absolute;
@@ -41,11 +47,16 @@
     }
 
     &.right {
-      left: 0;
+      left: auto;
+      right: 0;
+
+      .sep {
+        left: 0;
+      }
     }
   }
 }
 
-.menu_open .header .button {
+/*.menu_open .header .button {
   @include header_button_hover();
-}
+}*/
