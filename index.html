@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta names="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <title>iStudi</title>
 
-  <title>iStudi</title>
+        <link href="css/main.css" rel="stylesheet">
+    </head>
+    <body>
 
-  <link href="css/main.css" rel="stylesheet">
-</head>
+        <img src="splash.png" id="splash" />
 
-<body>
+        <!-- development -->
+        <!--script type="text/javascript" data-main="js/app.js" src="js/require.js"></script-->
 
-  <img src="splash.png" id="splash" />
-
-
-  <!-- development -->
-  <!--script type="text/javascript" data-main="js/app.js" src="js/require.js"></script-->
-
-  <!-- production -->
-  <script type="text/javascript" data-main="js/app-build.js" src="js/require.js"></script>
-
-</body>
+        <!-- production -->
+        <script type="text/javascript" data-main="js/app-build.js" src="js/require.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    </body>
 </html>
