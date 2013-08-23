@@ -7,7 +7,7 @@ define(['views/contentViews/_listView'], function(_listView) {
       templateOptions.navigateable = true;
       templateOptions.subtitle = "Triff alle Einstellungen für iStudi";
       templateOptions.text = 'Du kannst die anzuzeigenden Uni-Gruppen ändern, oder die Push-Einstellungen bearbeiten.';
-      templateOptions.data = [this.options.app.settings.models];
+      templateOptions.data = new Backbone.Collection(new Backbone.Model({data: this.options.app.settings}));
       return templateOptions;
     }
 

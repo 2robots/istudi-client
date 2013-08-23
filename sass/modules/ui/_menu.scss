@@ -28,9 +28,15 @@
       li {
         border-bottom: 1px solid #111111;
         border-top: 1px solid #2D2D2D;
-        padding: 10px;
+        padding: 0 10px;
         @include text-shadow(0 1px #000000);
         @include user-select(none);
+
+        .icn {
+          height: 36px;
+          width: 14px;
+          margin-right: 8px;
+        }
 
         &.active, &:active {
           background: #111111;

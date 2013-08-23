@@ -80,53 +80,57 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
          if it is a node-model-object, we show it as nested list. If not,
          we just display a list.
       */
-      _.each(this.templateOptions.data, function(obj) {
+      if(this.templateOptions.data != undefined) {
+        this.templateOptions.data.each(function(obj) {
+          itemCounter = 0;
 
-        itemCounter = 0;
-
-        if(obj instanceof Backbone.Model) {
-          title = obj.get("title");
-          data = obj.get("data");
-        } else {
-          data = obj;
-        }
-
-        // for each group render a list
-        t.listContainer.append(t.listTemplate({title: title}));
-        curGroup = t.listContainer.find("ul").last();
-
-        // for each list add all items
-        _.each(data, function(item) {
-
-          // if there is no search query, or the pattern matches
-          if(t.filterQuery == "" || pattern.test(item.get("title"))) {
-
-            // render our super generic listItem
-            curGroup.append(new _listItemView({
-
-              // model we take the title from
-              model: item,
-
-              // should this item be navigateable (e.g. to display a detailView)
-              navigateable: t.templateOptions.navigateable,
-
-              // should this item be checkable (e.g. for a config-view)
-              checkable: t.templateOptions.checkable,
-
-              // main app
-              app: t.options.app
-            }).render().$el);
-
-            itemCounter++;
+          if(obj instanceof Backbone.Model) {
+            title = obj.get("title");
+            data = obj.get("data");
+          } else {
+            data = obj;
           }
+
+          // for each group render a list
+          t.listContainer.append(t.listTemplate({title: title}));
+          curGroup = t.listContainer.find("ul").last();
+
+          if(data != undefined) {
+
+            // for each list add all items
+            data.each(function(item) {
+
+              // if there is no search query, or the pattern matches
+              if(t.filterQuery == "" || pattern.test(item.get("title"))) {
+
+                // render our super generic listItem
+                curGroup.append(new _listItemView({
+
+                  // model we take the title from
+                  model: item,
+
+                  // should this item be navigateable (e.g. to display a detailView)
+                  navigateable: t.templateOptions.navigateable,
+
+                  // should this item be checkable (e.g. for a config-view)
+                  checkable: t.templateOptions.checkable,
+
+                  // main app
+                  app: t.options.app
+                }).render().$el);
+
+                itemCounter++;
+              }
+            });
+          }
+
+          if(itemCounter == 0) {
+            curGroup.prev().remove();
+            curGroup.remove();
+          }
+
         });
-
-        if(itemCounter == 0) {
-          curGroup.prev().remove();
-          curGroup.remove();
-        }
-
-      });
+      }
 
     },
 

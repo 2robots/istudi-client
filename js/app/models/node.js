@@ -1,6 +1,8 @@
 
-define(function() {
+define(['collections/nodes'], function(nodes) {
   return Backbone.Model.extend({
+
+    idAttribute: "id",
 
     initialize: function() {
     },
@@ -13,11 +15,11 @@ define(function() {
       var rn = group.get("root_nodes");
 
       if(typeof(an) == "undefined") {
-        an = [];
+        an = new Backbone.Collection();
       }
 
       if(typeof(rn) == "undefined") {
-        rn = [];
+        rn = new Backbone.Collection();
       }
 
       // add this to it's parent, if there is one
@@ -26,11 +28,12 @@ define(function() {
         var d = parent.get("data");
 
         if(typeof(d) == "undefined") {
-          d = [];
+          d = new Backbone.Collection();
         }
 
         d.push(this);
         parent.set("data", d);
+
 
       // if this is a root_node, add it to the group
       } else {

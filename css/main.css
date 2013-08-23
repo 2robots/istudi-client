@@ -3363,6 +3363,33 @@ html, body {
   background-size: contain;
 }
 
+/* line 44, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.news {
+  background: url("img/icons/news.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 49, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.index {
+  background: url("img/icons/index.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 54, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+.icn.settings {
+  background: url("img/icons/settings.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -3765,13 +3792,19 @@ form input {
 #menu .content ol li {
   border-bottom: 1px solid #111111;
   border-top: 1px solid #2D2D2D;
-  padding: 10px;
+  padding: 0 10px;
   text-shadow: 0 1px black;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
 }
 /* line 35, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+#menu .content ol li .icn {
+  height: 36px;
+  width: 14px;
+  margin-right: 8px;
+}
+/* line 41, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
 #menu .content ol li.active, #menu .content ol li:active {
   background: #111111;
   border-top: 1px solid #111111;

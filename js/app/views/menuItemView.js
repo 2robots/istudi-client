@@ -10,7 +10,7 @@ define(function() {
     },
 
     render: function(){
-      this.$el.html(this.model.get("title"));
+      this.$el.html('<span class="icn ' + this.model.get("key") + '"></span>' + this.model.get("title"));
       return this;
     },
 

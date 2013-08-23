@@ -38,3 +38,20 @@
     @include background-size(contain);
   }
 }
+
+
+
+.icn.news {
+  background: url("img/icons/news.png") no-repeat center center;
+  @include background-size(contain);
+}
+
+.icn.index {
+  background: url("img/icons/index.png") no-repeat center center;
+  @include background-size(contain);
+}
+
+.icn.settings {
+  background: url("img/icons/settings.png") no-repeat center center;
+  @include background-size(contain);
+}

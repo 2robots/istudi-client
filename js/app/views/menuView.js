@@ -12,9 +12,8 @@ define(['text!templates/menu.tpl', 'views/menuItemView'], function(Template, men
 
       var t = this;
 
-      this.options.app.menuItems.bind("add", function(){
-        t.render();
-      });
+      this.options.app.menuItems.bind("add", function(){ t.render(); });
+      this.options.app.menuItems.bind("remove", function(){ t.render(); });
     },
 
     render: function(){

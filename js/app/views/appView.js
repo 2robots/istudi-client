@@ -6,8 +6,9 @@ define(['views/menuView', 'views/mainView'], function(menuView, mainView) {
     name: 'iStudi',
     tagName: 'div',
     id: 'app',
-    //endpoint: 'http://localhost:3000',
-    endpoint: 'http://192.168.0.56:3000',
+    // endpoint: 'http://localhost:3000',
+    // endpoint: 'http://192.168.0.56:3000',
+    endpoint: 'http://istudi.herokuapp.com',
     menuOpen: false,
     config: undefined,
 

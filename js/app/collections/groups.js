@@ -9,15 +9,21 @@ define(['collections/_collection', 'models/group', 'models/menuItem'], function(
     addMenuItems: function() {
 
       var t = this;
+
+      // remove all groupsLinks, then generate the new ones
+      t.app.menuItems.remove(t.app.menuItems.where({key: t.defaultView}));
+
       // add menu item for each checked group
       this.each(function(group) {
+
         if(group.checked()) {
           t.app.menuItems.add(
             new menuItem({
               key: t.defaultView,
               title: group.get("title"),
               left_button: "menu",
-              object: group
+              object: group,
+              position: group.get("position")+100
             })
           );
         }

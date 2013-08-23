@@ -8,7 +8,7 @@ define(['views/contentViews/_listView'], function(_listView) {
       templateOptions.checkable = true;
       templateOptions.subtitle = "Auf welcher Uni studierst du?";
       templateOptions.text = 'Du kannst eine oder mehrere Unis auswählen. Die Auswahl kannst du später unter "Einstellungen" auch ändern.';
-      templateOptions.data = [this.options.app.groups.models];
+      templateOptions.data = new Backbone.Collection(new Backbone.Model({data: this.options.app.groups}));
       return templateOptions;
     },
 

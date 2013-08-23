@@ -11,7 +11,7 @@ define(['collections/_collection', 'models/newsArticle', 'models/menuItem'], fun
       this.app = app;
 
       // add menu item
-      this.app.menuItems.add(new menuItem({key: this.defaultView, title: "Neuigkeiten", left_button: "menu"}));
+      this.app.menuItems.add(new menuItem({key: this.defaultView, title: "Neuigkeiten", left_button: "menu", position: 10}));
     },
 
     addUrlParameters: function() {

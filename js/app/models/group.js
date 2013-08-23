@@ -2,6 +2,8 @@
 define(function() {
   return Backbone.Model.extend({
 
+    idAttribute: "id",
+
     get_config: function() {
       var conf = this.collection.app.config.get("groups");
 

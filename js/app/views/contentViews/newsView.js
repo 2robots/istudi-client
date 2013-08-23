@@ -5,7 +5,7 @@ define(['views/contentViews/_listView'], function(_listView) {
     alterTemplateOptions: function(templateOptions) {
       templateOptions.showSearch = true;
       templateOptions.navigateable = true;
-      templateOptions.data = [this.options.app.newsArticles.models];
+      templateOptions.data = new Backbone.Collection(new Backbone.Model({data: this.options.app.newsArticles}));
       return templateOptions;
     }
 
