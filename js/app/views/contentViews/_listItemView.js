@@ -30,6 +30,7 @@ define(['text!templates/content/listItemView.tpl'], function(Template) {
           dView = this.model.get("detailView");
         } else {
           dView = { key: "_detail", title: this.model.get("title"), id: "_details_" + this.model.cid, left_button: "back" };
+          //dView = { key: "_detailZoom", title: this.model.get("title"), id: "_details_" + this.model.cid, left_button: "back" };
         }
 
         this.options.app.openContent(dView, this.model, "slideRight");

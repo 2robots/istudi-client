@@ -1,7 +1,7 @@
 
 <% if(showSearch) { %>
   <form id="search">
-    <input type="text" value="Filter" />
+    <input type="text" placeholder="<%= filterDefaultValue %>" />
   </form>
 <% } %>
 

@@ -1,4 +1,3 @@
-
 define(['text!templates/content/detailView.tpl'], function(Template) {
 
   return Backbone.View.extend({

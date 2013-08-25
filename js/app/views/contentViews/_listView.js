@@ -32,7 +32,8 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
         navigateable: false,
         checkable: false,
         itemClass: _listItemView,
-        data: []
+        data: [],
+        filterDefaultValue: "Filter"
       };
 
       this.templateOptions = this.alterTemplateOptions(this.templateOptions);
@@ -45,6 +46,14 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
 
       // rerender lists
       this.renderLists();
+    },
+
+    filter_action: function(pattern, item) {
+      return (this.filterQuery == "" || pattern.test(item.get("title")));
+    },
+
+    data_attr: function() {
+      return "data";
     },
 
     render: function(){
@@ -86,7 +95,7 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
 
           if(obj instanceof Backbone.Model) {
             title = obj.get("title");
-            data = obj.get("data");
+            data = obj.get(t.data_attr());
           } else {
             data = obj;
           }
@@ -101,7 +110,7 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
             data.each(function(item) {
 
               // if there is no search query, or the pattern matches
-              if(t.filterQuery == "" || pattern.test(item.get("title"))) {
+              if(t.filter_action(pattern, item)) {
 
                 // render our super generic listItem
                 curGroup.append(new _listItemView({

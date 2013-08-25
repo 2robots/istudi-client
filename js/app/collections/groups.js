@@ -28,6 +28,16 @@ define(['collections/_collection', 'models/group', 'models/menuItem'], function(
           );
         }
       });
+
+      // add menu item for global search
+      t.app.menuItems.add(
+        new menuItem({
+          key: 'search',
+          title: 'Volltextsuche',
+          left_button: "menu",
+          position: 1500
+        })
+      );
     }
   });
 

@@ -10,7 +10,7 @@ define(['collections/_collection', 'models/setting', 'models/menuItem'], functio
       this.app = app;
 
       // add menu item
-      this.app.menuItems.add(new menuItem({key: this.defaultView, title: "Einstellungen", left_button: "menu", position: "1000"}));
+      this.app.menuItems.add(new menuItem({key: this.defaultView, title: "Einstellungen", left_button: "menu", position: 2000}));
     }
 
   });
