@@ -1,7 +1,7 @@
 /* This file will hold styles for the mobile version of your website (mobile first). */
 /* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
 /* libs */
-/* line 1, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 1, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 html, body {
   font-family: sans-serif;
   margin: 0;
@@ -11,7 +11,7 @@ html, body {
   overflow: hidden;
 }
 
-/* line 10, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 10, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snap-content {
   position: absolute;
   top: 0;
@@ -30,7 +30,7 @@ html, body {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 28, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 28, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snap-drawers {
   position: absolute;
   top: 0;
@@ -41,7 +41,7 @@ html, body {
   height: auto;
 }
 
-/* line 38, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 38, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snap-drawer {
   position: absolute;
   top: 0;
@@ -59,25 +59,25 @@ html, body {
   transition: width 0.3s ease;
 }
 
-/* line 55, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 55, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snap-drawer-left {
   left: 0;
   z-index: 1;
 }
 
-/* line 60, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 60, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snap-drawer-right {
   right: 0;
   z-index: 1;
 }
 
-/* line 66, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 66, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snapjs-left .snap-drawer-right,
 .snapjs-right .snap-drawer-left {
   display: none;
 }
 
-/* line 71, /Users/franzwilding/Sites/istudi/sass/lib/_snap.scss */
+/* line 71, /Users/franzwilding/Sites/istudi/www/sass/lib/_snap.scss */
 .snapjs-expand-left .snap-drawer-left,
 .snapjs-expand-right .snap-drawer-right {
   width: 100%;
@@ -86,7 +86,7 @@ html, body {
 /* by http://www.codrops.com */
 /* animation sets */
 /* move from / to  */
-/* line 8, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 8, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-perspective {
   position: relative;
   width: 100%;
@@ -96,7 +96,7 @@ html, body {
   perspective: 1200px;
 }
 
-/* line 17, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 17, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page {
   position: absolute;
   top: 0;
@@ -115,62 +115,62 @@ html, body {
   transform-style: preserve-3d;
 }
 
-/* line 35, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 35, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-current {
   visibility: visible;
   z-index: 1;
 }
 
-/* line 40, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 40, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToLeft {
   -webkit-animation: moveToLeft 0.4s ease both;
   -moz-animation: moveToLeft 0.4s ease both;
   animation: moveToLeft 0.4s ease both;
 }
 
-/* line 46, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 46, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromLeft {
   -webkit-animation: moveFromLeft 0.4s ease both;
   -moz-animation: moveFromLeft 0.4s ease both;
   animation: moveFromLeft 0.4s ease both;
 }
 
-/* line 52, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 52, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToRight {
   -webkit-animation: moveToRight 0.4s ease both;
   -moz-animation: moveToRight 0.4s ease both;
   animation: moveToRight 0.4s ease both;
 }
 
-/* line 58, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 58, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromRight {
   -webkit-animation: moveFromRight 0.4s ease both;
   -moz-animation: moveFromRight 0.4s ease both;
   animation: moveFromRight 0.4s ease both;
 }
 
-/* line 64, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 64, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToTop {
   -webkit-animation: moveToTop 0.4s ease both;
   -moz-animation: moveToTop 0.4s ease both;
   animation: moveToTop 0.4s ease both;
 }
 
-/* line 70, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 70, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromTop {
   -webkit-animation: moveFromTop 0.4s ease both;
   -moz-animation: moveFromTop 0.4s ease both;
   animation: moveFromTop 0.4s ease both;
 }
 
-/* line 76, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 76, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToBottom {
   -webkit-animation: moveToBottom 0.4s ease both;
   -moz-animation: moveToBottom 0.4s ease both;
   animation: moveToBottom 0.4s ease both;
 }
 
-/* line 82, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 82, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromBottom {
   -webkit-animation: moveFromBottom 0.4s ease both;
   -moz-animation: moveFromBottom 0.4s ease both;
@@ -178,7 +178,7 @@ html, body {
 }
 
 /* fade */
-/* line 90, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 90, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-fade {
   -webkit-animation: fade .7s ease both;
   -moz-animation: fade .7s ease both;
@@ -186,56 +186,56 @@ html, body {
 }
 
 /* move from / to and fade */
-/* line 98, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 98, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToLeftFade {
   -webkit-animation: moveToLeftFade .7s ease both;
   -moz-animation: moveToLeftFade .7s ease both;
   animation: moveToLeftFade .7s ease both;
 }
 
-/* line 104, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 104, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromLeftFade {
   -webkit-animation: moveFromLeftFade .7s ease both;
   -moz-animation: moveFromLeftFade .7s ease both;
   animation: moveFromLeftFade .7s ease both;
 }
 
-/* line 110, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 110, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToRightFade {
   -webkit-animation: moveToRightFade .7s ease both;
   -moz-animation: moveToRightFade .7s ease both;
   animation: moveToRightFade .7s ease both;
 }
 
-/* line 116, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 116, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromRightFade {
   -webkit-animation: moveFromRightFade .7s ease both;
   -moz-animation: moveFromRightFade .7s ease both;
   animation: moveFromRightFade .7s ease both;
 }
 
-/* line 122, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 122, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToTopFade {
   -webkit-animation: moveToTopFade .7s ease both;
   -moz-animation: moveToTopFade .7s ease both;
   animation: moveToTopFade .7s ease both;
 }
 
-/* line 128, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 128, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromTopFade {
   -webkit-animation: moveFromTopFade .7s ease both;
   -moz-animation: moveFromTopFade .7s ease both;
   animation: moveFromTopFade .7s ease both;
 }
 
-/* line 134, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 134, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToBottomFade {
   -webkit-animation: moveToBottomFade .7s ease both;
   -moz-animation: moveToBottomFade .7s ease both;
   animation: moveToBottomFade .7s ease both;
 }
 
-/* line 140, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 140, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveFromBottomFade {
   -webkit-animation: moveFromBottomFade .7s ease both;
   -moz-animation: moveFromBottomFade .7s ease both;
@@ -243,28 +243,28 @@ html, body {
 }
 
 /* move to with different easing */
-/* line 148, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 148, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToLeftEasing {
   -webkit-animation: moveToLeft .7s ease-in-out both;
   -moz-animation: moveToLeft .7s ease-in-out both;
   animation: moveToLeft .7s ease-in-out both;
 }
 
-/* line 153, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 153, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToRightEasing {
   -webkit-animation: moveToRight .7s ease-in-out both;
   -moz-animation: moveToRight .7s ease-in-out both;
   animation: moveToRight .7s ease-in-out both;
 }
 
-/* line 158, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 158, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToTopEasing {
   -webkit-animation: moveToTop .7s ease-in-out both;
   -moz-animation: moveToTop .7s ease-in-out both;
   animation: moveToTop .7s ease-in-out both;
 }
 
-/* line 163, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 163, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-moveToBottomEasing {
   -webkit-animation: moveToBottom .7s ease-in-out both;
   -moz-animation: moveToBottom .7s ease-in-out both;
@@ -274,168 +274,168 @@ html, body {
 /********************************* keyframes **************************************/
 /* move from / to  */
 @-webkit-keyframes moveToLeft {
-  /* line 174, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 174, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateX(-100%);
   }
 }
 
 @-moz-keyframes moveToLeft {
-  /* line 177, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 177, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateX(-100%);
   }
 }
 
 @keyframes moveToLeft {
-  /* line 180, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 180, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes moveFromLeft {
-  /* line 184, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 184, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateX(-100%);
   }
 }
 
 @-moz-keyframes moveFromLeft {
-  /* line 187, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 187, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateX(-100%);
   }
 }
 
 @keyframes moveFromLeft {
-  /* line 190, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 190, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateX(-100%);
   }
 }
 
 @-webkit-keyframes moveToRight {
-  /* line 194, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 194, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateX(100%);
   }
 }
 
 @-moz-keyframes moveToRight {
-  /* line 197, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 197, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateX(100%);
   }
 }
 
 @keyframes moveToRight {
-  /* line 200, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 200, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateX(100%);
   }
 }
 
 @-webkit-keyframes moveFromRight {
-  /* line 204, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 204, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateX(100%);
   }
 }
 
 @-moz-keyframes moveFromRight {
-  /* line 207, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 207, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateX(100%);
   }
 }
 
 @keyframes moveFromRight {
-  /* line 210, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 210, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateX(100%);
   }
 }
 
 @-webkit-keyframes moveToTop {
-  /* line 214, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 214, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateY(-100%);
   }
 }
 
 @-moz-keyframes moveToTop {
-  /* line 217, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 217, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateY(-100%);
   }
 }
 
 @keyframes moveToTop {
-  /* line 220, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 220, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateY(-100%);
   }
 }
 
 @-webkit-keyframes moveFromTop {
-  /* line 224, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 224, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateY(-100%);
   }
 }
 
 @-moz-keyframes moveFromTop {
-  /* line 227, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 227, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateY(-100%);
   }
 }
 
 @keyframes moveFromTop {
-  /* line 230, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 230, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateY(-100%);
   }
 }
 
 @-webkit-keyframes moveToBottom {
-  /* line 234, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 234, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateY(100%);
   }
 }
 
 @-moz-keyframes moveToBottom {
-  /* line 237, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 237, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateY(100%);
   }
 }
 
 @keyframes moveToBottom {
-  /* line 240, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 240, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateY(100%);
   }
 }
 
 @-webkit-keyframes moveFromBottom {
-  /* line 244, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 244, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateY(100%);
   }
 }
 
 @-moz-keyframes moveFromBottom {
-  /* line 247, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 247, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateY(100%);
   }
 }
 
 @keyframes moveFromBottom {
-  /* line 250, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 250, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateY(100%);
   }
@@ -443,21 +443,21 @@ html, body {
 
 /* fade */
 @-webkit-keyframes fade {
-  /* line 256, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 256, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
   }
 }
 
 @-moz-keyframes fade {
-  /* line 259, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 259, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
   }
 }
 
 @keyframes fade {
-  /* line 262, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 262, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
   }
@@ -465,7 +465,7 @@ html, body {
 
 /* move from / to and fade */
 @-webkit-keyframes moveToLeftFade {
-  /* line 268, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 268, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateX(-100%);
@@ -473,7 +473,7 @@ html, body {
 }
 
 @-moz-keyframes moveToLeftFade {
-  /* line 271, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 271, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateX(-100%);
@@ -481,7 +481,7 @@ html, body {
 }
 
 @keyframes moveToLeftFade {
-  /* line 274, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 274, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     transform: translateX(-100%);
@@ -489,7 +489,7 @@ html, body {
 }
 
 @-webkit-keyframes moveFromLeftFade {
-  /* line 278, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 278, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateX(-100%);
@@ -497,7 +497,7 @@ html, body {
 }
 
 @-moz-keyframes moveFromLeftFade {
-  /* line 281, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 281, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateX(-100%);
@@ -505,7 +505,7 @@ html, body {
 }
 
 @keyframes moveFromLeftFade {
-  /* line 284, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 284, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     transform: translateX(-100%);
@@ -513,7 +513,7 @@ html, body {
 }
 
 @-webkit-keyframes moveToRightFade {
-  /* line 288, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 288, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateX(100%);
@@ -521,7 +521,7 @@ html, body {
 }
 
 @-moz-keyframes moveToRightFade {
-  /* line 291, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 291, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateX(100%);
@@ -529,7 +529,7 @@ html, body {
 }
 
 @keyframes moveToRightFade {
-  /* line 294, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 294, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     transform: translateX(100%);
@@ -537,7 +537,7 @@ html, body {
 }
 
 @-webkit-keyframes moveFromRightFade {
-  /* line 298, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 298, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateX(100%);
@@ -545,7 +545,7 @@ html, body {
 }
 
 @-moz-keyframes moveFromRightFade {
-  /* line 301, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 301, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateX(100%);
@@ -553,7 +553,7 @@ html, body {
 }
 
 @keyframes moveFromRightFade {
-  /* line 304, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 304, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     transform: translateX(100%);
@@ -561,7 +561,7 @@ html, body {
 }
 
 @-webkit-keyframes moveToTopFade {
-  /* line 308, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 308, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateY(-100%);
@@ -569,7 +569,7 @@ html, body {
 }
 
 @-moz-keyframes moveToTopFade {
-  /* line 311, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 311, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateY(-100%);
@@ -577,7 +577,7 @@ html, body {
 }
 
 @keyframes moveToTopFade {
-  /* line 314, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 314, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     transform: translateY(-100%);
@@ -585,7 +585,7 @@ html, body {
 }
 
 @-webkit-keyframes moveFromTopFade {
-  /* line 318, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 318, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateY(-100%);
@@ -593,7 +593,7 @@ html, body {
 }
 
 @-moz-keyframes moveFromTopFade {
-  /* line 321, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 321, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateY(-100%);
@@ -601,7 +601,7 @@ html, body {
 }
 
 @keyframes moveFromTopFade {
-  /* line 324, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 324, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     transform: translateY(-100%);
@@ -609,7 +609,7 @@ html, body {
 }
 
 @-webkit-keyframes moveToBottomFade {
-  /* line 328, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 328, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -webkit-transform: translateY(100%);
@@ -617,7 +617,7 @@ html, body {
 }
 
 @-moz-keyframes moveToBottomFade {
-  /* line 331, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 331, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     -moz-transform: translateY(100%);
@@ -625,7 +625,7 @@ html, body {
 }
 
 @keyframes moveToBottomFade {
-  /* line 334, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 334, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0.3;
     transform: translateY(100%);
@@ -633,7 +633,7 @@ html, body {
 }
 
 @-webkit-keyframes moveFromBottomFade {
-  /* line 338, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 338, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -webkit-transform: translateY(100%);
@@ -641,7 +641,7 @@ html, body {
 }
 
 @-moz-keyframes moveFromBottomFade {
-  /* line 341, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 341, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     -moz-transform: translateY(100%);
@@ -649,7 +649,7 @@ html, body {
 }
 
 @keyframes moveFromBottomFade {
-  /* line 344, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 344, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0.3;
     transform: translateY(100%);
@@ -657,42 +657,42 @@ html, body {
 }
 
 /* scale and fade */
-/* line 349, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 349, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleDown {
   -webkit-animation: scaleDown .7s ease both;
   -moz-animation: scaleDown .7s ease both;
   animation: scaleDown .7s ease both;
 }
 
-/* line 355, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 355, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleUp {
   -webkit-animation: scaleUp .7s ease both;
   -moz-animation: scaleUp .7s ease both;
   animation: scaleUp .7s ease both;
 }
 
-/* line 361, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 361, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleUpDown {
   -webkit-animation: scaleUpDown .5s ease both;
   -moz-animation: scaleUpDown .5s ease both;
   animation: scaleUpDown .5s ease both;
 }
 
-/* line 367, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 367, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleDownUp {
   -webkit-animation: scaleDownUp .5s ease both;
   -moz-animation: scaleDownUp .5s ease both;
   animation: scaleDownUp .5s ease both;
 }
 
-/* line 373, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 373, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleDownCenter {
   -webkit-animation: scaleDownCenter .4s ease-in both;
   -moz-animation: scaleDownCenter .4s ease-in both;
   animation: scaleDownCenter .4s ease-in both;
 }
 
-/* line 379, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 379, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-scaleUpCenter {
   -webkit-animation: scaleUpCenter .4s ease-out both;
   -moz-animation: scaleUpCenter .4s ease-out both;
@@ -702,7 +702,7 @@ html, body {
 /********************************* keyframes **************************************/
 /* scale and fade */
 @-webkit-keyframes scaleDown {
-  /* line 390, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 390, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -710,7 +710,7 @@ html, body {
 }
 
 @-moz-keyframes scaleDown {
-  /* line 393, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 393, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: scale(0.8);
@@ -718,7 +718,7 @@ html, body {
 }
 
 @keyframes scaleDown {
-  /* line 396, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 396, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: scale(0.8);
@@ -726,7 +726,7 @@ html, body {
 }
 
 @-webkit-keyframes scaleUp {
-  /* line 400, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 400, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(0.8);
@@ -734,7 +734,7 @@ html, body {
 }
 
 @-moz-keyframes scaleUp {
-  /* line 403, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 403, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: scale(0.8);
@@ -742,7 +742,7 @@ html, body {
 }
 
 @keyframes scaleUp {
-  /* line 406, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 406, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: scale(0.8);
@@ -750,7 +750,7 @@ html, body {
 }
 
 @-webkit-keyframes scaleUpDown {
-  /* line 410, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 410, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(1.2);
@@ -758,7 +758,7 @@ html, body {
 }
 
 @-moz-keyframes scaleUpDown {
-  /* line 413, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 413, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: scale(1.2);
@@ -766,7 +766,7 @@ html, body {
 }
 
 @keyframes scaleUpDown {
-  /* line 416, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 416, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: scale(1.2);
@@ -774,7 +774,7 @@ html, body {
 }
 
 @-webkit-keyframes scaleDownUp {
-  /* line 420, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 420, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(1.2);
@@ -782,7 +782,7 @@ html, body {
 }
 
 @-moz-keyframes scaleDownUp {
-  /* line 423, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 423, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: scale(1.2);
@@ -790,7 +790,7 @@ html, body {
 }
 
 @keyframes scaleDownUp {
-  /* line 426, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 426, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: scale(1.2);
@@ -798,7 +798,7 @@ html, body {
 }
 
 @-webkit-keyframes scaleDownCenter {
-  /* line 430, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 430, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -806,7 +806,7 @@ html, body {
 }
 
 @-moz-keyframes scaleDownCenter {
-  /* line 433, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 433, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: scale(0.7);
@@ -814,7 +814,7 @@ html, body {
 }
 
 @keyframes scaleDownCenter {
-  /* line 436, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 436, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: scale(0.7);
@@ -822,7 +822,7 @@ html, body {
 }
 
 @-webkit-keyframes scaleUpCenter {
-  /* line 440, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 440, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: scale(0.7);
@@ -830,7 +830,7 @@ html, body {
 }
 
 @-moz-keyframes scaleUpCenter {
-  /* line 443, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 443, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: scale(0.7);
@@ -838,7 +838,7 @@ html, body {
 }
 
 @keyframes scaleUpCenter {
-  /* line 446, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 446, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: scale(0.7);
@@ -846,7 +846,7 @@ html, body {
 }
 
 /* rotate sides first and scale */
-/* line 451, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 451, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRightSideFirst {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRightSideFirst .8s both ease-in;
@@ -856,7 +856,7 @@ html, body {
   animation: rotateRightSideFirst .8s both ease-in;
 }
 
-/* line 459, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 459, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateLeftSideFirst {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateLeftSideFirst .8s both ease-in;
@@ -866,7 +866,7 @@ html, body {
   animation: rotateLeftSideFirst .8s both ease-in;
 }
 
-/* line 467, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 467, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateTopSideFirst {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateTopSideFirst .8s both ease-in;
@@ -876,7 +876,7 @@ html, body {
   animation: rotateTopSideFirst .8s both ease-in;
 }
 
-/* line 475, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 475, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateBottomSideFirst {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateBottomSideFirst .8s both ease-in;
@@ -887,7 +887,7 @@ html, body {
 }
 
 /* flip */
-/* line 486, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 486, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipOutRight {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutRight .5s both ease-in;
@@ -897,7 +897,7 @@ html, body {
   animation: flipOutRight .5s both ease-in;
 }
 
-/* line 494, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 494, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipInLeft {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInLeft .5s both ease-out;
@@ -907,7 +907,7 @@ html, body {
   animation: flipInLeft .5s both ease-out;
 }
 
-/* line 502, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 502, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipOutLeft {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutLeft .5s both ease-in;
@@ -917,7 +917,7 @@ html, body {
   animation: flipOutLeft .5s both ease-in;
 }
 
-/* line 510, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 510, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipInRight {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInRight .5s both ease-out;
@@ -927,7 +927,7 @@ html, body {
   animation: flipInRight .5s both ease-out;
 }
 
-/* line 518, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 518, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipOutTop {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutTop .5s both ease-in;
@@ -937,7 +937,7 @@ html, body {
   animation: flipOutTop .5s both ease-in;
 }
 
-/* line 526, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 526, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipInBottom {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInBottom .5s both ease-out;
@@ -947,7 +947,7 @@ html, body {
   animation: flipInBottom .5s both ease-out;
 }
 
-/* line 534, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 534, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipOutBottom {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipOutBottom .5s both ease-in;
@@ -957,7 +957,7 @@ html, body {
   animation: flipOutBottom .5s both ease-in;
 }
 
-/* line 542, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 542, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-flipInTop {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: flipInTop .5s both ease-out;
@@ -968,7 +968,7 @@ html, body {
 }
 
 /* rotate fall */
-/* line 553, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 553, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateFall {
   -webkit-transform-origin: 0% 0%;
   -webkit-animation: rotateFall 1s both ease-in;
@@ -979,7 +979,7 @@ html, body {
 }
 
 /* rotate newspaper */
-/* line 563, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 563, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateOutNewspaper {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateOutNewspaper .5s both ease-in;
@@ -989,7 +989,7 @@ html, body {
   animation: rotateOutNewspaper .5s both ease-in;
 }
 
-/* line 571, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 571, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateInNewspaper {
   -webkit-transform-origin: 50% 50%;
   -webkit-animation: rotateInNewspaper .5s both ease-out;
@@ -1000,7 +1000,7 @@ html, body {
 }
 
 /* push */
-/* line 581, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 581, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePushLeft {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotatePushLeft .8s both ease;
@@ -1010,7 +1010,7 @@ html, body {
   animation: rotatePushLeft .8s both ease;
 }
 
-/* line 589, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 589, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePushRight {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotatePushRight .8s both ease;
@@ -1020,7 +1020,7 @@ html, body {
   animation: rotatePushRight .8s both ease;
 }
 
-/* line 597, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 597, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePushTop {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotatePushTop .8s both ease;
@@ -1030,7 +1030,7 @@ html, body {
   animation: rotatePushTop .8s both ease;
 }
 
-/* line 605, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 605, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePushBottom {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotatePushBottom .8s both ease;
@@ -1041,7 +1041,7 @@ html, body {
 }
 
 /* pull */
-/* line 615, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 615, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePullRight {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotatePullRight .5s both ease;
@@ -1051,7 +1051,7 @@ html, body {
   animation: rotatePullRight .5s both ease;
 }
 
-/* line 623, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 623, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePullLeft {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotatePullLeft .5s both ease;
@@ -1061,7 +1061,7 @@ html, body {
   animation: rotatePullLeft .5s both ease;
 }
 
-/* line 631, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 631, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePullTop {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotatePullTop .5s both ease;
@@ -1071,7 +1071,7 @@ html, body {
   animation: rotatePullTop .5s both ease;
 }
 
-/* line 639, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 639, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotatePullBottom {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotatePullBottom .5s both ease;
@@ -1082,7 +1082,7 @@ html, body {
 }
 
 /* fold */
-/* line 649, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 649, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateFoldRight {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateFoldRight .7s both ease;
@@ -1092,7 +1092,7 @@ html, body {
   animation: rotateFoldRight .7s both ease;
 }
 
-/* line 657, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 657, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateFoldLeft {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateFoldLeft .7s both ease;
@@ -1102,7 +1102,7 @@ html, body {
   animation: rotateFoldLeft .7s both ease;
 }
 
-/* line 665, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 665, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateFoldTop {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateFoldTop .7s both ease;
@@ -1112,7 +1112,7 @@ html, body {
   animation: rotateFoldTop .7s both ease;
 }
 
-/* line 673, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 673, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateFoldBottom {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateFoldBottom .7s both ease;
@@ -1123,7 +1123,7 @@ html, body {
 }
 
 /* unfold */
-/* line 683, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 683, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateUnfoldLeft {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateUnfoldLeft .7s both ease;
@@ -1133,7 +1133,7 @@ html, body {
   animation: rotateUnfoldLeft .7s both ease;
 }
 
-/* line 691, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 691, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateUnfoldRight {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateUnfoldRight .7s both ease;
@@ -1143,7 +1143,7 @@ html, body {
   animation: rotateUnfoldRight .7s both ease;
 }
 
-/* line 699, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 699, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateUnfoldTop {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateUnfoldTop .7s both ease;
@@ -1153,7 +1153,7 @@ html, body {
   animation: rotateUnfoldTop .7s both ease;
 }
 
-/* line 707, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 707, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateUnfoldBottom {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateUnfoldBottom .7s both ease;
@@ -1164,7 +1164,7 @@ html, body {
 }
 
 /* room walls */
-/* line 717, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 717, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateRoomLeftOut .8s both ease;
@@ -1174,7 +1174,7 @@ html, body {
   animation: rotateRoomLeftOut .8s both ease;
 }
 
-/* line 725, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 725, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRoomLeftIn .8s both ease;
@@ -1184,7 +1184,7 @@ html, body {
   animation: rotateRoomLeftIn .8s both ease;
 }
 
-/* line 733, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 733, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateRoomRightOut .8s both ease;
@@ -1194,7 +1194,7 @@ html, body {
   animation: rotateRoomRightOut .8s both ease;
 }
 
-/* line 741, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 741, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateRoomRightIn .8s both ease;
@@ -1204,7 +1204,7 @@ html, body {
   animation: rotateRoomRightIn .8s both ease;
 }
 
-/* line 749, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 749, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateRoomTopOut .8s both ease;
@@ -1214,7 +1214,7 @@ html, body {
   animation: rotateRoomTopOut .8s both ease;
 }
 
-/* line 757, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 757, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateRoomTopIn .8s both ease;
@@ -1224,7 +1224,7 @@ html, body {
   animation: rotateRoomTopIn .8s both ease;
 }
 
-/* line 765, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 765, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateRoomBottomOut .8s both ease;
@@ -1234,7 +1234,7 @@ html, body {
   animation: rotateRoomBottomOut .8s both ease;
 }
 
-/* line 773, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 773, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateRoomBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateRoomBottomIn .8s both ease;
@@ -1245,7 +1245,7 @@ html, body {
 }
 
 /* cube */
-/* line 783, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 783, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCubeLeftOut 0.4s both ease-in;
@@ -1255,7 +1255,7 @@ html, body {
   animation: rotateCubeLeftOut 0.4s both ease-in;
 }
 
-/* line 791, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 791, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCubeLeftIn 0.4s both ease-in;
@@ -1265,7 +1265,7 @@ html, body {
   animation: rotateCubeLeftIn 0.4s both ease-in;
 }
 
-/* line 799, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 799, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCubeRightOut 0.4s both ease-in;
@@ -1275,7 +1275,7 @@ html, body {
   animation: rotateCubeRightOut 0.4s both ease-in;
 }
 
-/* line 807, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 807, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCubeRightIn 0.4s both ease-in;
@@ -1285,7 +1285,7 @@ html, body {
   animation: rotateCubeRightIn 0.4s both ease-in;
 }
 
-/* line 815, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 815, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCubeTopOut 0.4s both ease-in;
@@ -1295,7 +1295,7 @@ html, body {
   animation: rotateCubeTopOut 0.4s both ease-in;
 }
 
-/* line 823, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 823, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCubeTopIn 0.4s both ease-in;
@@ -1305,7 +1305,7 @@ html, body {
   animation: rotateCubeTopIn 0.4s both ease-in;
 }
 
-/* line 831, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 831, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCubeBottomOut 0.4s both ease-in;
@@ -1315,7 +1315,7 @@ html, body {
   animation: rotateCubeBottomOut 0.4s both ease-in;
 }
 
-/* line 839, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 839, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCubeBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCubeBottomIn 0.4s both ease-in;
@@ -1326,7 +1326,7 @@ html, body {
 }
 
 /* carousel */
-/* line 849, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 849, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselLeftOut {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCarouselLeftOut .8s both ease;
@@ -1336,7 +1336,7 @@ html, body {
   animation: rotateCarouselLeftOut .8s both ease;
 }
 
-/* line 857, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 857, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselLeftIn {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCarouselLeftIn .8s both ease;
@@ -1346,7 +1346,7 @@ html, body {
   animation: rotateCarouselLeftIn .8s both ease;
 }
 
-/* line 865, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 865, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselRightOut {
   -webkit-transform-origin: 0% 50%;
   -webkit-animation: rotateCarouselRightOut .8s both ease;
@@ -1356,7 +1356,7 @@ html, body {
   animation: rotateCarouselRightOut .8s both ease;
 }
 
-/* line 873, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 873, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselRightIn {
   -webkit-transform-origin: 100% 50%;
   -webkit-animation: rotateCarouselRightIn .8s both ease;
@@ -1366,7 +1366,7 @@ html, body {
   animation: rotateCarouselRightIn .8s both ease;
 }
 
-/* line 881, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 881, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselTopOut {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCarouselTopOut .8s both ease;
@@ -1376,7 +1376,7 @@ html, body {
   animation: rotateCarouselTopOut .8s both ease;
 }
 
-/* line 889, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 889, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselTopIn {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCarouselTopIn .8s both ease;
@@ -1386,7 +1386,7 @@ html, body {
   animation: rotateCarouselTopIn .8s both ease;
 }
 
-/* line 897, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 897, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselBottomOut {
   -webkit-transform-origin: 50% 0%;
   -webkit-animation: rotateCarouselBottomOut .8s both ease;
@@ -1396,7 +1396,7 @@ html, body {
   animation: rotateCarouselBottomOut .8s both ease;
 }
 
-/* line 905, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 905, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateCarouselBottomIn {
   -webkit-transform-origin: 50% 100%;
   -webkit-animation: rotateCarouselBottomIn .8s both ease;
@@ -1407,7 +1407,7 @@ html, body {
 }
 
 /* sides */
-/* line 915, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 915, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateSidesOut {
   -webkit-transform-origin: -50% 50%;
   -webkit-animation: rotateSidesOut .5s both ease-in;
@@ -1417,7 +1417,7 @@ html, body {
   animation: rotateSidesOut .5s both ease-in;
 }
 
-/* line 923, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 923, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateSidesIn {
   -webkit-transform-origin: 150% 50%;
   -webkit-animation: rotateSidesIn .5s both ease-out;
@@ -1428,14 +1428,14 @@ html, body {
 }
 
 /* slide */
-/* line 933, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 933, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateSlideOut {
   -webkit-animation: rotateSlideOut 1s both ease;
   -moz-animation: rotateSlideOut 1s both ease;
   animation: rotateSlideOut 1s both ease;
 }
 
-/* line 938, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 938, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-rotateSlideIn {
   -webkit-animation: rotateSlideIn 1s both ease;
   -moz-animation: rotateSlideIn 1s both ease;
@@ -1445,14 +1445,14 @@ html, body {
 /********************************* keyframes **************************************/
 /* rotate sides first and scale */
 @-webkit-keyframes rotateRightSideFirst {
-  /* line 949, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 949, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -webkit-transform: rotateY(15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 950, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 950, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1460,14 +1460,14 @@ html, body {
 }
 
 @-moz-keyframes rotateRightSideFirst {
-  /* line 953, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 953, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -moz-transform: rotateY(15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 954, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 954, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1475,14 +1475,14 @@ html, body {
 }
 
 @keyframes rotateRightSideFirst {
-  /* line 957, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 957, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     transform: rotateY(15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 958, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 958, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1490,14 +1490,14 @@ html, body {
 }
 
 @-webkit-keyframes rotateLeftSideFirst {
-  /* line 962, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 962, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -webkit-transform: rotateY(-15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 963, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 963, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1505,14 +1505,14 @@ html, body {
 }
 
 @-moz-keyframes rotateLeftSideFirst {
-  /* line 966, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 966, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -moz-transform: rotateY(-15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 967, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 967, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1520,14 +1520,14 @@ html, body {
 }
 
 @keyframes rotateLeftSideFirst {
-  /* line 970, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 970, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     transform: rotateY(-15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 971, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 971, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1535,14 +1535,14 @@ html, body {
 }
 
 @-webkit-keyframes rotateTopSideFirst {
-  /* line 975, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 975, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -webkit-transform: rotateX(15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 976, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 976, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1550,14 +1550,14 @@ html, body {
 }
 
 @-moz-keyframes rotateTopSideFirst {
-  /* line 979, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 979, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -moz-transform: rotateX(15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 980, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 980, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1565,14 +1565,14 @@ html, body {
 }
 
 @keyframes rotateTopSideFirst {
-  /* line 983, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 983, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     transform: rotateX(15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 984, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 984, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1580,14 +1580,14 @@ html, body {
 }
 
 @-webkit-keyframes rotateBottomSideFirst {
-  /* line 988, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 988, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -webkit-transform: rotateX(-15deg);
     opacity: .8;
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 989, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 989, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -webkit-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1595,14 +1595,14 @@ html, body {
 }
 
 @-moz-keyframes rotateBottomSideFirst {
-  /* line 992, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 992, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -moz-transform: rotateX(-15deg);
     opacity: .8;
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 993, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 993, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -moz-transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1610,14 +1610,14 @@ html, body {
 }
 
 @keyframes rotateBottomSideFirst {
-  /* line 996, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 996, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     transform: rotateX(-15deg);
     opacity: .8;
     animation-timing-function: ease-out;
   }
 
-  /* line 997, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 997, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     transform: scale(0.8) translateZ(-200px);
     opacity: 0;
@@ -1626,7 +1626,7 @@ html, body {
 
 /* flip */
 @-webkit-keyframes flipOutRight {
-  /* line 1003, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1003, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1634,7 +1634,7 @@ html, body {
 }
 
 @-moz-keyframes flipOutRight {
-  /* line 1006, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1006, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1642,7 +1642,7 @@ html, body {
 }
 
 @keyframes flipOutRight {
-  /* line 1009, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1009, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1650,7 +1650,7 @@ html, body {
 }
 
 @-webkit-keyframes flipInLeft {
-  /* line 1013, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1013, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1658,7 +1658,7 @@ html, body {
 }
 
 @-moz-keyframes flipInLeft {
-  /* line 1016, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1016, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1666,7 +1666,7 @@ html, body {
 }
 
 @keyframes flipInLeft {
-  /* line 1019, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1019, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1674,7 +1674,7 @@ html, body {
 }
 
 @-webkit-keyframes flipOutLeft {
-  /* line 1023, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1023, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1682,7 +1682,7 @@ html, body {
 }
 
 @-moz-keyframes flipOutLeft {
-  /* line 1026, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1026, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1690,7 +1690,7 @@ html, body {
 }
 
 @keyframes flipOutLeft {
-  /* line 1029, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1029, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateZ(-1000px) rotateY(-90deg);
     opacity: 0.2;
@@ -1698,7 +1698,7 @@ html, body {
 }
 
 @-webkit-keyframes flipInRight {
-  /* line 1033, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1033, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1706,7 +1706,7 @@ html, body {
 }
 
 @-moz-keyframes flipInRight {
-  /* line 1036, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1036, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1714,7 +1714,7 @@ html, body {
 }
 
 @keyframes flipInRight {
-  /* line 1039, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1039, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateZ(-1000px) rotateY(90deg);
     opacity: 0.2;
@@ -1722,7 +1722,7 @@ html, body {
 }
 
 @-webkit-keyframes flipOutTop {
-  /* line 1043, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1043, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1730,7 +1730,7 @@ html, body {
 }
 
 @-moz-keyframes flipOutTop {
-  /* line 1046, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1046, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1738,7 +1738,7 @@ html, body {
 }
 
 @keyframes flipOutTop {
-  /* line 1049, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1049, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1746,7 +1746,7 @@ html, body {
 }
 
 @-webkit-keyframes flipInBottom {
-  /* line 1053, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1053, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1754,7 +1754,7 @@ html, body {
 }
 
 @-moz-keyframes flipInBottom {
-  /* line 1056, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1056, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1762,7 +1762,7 @@ html, body {
 }
 
 @keyframes flipInBottom {
-  /* line 1059, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1059, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1770,7 +1770,7 @@ html, body {
 }
 
 @-webkit-keyframes flipOutBottom {
-  /* line 1063, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1063, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1778,7 +1778,7 @@ html, body {
 }
 
 @-moz-keyframes flipOutBottom {
-  /* line 1066, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1066, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1786,7 +1786,7 @@ html, body {
 }
 
 @keyframes flipOutBottom {
-  /* line 1069, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1069, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateZ(-1000px) rotateX(-90deg);
     opacity: 0.2;
@@ -1794,7 +1794,7 @@ html, body {
 }
 
 @-webkit-keyframes flipInTop {
-  /* line 1073, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1073, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1802,7 +1802,7 @@ html, body {
 }
 
 @-moz-keyframes flipInTop {
-  /* line 1076, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1076, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1810,7 +1810,7 @@ html, body {
 }
 
 @keyframes flipInTop {
-  /* line 1079, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1079, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateZ(-1000px) rotateX(90deg);
     opacity: 0.2;
@@ -1819,84 +1819,84 @@ html, body {
 
 /* fall */
 @-webkit-keyframes rotateFall {
-  /* line 1085, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1085, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     -webkit-transform: rotateZ(0deg);
   }
 
-  /* line 1086, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1086, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   20% {
     -webkit-transform: rotateZ(10deg);
     -webkit-animation-timing-function: ease-out;
   }
 
-  /* line 1087, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1087, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -webkit-transform: rotateZ(17deg);
   }
 
-  /* line 1088, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1088, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   60% {
     -webkit-transform: rotateZ(16deg);
   }
 
-  /* line 1089, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1089, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -webkit-transform: translateY(100%) rotateZ(17deg);
   }
 }
 
 @-moz-keyframes rotateFall {
-  /* line 1092, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1092, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     -moz-transform: rotateZ(0deg);
   }
 
-  /* line 1093, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1093, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   20% {
     -moz-transform: rotateZ(10deg);
     -moz-animation-timing-function: ease-out;
   }
 
-  /* line 1094, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1094, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     -moz-transform: rotateZ(17deg);
   }
 
-  /* line 1095, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1095, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   60% {
     -moz-transform: rotateZ(16deg);
   }
 
-  /* line 1096, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1096, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     -moz-transform: translateY(100%) rotateZ(17deg);
   }
 }
 
 @keyframes rotateFall {
-  /* line 1099, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1099, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     transform: rotateZ(0deg);
   }
 
-  /* line 1100, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1100, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   20% {
     transform: rotateZ(10deg);
     animation-timing-function: ease-out;
   }
 
-  /* line 1101, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1101, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   40% {
     transform: rotateZ(17deg);
   }
 
-  /* line 1102, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1102, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   60% {
     transform: rotateZ(16deg);
   }
 
-  /* line 1103, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1103, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     transform: translateY(100%) rotateZ(17deg);
   }
@@ -1904,7 +1904,7 @@ html, body {
 
 /* newspaper */
 @-webkit-keyframes rotateOutNewspaper {
-  /* line 1109, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1109, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -webkit-transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -1912,7 +1912,7 @@ html, body {
 }
 
 @-moz-keyframes rotateOutNewspaper {
-  /* line 1112, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1112, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     -moz-transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -1920,7 +1920,7 @@ html, body {
 }
 
 @keyframes rotateOutNewspaper {
-  /* line 1115, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1115, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     transform: translateZ(-3000px) rotateZ(360deg);
     opacity: 0;
@@ -1928,7 +1928,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateInNewspaper {
-  /* line 1119, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1119, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -webkit-transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -1936,7 +1936,7 @@ html, body {
 }
 
 @-moz-keyframes rotateInNewspaper {
-  /* line 1122, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1122, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     -moz-transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -1944,7 +1944,7 @@ html, body {
 }
 
 @keyframes rotateInNewspaper {
-  /* line 1125, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1125, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     transform: translateZ(-3000px) rotateZ(-360deg);
     opacity: 0;
@@ -1953,7 +1953,7 @@ html, body {
 
 /* push */
 @-webkit-keyframes rotatePushLeft {
-  /* line 1131, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1131, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateY(90deg);
@@ -1961,7 +1961,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePushLeft {
-  /* line 1134, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1134, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: rotateY(90deg);
@@ -1969,7 +1969,7 @@ html, body {
 }
 
 @keyframes rotatePushLeft {
-  /* line 1137, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1137, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: rotateY(90deg);
@@ -1977,7 +1977,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePushRight {
-  /* line 1141, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1141, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateY(-90deg);
@@ -1985,7 +1985,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePushRight {
-  /* line 1144, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1144, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: rotateY(-90deg);
@@ -1993,7 +1993,7 @@ html, body {
 }
 
 @keyframes rotatePushRight {
-  /* line 1147, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1147, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: rotateY(-90deg);
@@ -2001,7 +2001,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePushTop {
-  /* line 1151, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1151, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateX(-90deg);
@@ -2009,7 +2009,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePushTop {
-  /* line 1154, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1154, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: rotateX(-90deg);
@@ -2017,7 +2017,7 @@ html, body {
 }
 
 @keyframes rotatePushTop {
-  /* line 1157, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1157, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: rotateX(-90deg);
@@ -2025,7 +2025,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePushBottom {
-  /* line 1161, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1161, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: rotateX(90deg);
@@ -2033,7 +2033,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePushBottom {
-  /* line 1164, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1164, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: rotateX(90deg);
@@ -2041,7 +2041,7 @@ html, body {
 }
 
 @keyframes rotatePushBottom {
-  /* line 1167, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1167, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: rotateX(90deg);
@@ -2050,7 +2050,7 @@ html, body {
 
 /* pull */
 @-webkit-keyframes rotatePullRight {
-  /* line 1173, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1173, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateY(-90deg);
@@ -2058,7 +2058,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePullRight {
-  /* line 1176, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1176, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: rotateY(-90deg);
@@ -2066,7 +2066,7 @@ html, body {
 }
 
 @keyframes rotatePullRight {
-  /* line 1179, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1179, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: rotateY(-90deg);
@@ -2074,7 +2074,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePullLeft {
-  /* line 1183, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1183, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateY(90deg);
@@ -2082,7 +2082,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePullLeft {
-  /* line 1186, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1186, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: rotateY(90deg);
@@ -2090,7 +2090,7 @@ html, body {
 }
 
 @keyframes rotatePullLeft {
-  /* line 1189, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1189, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: rotateY(90deg);
@@ -2098,7 +2098,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePullTop {
-  /* line 1193, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1193, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateX(-90deg);
@@ -2106,7 +2106,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePullTop {
-  /* line 1196, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1196, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: rotateX(-90deg);
@@ -2114,7 +2114,7 @@ html, body {
 }
 
 @keyframes rotatePullTop {
-  /* line 1199, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1199, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: rotateX(-90deg);
@@ -2122,7 +2122,7 @@ html, body {
 }
 
 @-webkit-keyframes rotatePullBottom {
-  /* line 1203, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1203, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: rotateX(90deg);
@@ -2130,7 +2130,7 @@ html, body {
 }
 
 @-moz-keyframes rotatePullBottom {
-  /* line 1206, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1206, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: rotateX(90deg);
@@ -2138,7 +2138,7 @@ html, body {
 }
 
 @keyframes rotatePullBottom {
-  /* line 1209, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1209, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: rotateX(90deg);
@@ -2147,7 +2147,7 @@ html, body {
 
 /* fold */
 @-webkit-keyframes rotateFoldRight {
-  /* line 1215, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1215, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -2155,7 +2155,7 @@ html, body {
 }
 
 @-moz-keyframes rotateFoldRight {
-  /* line 1218, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1218, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -2163,7 +2163,7 @@ html, body {
 }
 
 @keyframes rotateFoldRight {
-  /* line 1221, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1221, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: translateX(100%) rotateY(90deg);
@@ -2171,7 +2171,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateFoldLeft {
-  /* line 1225, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1225, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -2179,7 +2179,7 @@ html, body {
 }
 
 @-moz-keyframes rotateFoldLeft {
-  /* line 1228, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1228, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -2187,7 +2187,7 @@ html, body {
 }
 
 @keyframes rotateFoldLeft {
-  /* line 1231, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1231, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: translateX(-100%) rotateY(-90deg);
@@ -2195,7 +2195,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateFoldTop {
-  /* line 1235, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1235, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -2203,7 +2203,7 @@ html, body {
 }
 
 @-moz-keyframes rotateFoldTop {
-  /* line 1238, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1238, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -2211,7 +2211,7 @@ html, body {
 }
 
 @keyframes rotateFoldTop {
-  /* line 1241, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1241, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: translateY(-100%) rotateX(90deg);
@@ -2219,7 +2219,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateFoldBottom {
-  /* line 1245, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1245, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -2227,7 +2227,7 @@ html, body {
 }
 
 @-moz-keyframes rotateFoldBottom {
-  /* line 1248, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1248, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -2235,7 +2235,7 @@ html, body {
 }
 
 @keyframes rotateFoldBottom {
-  /* line 1251, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1251, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: translateY(100%) rotateX(-90deg);
@@ -2244,7 +2244,7 @@ html, body {
 
 /* unfold */
 @-webkit-keyframes rotateUnfoldLeft {
-  /* line 1257, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1257, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -2252,7 +2252,7 @@ html, body {
 }
 
 @-moz-keyframes rotateUnfoldLeft {
-  /* line 1260, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1260, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -2260,7 +2260,7 @@ html, body {
 }
 
 @keyframes rotateUnfoldLeft {
-  /* line 1263, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1263, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: translateX(-100%) rotateY(-90deg);
@@ -2268,7 +2268,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateUnfoldRight {
-  /* line 1267, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1267, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -2276,7 +2276,7 @@ html, body {
 }
 
 @-moz-keyframes rotateUnfoldRight {
-  /* line 1270, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1270, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -2284,7 +2284,7 @@ html, body {
 }
 
 @keyframes rotateUnfoldRight {
-  /* line 1273, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1273, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: translateX(100%) rotateY(90deg);
@@ -2292,7 +2292,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateUnfoldTop {
-  /* line 1277, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1277, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -2300,7 +2300,7 @@ html, body {
 }
 
 @-moz-keyframes rotateUnfoldTop {
-  /* line 1280, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1280, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -2308,7 +2308,7 @@ html, body {
 }
 
 @keyframes rotateUnfoldTop {
-  /* line 1283, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1283, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: translateY(-100%) rotateX(90deg);
@@ -2316,7 +2316,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateUnfoldBottom {
-  /* line 1287, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1287, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -2324,7 +2324,7 @@ html, body {
 }
 
 @-moz-keyframes rotateUnfoldBottom {
-  /* line 1290, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1290, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -2332,7 +2332,7 @@ html, body {
 }
 
 @keyframes rotateUnfoldBottom {
-  /* line 1293, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1293, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: translateY(100%) rotateX(-90deg);
@@ -2341,7 +2341,7 @@ html, body {
 
 /* room walls */
 @-webkit-keyframes rotateRoomLeftOut {
-  /* line 1299, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1299, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(90deg);
@@ -2349,7 +2349,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomLeftOut {
-  /* line 1302, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1302, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(90deg);
@@ -2357,7 +2357,7 @@ html, body {
 }
 
 @keyframes rotateRoomLeftOut {
-  /* line 1305, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1305, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateX(-100%) rotateY(90deg);
@@ -2365,7 +2365,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomLeftIn {
-  /* line 1309, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1309, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(-90deg);
@@ -2373,7 +2373,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomLeftIn {
-  /* line 1312, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1312, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(-90deg);
@@ -2381,7 +2381,7 @@ html, body {
 }
 
 @keyframes rotateRoomLeftIn {
-  /* line 1315, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1315, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateX(100%) rotateY(-90deg);
@@ -2389,7 +2389,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomRightOut {
-  /* line 1319, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1319, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(-90deg);
@@ -2397,7 +2397,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomRightOut {
-  /* line 1322, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1322, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(-90deg);
@@ -2405,7 +2405,7 @@ html, body {
 }
 
 @keyframes rotateRoomRightOut {
-  /* line 1325, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1325, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateX(100%) rotateY(-90deg);
@@ -2413,7 +2413,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomRightIn {
-  /* line 1329, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1329, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(90deg);
@@ -2421,7 +2421,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomRightIn {
-  /* line 1332, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1332, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(90deg);
@@ -2429,7 +2429,7 @@ html, body {
 }
 
 @keyframes rotateRoomRightIn {
-  /* line 1335, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1335, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateX(-100%) rotateY(90deg);
@@ -2437,7 +2437,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomTopOut {
-  /* line 1339, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1339, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(-90deg);
@@ -2445,7 +2445,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomTopOut {
-  /* line 1342, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1342, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(-90deg);
@@ -2453,7 +2453,7 @@ html, body {
 }
 
 @keyframes rotateRoomTopOut {
-  /* line 1345, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1345, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateY(-100%) rotateX(-90deg);
@@ -2461,7 +2461,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomTopIn {
-  /* line 1349, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1349, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(90deg);
@@ -2469,7 +2469,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomTopIn {
-  /* line 1352, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1352, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(90deg);
@@ -2477,7 +2477,7 @@ html, body {
 }
 
 @keyframes rotateRoomTopIn {
-  /* line 1355, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1355, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateY(100%) rotateX(90deg);
@@ -2485,7 +2485,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomBottomOut {
-  /* line 1359, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1359, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(90deg);
@@ -2493,7 +2493,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomBottomOut {
-  /* line 1362, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1362, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(90deg);
@@ -2501,7 +2501,7 @@ html, body {
 }
 
 @keyframes rotateRoomBottomOut {
-  /* line 1365, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1365, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateY(100%) rotateX(90deg);
@@ -2509,7 +2509,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateRoomBottomIn {
-  /* line 1369, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1369, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(-90deg);
@@ -2517,7 +2517,7 @@ html, body {
 }
 
 @-moz-keyframes rotateRoomBottomIn {
-  /* line 1372, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1372, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(-90deg);
@@ -2525,7 +2525,7 @@ html, body {
 }
 
 @keyframes rotateRoomBottomIn {
-  /* line 1375, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1375, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateY(-100%) rotateX(-90deg);
@@ -2534,13 +2534,13 @@ html, body {
 
 /* cube */
 @-webkit-keyframes rotateCubeLeftOut {
-  /* line 1381, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1381, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1382, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1382, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
@@ -2548,13 +2548,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeLeftOut {
-  /* line 1385, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1385, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1386, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1386, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(-90deg);
@@ -2562,13 +2562,13 @@ html, body {
 }
 
 @keyframes rotateCubeLeftOut {
-  /* line 1389, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1389, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
   }
 
-  /* line 1390, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1390, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     transform: translateX(-100%) rotateY(-90deg);
@@ -2576,13 +2576,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeLeftIn {
-  /* line 1394, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1394, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1395, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1395, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -2590,13 +2590,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeLeftIn {
-  /* line 1398, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1398, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1399, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1399, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -2604,13 +2604,13 @@ html, body {
 }
 
 @keyframes rotateCubeLeftIn {
-  /* line 1402, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1402, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     transform: translateX(100%) rotateY(90deg);
   }
 
-  /* line 1403, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1403, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(50%) translateZ(-200px) rotateY(45deg);
@@ -2618,13 +2618,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeRightOut {
-  /* line 1407, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1407, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1408, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1408, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateX(100%) rotateY(90deg);
@@ -2632,13 +2632,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeRightOut {
-  /* line 1411, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1411, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1412, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1412, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -moz-transform: translateX(100%) rotateY(90deg);
@@ -2646,13 +2646,13 @@ html, body {
 }
 
 @keyframes rotateCubeRightOut {
-  /* line 1415, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1415, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(50%) translateZ(-200px) rotateY(45deg);
   }
 
-  /* line 1416, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1416, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     transform: translateX(100%) rotateY(90deg);
@@ -2660,13 +2660,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeRightIn {
-  /* line 1420, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1420, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1421, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1421, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -2674,13 +2674,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeRightIn {
-  /* line 1424, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1424, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -moz-transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1425, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1425, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -2688,13 +2688,13 @@ html, body {
 }
 
 @keyframes rotateCubeRightIn {
-  /* line 1428, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1428, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     transform: translateX(-100%) rotateY(-90deg);
   }
 
-  /* line 1429, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1429, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateX(-50%) translateZ(-200px) rotateY(-45deg);
@@ -2702,13 +2702,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeTopOut {
-  /* line 1433, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1433, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1434, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1434, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(90deg);
@@ -2716,13 +2716,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeTopOut {
-  /* line 1437, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1437, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1438, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1438, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(90deg);
@@ -2730,13 +2730,13 @@ html, body {
 }
 
 @keyframes rotateCubeTopOut {
-  /* line 1441, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1441, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
   }
 
-  /* line 1442, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1442, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     transform: translateY(-100%) rotateX(90deg);
@@ -2744,13 +2744,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeTopIn {
-  /* line 1446, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1446, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1447, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1447, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -2758,13 +2758,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeTopIn {
-  /* line 1450, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1450, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1451, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1451, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -2772,13 +2772,13 @@ html, body {
 }
 
 @keyframes rotateCubeTopIn {
-  /* line 1454, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1454, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     transform: translateY(100%) rotateX(-90deg);
   }
 
-  /* line 1455, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1455, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
@@ -2786,13 +2786,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeBottomOut {
-  /* line 1459, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1459, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1460, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1460, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -webkit-transform: translateY(100%) rotateX(-90deg);
@@ -2800,13 +2800,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeBottomOut {
-  /* line 1463, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1463, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1464, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1464, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     -moz-transform: translateY(100%) rotateX(-90deg);
@@ -2814,13 +2814,13 @@ html, body {
 }
 
 @keyframes rotateCubeBottomOut {
-  /* line 1467, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1467, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(50%) translateZ(-200px) rotateX(-45deg);
   }
 
-  /* line 1468, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1468, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .3;
     transform: translateY(100%) rotateX(-90deg);
@@ -2828,13 +2828,13 @@ html, body {
 }
 
 @-webkit-keyframes rotateCubeBottomIn {
-  /* line 1472, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1472, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -webkit-transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1473, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1473, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -webkit-animation-timing-function: ease-out;
     -webkit-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -2842,13 +2842,13 @@ html, body {
 }
 
 @-moz-keyframes rotateCubeBottomIn {
-  /* line 1476, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1476, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     -moz-transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1477, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1477, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     -moz-animation-timing-function: ease-out;
     -moz-transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -2856,13 +2856,13 @@ html, body {
 }
 
 @keyframes rotateCubeBottomIn {
-  /* line 1480, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1480, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0% {
     opacity: .3;
     transform: translateY(-100%) rotateX(90deg);
   }
 
-  /* line 1481, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1481, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   50% {
     animation-timing-function: ease-out;
     transform: translateY(-50%) translateZ(-200px) rotateX(45deg);
@@ -2871,7 +2871,7 @@ html, body {
 
 /* carousel */
 @-webkit-keyframes rotateCarouselLeftOut {
-  /* line 1487, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1487, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -2879,7 +2879,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselLeftOut {
-  /* line 1490, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1490, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -2887,7 +2887,7 @@ html, body {
 }
 
 @keyframes rotateCarouselLeftOut {
-  /* line 1493, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1493, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateX(-150%) scale(0.4) rotateY(-65deg);
@@ -2895,7 +2895,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselLeftIn {
-  /* line 1497, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1497, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2903,7 +2903,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselLeftIn {
-  /* line 1500, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1500, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2911,7 +2911,7 @@ html, body {
 }
 
 @keyframes rotateCarouselLeftIn {
-  /* line 1503, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1503, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2919,7 +2919,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselRightOut {
-  /* line 1507, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1507, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2927,7 +2927,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselRightOut {
-  /* line 1510, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1510, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2935,7 +2935,7 @@ html, body {
 }
 
 @keyframes rotateCarouselRightOut {
-  /* line 1513, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1513, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateX(200%) scale(0.4) rotateY(65deg);
@@ -2943,7 +2943,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselRightIn {
-  /* line 1517, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1517, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -2951,7 +2951,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselRightIn {
-  /* line 1520, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1520, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -2959,7 +2959,7 @@ html, body {
 }
 
 @keyframes rotateCarouselRightIn {
-  /* line 1523, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1523, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateX(-200%) scale(0.4) rotateY(-65deg);
@@ -2967,7 +2967,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselTopOut {
-  /* line 1527, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1527, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -2975,7 +2975,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselTopOut {
-  /* line 1530, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1530, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -2983,7 +2983,7 @@ html, body {
 }
 
 @keyframes rotateCarouselTopOut {
-  /* line 1533, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1533, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -2991,7 +2991,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselTopIn {
-  /* line 1537, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1537, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -2999,7 +2999,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselTopIn {
-  /* line 1540, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1540, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -3007,7 +3007,7 @@ html, body {
 }
 
 @keyframes rotateCarouselTopIn {
-  /* line 1543, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1543, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -3015,7 +3015,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselBottomOut {
-  /* line 1547, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1547, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -webkit-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -3023,7 +3023,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselBottomOut {
-  /* line 1550, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1550, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     -moz-transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -3031,7 +3031,7 @@ html, body {
 }
 
 @keyframes rotateCarouselBottomOut {
-  /* line 1553, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1553, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: .3;
     transform: translateY(200%) scale(0.4) rotateX(-65deg);
@@ -3039,7 +3039,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateCarouselBottomIn {
-  /* line 1557, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1557, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -webkit-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -3047,7 +3047,7 @@ html, body {
 }
 
 @-moz-keyframes rotateCarouselBottomIn {
-  /* line 1560, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1560, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     -moz-transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -3055,7 +3055,7 @@ html, body {
 }
 
 @keyframes rotateCarouselBottomIn {
-  /* line 1563, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1563, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: .3;
     transform: translateY(-200%) scale(0.4) rotateX(65deg);
@@ -3064,7 +3064,7 @@ html, body {
 
 /* sides */
 @-webkit-keyframes rotateSidesOut {
-  /* line 1569, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1569, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -webkit-transform: translateZ(-500px) rotateY(90deg);
@@ -3072,7 +3072,7 @@ html, body {
 }
 
 @-moz-keyframes rotateSidesOut {
-  /* line 1572, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1572, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     -moz-transform: translateZ(-500px) rotateY(90deg);
@@ -3080,7 +3080,7 @@ html, body {
 }
 
 @keyframes rotateSidesOut {
-  /* line 1575, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1575, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   to {
     opacity: 0;
     transform: translateZ(-500px) rotateY(90deg);
@@ -3088,7 +3088,7 @@ html, body {
 }
 
 @-webkit-keyframes rotateSidesIn {
-  /* line 1579, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1579, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -webkit-transform: translateZ(-500px) rotateY(-90deg);
@@ -3096,7 +3096,7 @@ html, body {
 }
 
 @-moz-keyframes rotateSidesIn {
-  /* line 1582, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1582, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     -moz-transform: translateZ(-500px) rotateY(-90deg);
@@ -3104,7 +3104,7 @@ html, body {
 }
 
 @keyframes rotateSidesIn {
-  /* line 1585, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1585, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   from {
     opacity: 0;
     transform: translateZ(-500px) rotateY(-90deg);
@@ -3113,19 +3113,19 @@ html, body {
 
 /* slide */
 @-webkit-keyframes rotateSlideOut {
-  /* line 1591, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1591, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   25% {
     opacity: .5;
     -webkit-transform: translateZ(-500px);
   }
 
-  /* line 1592, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1592, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1593, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1593, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(-200%);
@@ -3133,19 +3133,19 @@ html, body {
 }
 
 @-moz-keyframes rotateSlideOut {
-  /* line 1596, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1596, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   25% {
     opacity: .5;
     -moz-transform: translateZ(-500px);
   }
 
-  /* line 1597, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1597, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1598, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1598, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(-200%);
@@ -3153,19 +3153,19 @@ html, body {
 }
 
 @keyframes rotateSlideOut {
-  /* line 1601, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1601, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   25% {
     opacity: .5;
     transform: translateZ(-500px);
   }
 
-  /* line 1602, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1602, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     transform: translateZ(-500px) translateX(-200%);
   }
 
-  /* line 1603, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1603, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: .5;
     transform: translateZ(-500px) translateX(-200%);
@@ -3173,19 +3173,19 @@ html, body {
 }
 
 @-webkit-keyframes rotateSlideIn {
-  /* line 1607, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1607, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0%, 25% {
     opacity: .5;
     -webkit-transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1608, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1608, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     -webkit-transform: translateZ(-500px);
   }
 
-  /* line 1609, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1609, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: 1;
     -webkit-transform: translateZ(0) translateX(0);
@@ -3193,19 +3193,19 @@ html, body {
 }
 
 @-moz-keyframes rotateSlideIn {
-  /* line 1612, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1612, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0%, 25% {
     opacity: .5;
     -moz-transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1613, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1613, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     -moz-transform: translateZ(-500px);
   }
 
-  /* line 1614, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1614, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: 1;
     -moz-transform: translateZ(0) translateX(0);
@@ -3213,19 +3213,19 @@ html, body {
 }
 
 @keyframes rotateSlideIn {
-  /* line 1617, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1617, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   0%, 25% {
     opacity: .5;
     transform: translateZ(-500px) translateX(200%);
   }
 
-  /* line 1618, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1618, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   75% {
     opacity: .5;
     transform: translateZ(-500px);
   }
 
-  /* line 1619, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+  /* line 1619, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
   100% {
     opacity: 1;
     transform: translateZ(0) translateX(0);
@@ -3233,56 +3233,56 @@ html, body {
 }
 
 /* animation delay classes */
-/* line 1624, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1624, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay100 {
   -webkit-animation-delay: .1s;
   -moz-animation-delay: .1s;
   animation-delay: .1s;
 }
 
-/* line 1629, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1629, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay180 {
   -webkit-animation-delay: .180s;
   -moz-animation-delay: .180s;
   animation-delay: .180s;
 }
 
-/* line 1634, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1634, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay200 {
   -webkit-animation-delay: .2s;
   -moz-animation-delay: .2s;
   animation-delay: .2s;
 }
 
-/* line 1639, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1639, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay300 {
   -webkit-animation-delay: .3s;
   -moz-animation-delay: .3s;
   animation-delay: .3s;
 }
 
-/* line 1644, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1644, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay400 {
   -webkit-animation-delay: .4s;
   -moz-animation-delay: .4s;
   animation-delay: .4s;
 }
 
-/* line 1649, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1649, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay500 {
   -webkit-animation-delay: .5s;
   -moz-animation-delay: .5s;
   animation-delay: .5s;
 }
 
-/* line 1654, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1654, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay700 {
   -webkit-animation-delay: .7s;
   -moz-animation-delay: .7s;
   animation-delay: .7s;
 }
 
-/* line 1659, /Users/franzwilding/Sites/istudi/sass/lib/_animations.scss */
+/* line 1659, /Users/franzwilding/Sites/istudi/www/sass/lib/_animations.scss */
 .pt-page-delay1000 {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
@@ -3291,7 +3291,7 @@ html, body {
 
 /* base */
 /* COLORS */
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn {
   width: 22px;
   height: 48px;
@@ -3306,7 +3306,7 @@ html, body {
   *display: inline;
 }
 
-/* line 8, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 8, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.menu {
   background: url("img/icons/menu.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3315,7 +3315,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 13, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 13, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.ok {
   background: url("img/icons/ok.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3324,7 +3324,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 18, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 18, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.back {
   background: url("img/icons/back.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3333,7 +3333,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 23, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.navigation {
   width: 12px;
   height: 12px;
@@ -3344,7 +3344,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 30, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 30, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.checkbox {
   width: 16px;
   height: 16px;
@@ -3354,7 +3354,7 @@ html, body {
   -o-background-size: contain;
   background-size: contain;
 }
-/* line 36, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 36, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.checkbox.active {
   background: url("img/icons/checkbox_active.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3363,7 +3363,18 @@ html, body {
   background-size: contain;
 }
 
-/* line 44, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 42, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+.icn.loading {
+  width: 16px;
+  height: 16px;
+  background: url("img/icons/loading.gif") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+
+/* line 51, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.news {
   background: url("img/icons/news.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3372,7 +3383,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 49, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 56, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.index {
   background: url("img/icons/index.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3381,7 +3392,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 54, /Users/franzwilding/Sites/istudi/sass/modules/_icons.scss */
+/* line 61, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.settings {
   background: url("img/icons/settings.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3394,7 +3405,7 @@ html, body {
    v2.0 | 20110126
    License: none (public domain)
 */
-/* line 18, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 18, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -3417,65 +3428,65 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-/* line 28, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 28, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
-/* line 31, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 31, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 body {
   line-height: 1;
 }
 
-/* line 34, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 34, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 37, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 37, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 blockquote, q {
   quotes: none;
 }
 
-/* line 41, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 41, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
   content: none;
 }
 
-/* line 45, /Users/franzwilding/Sites/istudi/sass/base/_reset.scss */
+/* line 45, /Users/franzwilding/Sites/istudi/www/sass/base/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 1, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 1, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial;
   font-size: 1em;
 }
 
-/* line 6, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 6, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 .c {
   clear: both;
   margin: 0;
   padding: 0;
 }
 
-/* line 12, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 12, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 p, ul, ol, dl, h1, h2, h3, h4, h5, h6, table, pre, blockquote, hr {
   margin: 20px 0;
 }
 
-/* line 16, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 16, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 h2 {
   color: #bf0000;
   font-size: 1.4em;
 }
 
-/* line 21, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 21, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 h4 {
   font-weight: 200;
   color: #666666;
@@ -3483,33 +3494,33 @@ h4 {
   font-size: 1.2em;
 }
 
-/* line 35, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 35, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 i {
   font-style: italic;
 }
 
-/* line 57, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 57, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 ol, ul {
   margin: 0 0 20px 20px;
 }
 
-/* line 65, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 65, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 ol {
   list-style: decimal;
 }
 
-/* line 69, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 69, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 ul {
   list-style: disc;
 }
 
-/* line 88, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 88, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 table tr td {
   padding: 2px;
 }
 
 /* FORMUALR AND USER INPUTS */
-/* line 124, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 124, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 form input, form textarea {
   font-size: 1em;
   font-weight: 200;
@@ -3524,34 +3535,51 @@ form input, form textarea {
   color: #B3B3B3;
   border: none;
 }
-/* line 134, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 134, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 form input:focus, form textarea:focus {
   color: #111111;
 }
-/* line 142, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 142, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 form input {
   height: 30px;
 }
 
-/* line 156, /Users/franzwilding/Sites/istudi/sass/base/_defaults.scss */
+/* line 156, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
 #splash {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 1000;
+  background: black;
+  text-align: center;
+}
+/* line 167, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
+#splash img {
+  height: 100%;
+}
+/* line 171, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
+#splash .loading {
+  left: 50%;
+  margin-left: -8px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 50px;
+  width: 16px;
+  height: 16px;
 }
 
 /* ui elements */
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
-/* line 7, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 7, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .header, #app .content {
   position: fixed;
   top: 0;
@@ -3559,18 +3587,18 @@ form input {
   right: 0;
   bottom: 0;
 }
-/* line 15, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 15, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content {
   top: 50px;
   overflow: auto;
 }
-/* line 19, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 19, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner {
   width: 100%;
   min-height: 101%;
 }
 
-/* line 26, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 26, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main {
   background: #EDEDED;
   -webkit-box-shadow: 0 0 10px black;
@@ -3580,12 +3608,12 @@ form input {
   position: absolute;
   width: 100%;
 }
-/* line 33, /Users/franzwilding/Sites/istudi/sass/modules/ui/_app.scss */
+/* line 33, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main .inner {
   background: #EDEDED;
 }
 
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header {
   height: 50px;
   text-align: center;
@@ -3596,14 +3624,14 @@ form input {
   background-image: -ms-linear-gradient(#ffffff, #f6f6f6 97%, #c2c2c2 98%, #dfdfdf 98%);
   background-image: linear-gradient(#ffffff, #f6f6f6 97%, #c2c2c2 98%, #dfdfdf 98%);
 }
-/* line 7, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 7, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header h2 {
   margin: 13px 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
 }
-/* line 12, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 12, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button {
   width: 50px;
   margin: 0;
@@ -3628,11 +3656,11 @@ form input {
     @include header_button_hover();
   }*/
 }
-/* line 25, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button.inactive {
   opacity: 0.2;
 }
-/* line 33, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 33, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button .sep {
   position: absolute;
   top: 0;
@@ -3646,16 +3674,16 @@ form input {
   -o-background-size: 100% 100%;
   background-size: 100% 100%;
 }
-/* line 44, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 44, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button.left .sep {
   right: 0;
 }
-/* line 49, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 49, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button.right {
   left: auto;
   right: 0;
 }
-/* line 53, /Users/franzwilding/Sites/istudi/sass/modules/ui/_header.scss */
+/* line 53, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header .button.right .sep {
   left: 0;
 }
@@ -3663,40 +3691,40 @@ form input {
 /*.menu_open .header .button {
   @include header_button_hover();
 }*/
-/* line 4, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 4, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner .spacer {
   height: 15px;
   width: 100%;
   margin: 0;
 }
-/* line 10, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 10, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner h1, .content .inner h2, .content .inner h3, .content .inner h4, .content .inner h5, .content .inner h6, .content .inner p, .content .inner ol, .content .inner ul {
   margin: 15px;
 }
-/* line 14, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 14, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner h1, .content .inner h2, .content .inner h3, .content .inner h4, .content .inner h5, .content .inner h6 {
   margin-bottom: 0;
 }
-/* line 18, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 18, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner h3 {
   font-weight: bold;
   text-align: center;
 }
-/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 23, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner p {
   text-align: center;
 }
-/* line 27, /Users/franzwilding/Sites/istudi/sass/modules/ui/_content.scss */
+/* line 27, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner ol, .content .inner ul {
   margin-left: 35px;
 }
 
-/* line 3, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 3, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list, .content .inner ol.list {
   border-top: 1px solid #C7C7C7;
   margin: 5px 0 20px 0;
 }
-/* line 7, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 7, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li, .content .inner ol.list li {
   width: 100%;
   background: white;
@@ -3713,28 +3741,28 @@ form input {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 16, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 16, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner, .content .inner ol.list li .listInner {
   padding: 18px 15px;
 }
-/* line 19, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 19, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .title, .content .inner ol.list li .listInner .title {
   font-size: 1.2em;
   font-weight: 200;
   color: #000000;
 }
-/* line 25, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation, .content .inner ul.list li .listInner .checkbox, .content .inner ol.list li .listInner .navigation, .content .inner ol.list li .listInner .checkbox {
   position: absolute;
   top: 50%;
   margin-top: -6px;
   right: 15px;
 }
-/* line 31, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 31, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation.checkbox, .content .inner ul.list li .listInner .checkbox.checkbox, .content .inner ol.list li .listInner .navigation.checkbox, .content .inner ol.list li .listInner .checkbox.checkbox {
   margin-top: -4px;
 }
-/* line 37, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 37, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active, .content .inner ol.list li:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
   background-image: -webkit-linear-gradient(#0099ff, #0089e7);
@@ -3743,12 +3771,12 @@ form input {
   background-image: -ms-linear-gradient(#0099ff, #0089e7);
   background-image: linear-gradient(#0099ff, #0089e7);
 }
-/* line 41, /Users/franzwilding/Sites/istudi/sass/modules/ui/_listview.scss */
+/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active .listInner .title, .content .inner ol.list li:active .listInner .title {
   color: white;
 }
 
-/* line 3, /Users/franzwilding/Sites/istudi/sass/modules/ui/_detailview.scss */
+/* line 3, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_detailview.scss */
 .content .inner .article {
   min-height: 100%;
   overflow: hidden;
@@ -3756,13 +3784,13 @@ form input {
   padding: 15px;
 }
 
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu {
   width: 100%;
   background: #222222;
   color: white;
 }
-/* line 9, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 9, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .header {
   width: 100%;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #282828), color-stop(98%, #161616), color-stop(99%, #393939));
@@ -3772,23 +3800,23 @@ form input {
   background-image: -ms-linear-gradient(#282828, #161616 98%, #393939 99%);
   background-image: linear-gradient(#282828, #161616 98%, #393939 99%);
 }
-/* line 14, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 14, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .header h2 {
   width: 266px;
   color: white;
 }
-/* line 20, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 20, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content {
   width: 266px;
 }
-/* line 23, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 23, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol {
   list-style: none;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #2D2D2D;
 }
-/* line 28, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 28, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li {
   border-bottom: 1px solid #111111;
   border-top: 1px solid #2D2D2D;
@@ -3798,26 +3826,26 @@ form input {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 35, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 35, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li .icn {
   height: 36px;
   width: 14px;
   margin-right: 8px;
 }
-/* line 41, /Users/franzwilding/Sites/istudi/sass/modules/ui/_menu.scss */
+/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li.active, #menu .content ol li:active {
   background: #111111;
   border-top: 1px solid #111111;
 }
 
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_search.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_search.scss */
 #search {
   position: relative;
   width: 100%;
   height: 70px;
   border-bottom: 1px solid #C7C7C7;
 }
-/* line 8, /Users/franzwilding/Sites/istudi/sass/modules/ui/_search.scss */
+/* line 8, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_search.scss */
 #search input {
   position: absolute;
   top: 15px;
@@ -3832,12 +3860,12 @@ form input {
   background-size: 12px 12px;
 }
 
-/* line 2, /Users/franzwilding/Sites/istudi/sass/modules/ui/_loading.scss */
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_loading.scss */
 .loading {
   margin: 20px;
   background: #DFDFDF;
 }
-/* line 6, /Users/franzwilding/Sites/istudi/sass/modules/ui/_loading.scss */
+/* line 6, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_loading.scss */
 .loading .status {
   display: block;
   height: 30px;

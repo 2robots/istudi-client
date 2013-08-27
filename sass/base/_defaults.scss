@@ -159,6 +159,23 @@ form {
   left: 0;
   right: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: 1000;
+  background: black;
+  text-align: center;
+
+  img {
+    height: 100%;
+  }
+
+  .loading {
+    left: 50%;
+    margin-left: -8px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 50px;
+    width: 16px;
+    height: 16px;
+  }
 }

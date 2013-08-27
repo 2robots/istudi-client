@@ -30,7 +30,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       this.options.app.main.trigger("rightButtonSetInactive");
 
       var t = this;
-      var downloads_count = 2;
+      var downloads_count = 4;
       // we count all download processes, so we know, when the last one is finished.
 
       // start downloading nodes
@@ -51,13 +51,75 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
         }
       });
 
-      // start downloading nodes
+      // start downloading news
       t.r_counter++;
       t.options.app.newsArticles.fetch({
         success: function(){
 
           //update status bar
           t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+
+          //if this is the last download, we can finish the process
+          t.finish_all_downloads();
+        }
+      });
+
+      // start downloading maps
+      t.r_counter++;
+      t.options.app.maps.fetch({
+        success: function(){
+
+          // initialize content and detailView
+          t.options.app.maps.each(function(n){
+
+            n.downloadFile(
+
+              // on success
+              function(){
+              //update status bar
+              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+              },
+
+              // on error
+              function(){
+              //update status bar
+              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+              }
+            );
+
+            n.initializeContent();
+          });
+
+          //if this is the last download, we can finish the process
+          t.finish_all_downloads();
+        }
+      });
+
+      // start downloading pocketcards
+      t.r_counter++;
+      t.options.app.pocketcards.fetch({
+        success: function(){
+
+          // initialize content and detailView
+          t.options.app.pocketcards.each(function(n){
+
+            n.downloadFile(
+
+              // on success
+              function(){
+              //update status bar
+              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+              },
+
+              // on error
+              function(){
+              //update status bar
+              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+              }
+            );
+
+            n.initializeContent();
+          });
 
           //if this is the last download, we can finish the process
           t.finish_all_downloads();

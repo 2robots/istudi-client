@@ -1,15 +1,16 @@
 
-define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, menuItems, nodes, node, groups, newsArticle, newsArticles, settings, setting, config) {
+define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'models/map', 'collections/maps', 'models/pocketcard', 'collections/pocketcards', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, menuItems, nodes, node, groups, newsArticle, newsArticles, map, maps, pocketcard, pocketcards, settings, setting, config) {
 
   return Backbone.View.extend({
 
     name: 'iStudi',
     tagName: 'div',
     id: 'app',
-    // endpoint: 'http://localhost:3000',
-    endpoint: 'http://192.168.1.20:3000',
+    endpoint: 'http://localhost:3000',
+    // endpoint: 'http://192.168.1.20:3000',
+    // endpoint: 'http://192.168.0.52:3000'
     // endpoint: 'http://192.168.0.56:3000',
-    //endpoint: 'http://istudi.herokuapp.com',
+    // endpoint: 'http://istudi.herokuapp.com',
     menuOpen: false,
 
     initialize: function() {
@@ -22,6 +23,8 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
       this.menuItems.app = this;
 
       this.newsArticles = new newsArticles([], this);
+      this.maps = new maps([], this);
+      this.pocketcards = new pocketcards([], this);
       this.nodes = new nodes([], this);
       this.groups = new groups([], this);
       this.settings = new settings([], this);

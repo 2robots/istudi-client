@@ -1,5 +1,5 @@
 
-<h3>Fasst geschafft!</h3>
+<h3>Fast geschafft!</h3>
 
 <p>Es werden gerade alle Inhalte für deinen Uni-Standort heruntergeladen.</p>
 

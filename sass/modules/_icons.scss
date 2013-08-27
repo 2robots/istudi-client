@@ -39,6 +39,13 @@
   }
 }
 
+.icn.loading {
+  width: 16px;
+  height: 16px;
+  background: url("img/icons/loading.gif") no-repeat center center;
+  @include background-size(contain);
+}
+
 
 
 .icn.news {

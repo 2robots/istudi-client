@@ -13,13 +13,16 @@
     </head>
     <body>
 
-        <img src="splash.png" id="splash" />
+        <div id="splash">
+            <img src="splash.png" />
+            <span class="icn loading"></span>
+        </div>
 
         <!-- development -->
-        <!--script type="text/javascript" data-main="js/app.js" src="js/require.js"></script-->
+        <script type="text/javascript" data-main="js/app.js" src="js/require.js"></script>
 
         <!-- production -->
-        <script type="text/javascript" data-main="js/app-build.js" src="js/require.js"></script>
+        <!--script type="text/javascript" data-main="js/app-build.js" src="js/require.js"></script-->
         <script type="text/javascript" src="cordova.js"></script>
     </body>
 </html>
