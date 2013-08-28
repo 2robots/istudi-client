@@ -14,9 +14,11 @@ define(function() {
       var local_file_uri = "map_" + this.get("id") + ".svg";
 
       if(typeof LocalFileSystem != "undefined") {
+
         // try to access file system
         window.requestFileSystem(
-          LocalFileSystem.PERSISTENT, 0,
+          LocalFileSystem.PERSISTENT,
+          0,
 
           // if the filesystem is avaiable
           function onFileSystemSuccess(fileSystem) {
