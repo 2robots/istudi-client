@@ -14,11 +14,11 @@ define(['collections/nodes'], function(nodes) {
       var an = group.get("all_nodes");
       var rn = group.get("root_nodes");
 
-      if(typeof(an.each) == "undefined") {
+      if(typeof(an) == "undefined" || typeof(an.each) == "undefined") {
         an = new Backbone.Collection();
       }
 
-      if(typeof(rn.each) == "undefined") {
+      if(typeof(rn) == "undefined" || typeof(rn.each) == "undefined") {
         rn = new Backbone.Collection();
       }
 
@@ -27,7 +27,7 @@ define(['collections/nodes'], function(nodes) {
         var parent = this.collection.get(this.get("ancestry"));
         var d = parent.get("data");
 
-        if(typeof(d.each) == "undefined") {
+        if(typeof(d) == "undefined" || typeof(d.each) == "undefined") {
           d = new Backbone.Collection();
         }
 

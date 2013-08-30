@@ -7,6 +7,7 @@ define(function() {
     model: undefined,
     app: undefined,
     resource: '',
+    reset_next_fetch: false,
 
     initialize: function(models, app) {
       this.app = app;
@@ -22,10 +23,11 @@ define(function() {
         s = '&';
       }
 
-      if(typeof(this.since()) != "undefined") {
+      if(typeof(this.since()) != "undefined" && !this.reset_next_fetch) {
         ret += s + 'since=' + this.since();
       }
 
+      this.reset_next_fetch = false;
       return ret;
     },
 

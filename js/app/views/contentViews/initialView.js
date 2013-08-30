@@ -35,6 +35,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
 
       // start downloading nodes
       t.r_counter++;
+      t.options.app.nodes.reset_next_fetch = true;
       t.options.app.nodes.fetch({
         success: function(){
 
@@ -53,6 +54,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
 
       // start downloading news
       t.r_counter++;
+      t.options.app.newsArticles.reset_next_fetch = true;
       t.options.app.newsArticles.fetch({
         success: function(){
 
@@ -65,6 +67,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       });
 
       // start downloading maps
+      t.options.app.maps.reset_next_fetch = true;
       t.options.app.maps.fetch({
         success: function(){
 
@@ -100,6 +103,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       });
 
       // start downloading pocketcards
+      t.options.app.pocketcards.reset_next_fetch = true;
       t.options.app.pocketcards.fetch({
         success: function(){
 
