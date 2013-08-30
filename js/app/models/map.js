@@ -4,7 +4,6 @@ define(function() {
     idAttribute: "id",
 
     downloadFile: function(success_cb, error_cb) {
-
       var t = this;
 
       // remote file url
@@ -55,10 +54,12 @@ define(function() {
               },
             function(){
               t.useRemoteFile();
+              error_cb();
             });
           },
         function(){
           t.useRemoteFile();
+          error_cb();
         });
       } else {
         t.useRemoteFile();

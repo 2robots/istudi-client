@@ -2,7 +2,7 @@
 define(function() {
   return Backbone.Model.extend({
 
-    initialize: function(app) {
+    initialize: function(a, app) {
 
       // get app instance
       this.app = app;
@@ -20,7 +20,11 @@ define(function() {
     },
 
     save: function() {
+      window.localStorage.setItem(this.app.name + "_config", JSON.stringify(this));
+    },
 
+    load: function() {
+      this.set(JSON.parse(window.localStorage.getItem(this.app.name + "_config")));
     }
   });
 });

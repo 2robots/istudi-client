@@ -65,64 +65,72 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       });
 
       // start downloading maps
-      t.r_counter++;
       t.options.app.maps.fetch({
         success: function(){
 
           // initialize content and detailView
           t.options.app.maps.each(function(n){
 
+            t.r_counter++;
+
             n.downloadFile(
 
               // on success
               function(){
-              //update status bar
-              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                //update status bar
+                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                n.initializeContent();
+
+                //if this is the last download, we can finish the process
+                t.finish_all_downloads();
               },
 
               // on error
               function(){
-              //update status bar
-              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                //update status bar
+                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                n.initializeContent();
+
+                //if this is the last download, we can finish the process
+                t.finish_all_downloads();
               }
             );
-
-            n.initializeContent();
           });
-
-          //if this is the last download, we can finish the process
-          t.finish_all_downloads();
         }
       });
 
       // start downloading pocketcards
-      t.r_counter++;
       t.options.app.pocketcards.fetch({
         success: function(){
 
           // initialize content and detailView
           t.options.app.pocketcards.each(function(n){
 
+            t.r_counter++;
+
             n.downloadFile(
 
               // on success
               function(){
-              //update status bar
-              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                //update status bar
+                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                n.initializeContent();
+
+                //if this is the last download, we can finish the process
+                t.finish_all_downloads();
               },
 
               // on error
               function(){
-              //update status bar
-              t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                //update status bar
+                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                n.initializeContent();
+
+                //if this is the last download, we can finish the process
+                t.finish_all_downloads();
               }
             );
-
-            n.initializeContent();
           });
-
-          //if this is the last download, we can finish the process
-          t.finish_all_downloads();
         }
       });
     },
@@ -130,6 +138,15 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
     finish_all_downloads: function() {
       this.r_counter--;
       if(this.r_counter == 0) {
+
+        // save config & all content
+        this.options.app.config.save();
+        this.options.app.groups.save();
+        this.options.app.newsArticles.save();
+        this.options.app.nodes.save();
+        this.options.app.maps.save();
+        this.options.app.pocketcards.save();
+
         this.options.app.main.trigger("rightButtonSetActive");
       }
     },

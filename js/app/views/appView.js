@@ -16,7 +16,7 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
     initialize: function() {
 
       // initialize config
-      this.config = new config(this);
+      this.config = new config({}, this);
 
       // initialize main controllers
       this.menuItems = new menuItems;
@@ -55,8 +55,25 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
       this.$el.append(this.main.render().$el);
 
       // render news
-      if(false) {
-        t.openContent(this.menuItems.get("news"));
+      if(window.localStorage.getItem(t.name + "_config") != null) {
+
+        // load config
+        this.config.load();
+
+        // load content
+        t.groups.load();
+        t.newsArticles.load();
+        t.nodes.load();
+        t.pocketcards.load();
+        t.maps.load();
+
+        // add menu items for groups
+        t.groups.addMenuItems();
+
+        // initialize relationships
+        t.nodes.each(function(n){ n.initializeRelationships(); });
+
+        t.openContent(this.menuItems.findWhere({key: "news"}));
         t.lets_go();
 
       // render initial-page-setup

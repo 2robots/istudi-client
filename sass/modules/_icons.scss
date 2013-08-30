@@ -53,6 +53,21 @@
   @include background-size(contain);
 }
 
+.icn.maps {
+  background: url("img/icons/maps.png") no-repeat center center;
+  @include background-size(contain);
+}
+
+.icn.pocketcards {
+  background: url("img/icons/pocketcards.png") no-repeat center center;
+  @include background-size(contain);
+}
+
+.icn.search {
+  background: url("img/icons/search_full.png") no-repeat center center;
+  @include background-size(contain);
+}
+
 .icn.index {
   background: url("img/icons/index.png") no-repeat center center;
   @include background-size(contain);

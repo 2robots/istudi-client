@@ -5,6 +5,7 @@ define(['collections/_contentCollection', 'models/newsArticle', 'models/menuItem
     model: Model,
     resource: 'news',
     defaultView: 'news',
+    idAttribute: undefined,
 
     initialize: function(models, app) {
 

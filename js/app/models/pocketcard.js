@@ -4,7 +4,6 @@ define(function() {
     idAttribute: "id",
 
     downloadFile: function(success_cb, error_cb) {
-
       var t = this;
 
       // remote file url
@@ -14,9 +13,11 @@ define(function() {
       var local_file_uri = "pocketcard_" + this.get("id") + ".svg";
 
       if(typeof LocalFileSystem != "undefined") {
+
         // try to access file system
         window.requestFileSystem(
-          LocalFileSystem.PERSISTENT, 0,
+          LocalFileSystem.PERSISTENT,
+          0,
 
           // if the filesystem is avaiable
           function onFileSystemSuccess(fileSystem) {
@@ -53,10 +54,12 @@ define(function() {
               },
             function(){
               t.useRemoteFile();
+              error_cb();
             });
           },
         function(){
           t.useRemoteFile();
+          error_cb();
         });
       } else {
         t.useRemoteFile();

@@ -3,6 +3,7 @@ define(function() {
 
   return Backbone.Collection.extend({
 
+    idAttribute: 'id',
     model: undefined,
     app: undefined,
     resource: '',
@@ -36,8 +37,16 @@ define(function() {
       return this.pluck("updated_at").sort().pop();
     },
 
-    load: function() {
+    resource_name: function() {
+      return this.app.name + "_" + this.resource;
+    },
 
+    load: function() {
+      this.reset(JSON.parse(window.localStorage.getItem(this.resource_name())));
+    },
+
+    save: function() {
+      window.localStorage.setItem(this.resource_name(), JSON.stringify(this));
     }
   });
 
