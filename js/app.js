@@ -13,7 +13,7 @@ require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'v
 
 
 
-  Zepto(function($){
+  /*Zepto(function($){
 
     document.addEventListener("deviceready", function () {
 
@@ -42,10 +42,10 @@ require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'v
       $(document).trigger("deviceready");
     }
 
-  });
+  });*/
 
   // NORMAL CODE
-  /*Zepto(function($){
+  Zepto(function($){
 
     document.addEventListener("deviceready", function () {
       // enable Fastclick plugin
@@ -65,7 +65,7 @@ require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'v
       $(document).trigger("deviceready");
     }
 
-  });*/
+  });
 });
 
 
