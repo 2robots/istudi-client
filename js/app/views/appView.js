@@ -18,6 +18,9 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
       // initialize config
       this.config = new config({}, this);
 
+      // register Push Notifications
+      this.registerPush();
+
       // initialize main controllers
       this.menuItems = new menuItems;
       this.menuItems.app = this;
@@ -128,6 +131,44 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
 
     openContent: function(item, model, transition) {
       return this.main.openContent(item, model, transition);
+    },
+
+    registerPush: function() {
+
+      try {
+        pushNotification = window.plugins.pushNotification;
+
+        if (device.platform == 'android' || device.platform == 'Android') {
+
+          pushNotification.register(function(result){
+            alert(result);
+          }, function(error){
+            alert(error);
+          }, {"senderID":"661780372179","ecb":"onNotificationGCM"});   // required!
+
+        } else {
+
+          pushNotification.register(function(token){
+            alert(token);
+          }, function(error){
+            alert(error);
+          }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});  // required!
+        }
+      }
+
+      catch(err) {
+        txt="There was an error on this page.\n\n";
+        txt+="Error description: " + err.message + "\n\n";
+        alert(txt);
+      }
+
+    },
+
+    // handle APNS notifications for iOS
+    onNotificationAPN: function(e) {
+      if (e.alert) {
+        alert(e.alert);
+      }
     },
 
     lets_go: function() {
