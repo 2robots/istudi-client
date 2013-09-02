@@ -30,7 +30,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       this.options.app.main.trigger("rightButtonSetInactive");
 
       var t = this;
-      var downloads_count = 4;
+      var downloads_count = 5;
       // we count all download processes, so we know, when the last one is finished.
 
       // start downloading nodes
@@ -136,6 +136,18 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
             );
           });
         }
+      });
+
+      // send push notification token to server
+      t.r_counter++;
+
+      $.post(t.options.app.endpoint + '/device_tokens', {
+        token: t.options.app.config.token(),
+        groups: t.options.app.config.active_groups()
+      }, function(){
+
+        //if this is the last download, we can finish the process
+        t.finish_all_downloads();
       });
     },
 

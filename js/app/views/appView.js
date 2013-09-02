@@ -135,21 +135,29 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
 
     registerPush: function() {
 
+      var t = this;
+
       try {
         pushNotification = window.plugins.pushNotification;
 
+        // ANDROID
         if (device.platform == 'android' || device.platform == 'Android') {
 
           pushNotification.register(function(result){
-            alert(result);
+
+            t.config.saveConfig("android_token", result);
+
           }, function(error){
             alert(error);
           }, {"senderID":"661780372179","ecb":"onNotificationGCM"});   // required!
 
+        // IOS
         } else {
 
           pushNotification.register(function(token){
-            alert(token);
+
+            t.config.saveConfig("ios_token", token);
+
           }, function(error){
             alert(error);
           }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});  // required!

@@ -25,6 +25,27 @@ define(function() {
 
     load: function() {
       this.set(JSON.parse(window.localStorage.getItem(this.app.name + "_config")));
+    },
+
+    // custom getter
+    active_groups: function() {
+      var gr = [];
+
+      _.each(this.get("groups"), function(g, i){
+        if(g) {
+          gr.push(i);
+        }
+      });
+
+      return gr;
+    },
+
+    token: function() {
+      if(typeof(this.get("android_token")) != "undefined") {
+        return this.get("android_token");
+      } else {
+        return this.get("ios_token");
+      }
     }
   });
 });
