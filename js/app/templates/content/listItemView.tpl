@@ -1,7 +1,7 @@
-<div class="listInner">
+<div class="listInner<% if(typeof(model.get("date")) != "undefined") { %> withDate<% } %>">
 
   <% if(typeof(model.get("date")) != "undefined") { %>
-    <div class="date"><%= new Date(model.get("date")).toLocaleDateString() %></div>
+    <div class="date"><span class="icn time"></span><%= new Date(model.get("date")).toLocaleDateString() %></div>
   <% } %>
   <div class="title"><%= model.get("title") %></div>
 

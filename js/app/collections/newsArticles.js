@@ -8,6 +8,12 @@ define(['collections/_contentCollection', 'models/newsArticle', 'models/menuItem
     name_one: "Neuigkeit",
     name_many: "Neuigkeiten",
 
+    comparator: function(a1, a2) {
+      var d_a1 = Math.round(new Date(a1.get("date")).getTime()/1000);
+      var d_a2 = Math.round(new Date(a2.get("date")).getTime()/1000);
+      return d_a1 < d_a2;
+    },
+
     initialize: function(models, app) {
 
       this.app = app;

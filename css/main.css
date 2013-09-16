@@ -3375,6 +3375,17 @@ html, body {
 }
 
 /* line 49, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+.icn.time {
+  background: url("img/icons/time.png") no-repeat center center;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+}
+
+/* line 56, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.loading {
   width: 16px;
   height: 16px;
@@ -3385,7 +3396,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 58, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 65, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.news {
   background: url("img/icons/news.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3394,7 +3405,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 63, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 70, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.maps {
   background: url("img/icons/maps.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3403,7 +3414,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 68, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 75, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.pocketcards {
   background: url("img/icons/pocketcards.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3412,7 +3423,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 73, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 80, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.search {
   background: url("img/icons/search_full.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3421,7 +3432,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 78, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 85, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.index {
   background: url("img/icons/index.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3430,7 +3441,7 @@ html, body {
   background-size: contain;
 }
 
-/* line 83, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
+/* line 90, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn.settings {
   background: url("img/icons/settings.png") no-repeat center center;
   -webkit-background-size: contain;
@@ -3633,10 +3644,9 @@ form input {
 /* line 19, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner {
   width: 100%;
-  min-height: 101%;
 }
 
-/* line 26, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main {
   background: #EDEDED;
   -webkit-box-shadow: 0 0 10px black;
@@ -3646,7 +3656,7 @@ form input {
   position: absolute;
   width: 100%;
 }
-/* line 33, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 32, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main .inner {
   background: #EDEDED;
 }
@@ -3858,17 +3868,38 @@ form input {
   color: #B3B3B3;
 }
 /* line 38, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner.withDate, .content .inner ol.list li .listInner.withDate {
+  padding: 5px 15px;
+}
+/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner.withDate .title, .content .inner ol.list li .listInner.withDate .title {
+  padding-top: 0;
+  float: none;
+}
+/* line 46, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner.withDate .date, .content .inner ol.list li .listInner.withDate .date {
+  padding-top: 5px;
+  float: none;
+}
+/* line 50, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+.content .inner ul.list li .listInner.withDate .date .icn, .content .inner ol.list li .listInner.withDate .date .icn {
+  width: 14px;
+  height: 14px;
+  margin-top: -2px;
+  margin-right: 3px;
+}
+/* line 61, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation, .content .inner ul.list li .listInner .checkbox, .content .inner ol.list li .listInner .navigation, .content .inner ol.list li .listInner .checkbox {
   position: absolute;
   top: 50%;
   margin-top: -6px;
   right: 15px;
 }
-/* line 44, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 67, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation.checkbox, .content .inner ul.list li .listInner .checkbox.checkbox, .content .inner ol.list li .listInner .navigation.checkbox, .content .inner ol.list li .listInner .checkbox.checkbox {
   margin-top: -4px;
 }
-/* line 50, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 73, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active, .content .inner ol.list li:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
   background-image: -webkit-linear-gradient(#0099ff, #0089e7);
@@ -3877,7 +3908,7 @@ form input {
   background-image: -ms-linear-gradient(#0099ff, #0089e7);
   background-image: linear-gradient(#0099ff, #0089e7);
 }
-/* line 54, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 77, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active .listInner .title, .content .inner ol.list li:active .listInner .title {
   color: white;
 }
@@ -3910,19 +3941,21 @@ form input {
 #menu .header h2 {
   width: 266px;
   color: white;
+  margin-left: 0;
+  margin-right: 0;
 }
-/* line 20, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
+/* line 22, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content {
   width: 266px;
 }
-/* line 23, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
+/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol {
   list-style: none;
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #2D2D2D;
 }
-/* line 28, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
+/* line 30, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li {
   border-bottom: 1px solid #111111;
   border-top: 1px solid #2D2D2D;
@@ -3932,13 +3965,13 @@ form input {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 35, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
+/* line 37, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li .icn {
   height: 36px;
   width: 14px;
   margin-right: 8px;
 }
-/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
+/* line 43, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
 #menu .content ol li.active, #menu .content ol li:active {
   background: #111111;
   border-top: 1px solid #111111;

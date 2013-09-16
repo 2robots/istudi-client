@@ -76,6 +76,7 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
       var curGroup = false;
       var title = undefined;
       var data = [];
+      var active = true;
       var t = this;
       var itemCounter = 0;
 
@@ -96,46 +97,57 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
           if(obj instanceof Backbone.Model) {
             title = obj.get("title");
             data = obj.get(t.data_attr());
+            if(typeof(obj.get("active")) != "undefined") {
+              active = obj.get("active");
+            }
           } else {
             data = obj;
           }
 
-          // for each group render a list
-          t.listContainer.append(t.listTemplate({title: title}));
-          curGroup = t.listContainer.find("ul").last();
+          // if there is an "active"-attribute, we use it to check if we should display this item
+          if(active) {
 
-          if(data != undefined) {
+            // for each group render a list
+            t.listContainer.append(t.listTemplate({title: title}));
+            curGroup = t.listContainer.find("ul").last();
 
-            // for each list add all items
-            data.each(function(item) {
+            if(data != undefined) {
 
-              // if there is no search query, or the pattern matches
-              if(t.filter_action(pattern, item)) {
+              // for each list add all items
+              data.each(function(item) {
 
-                // render our super generic listItem
-                curGroup.append(new _listItemView({
+                // if there is no search query, or the pattern matches
+                if(t.filter_action(pattern, item)) {
 
-                  // model we take the title from
-                  model: item,
+                  // if there is an "active"-attribute, we use it to check if we should display this item
+                  if(typeof(item.get("active")) == "undefined" || item.get("active")) {
 
-                  // should this item be navigateable (e.g. to display a detailView)
-                  navigateable: t.templateOptions.navigateable,
+                    // render our super generic listItem
+                    curGroup.append(new _listItemView({
 
-                  // should this item be checkable (e.g. for a config-view)
-                  checkable: t.templateOptions.checkable,
+                      // model we take the title from
+                      model: item,
 
-                  // main app
-                  app: t.options.app
-                }).render().$el);
+                      // should this item be navigateable (e.g. to display a detailView)
+                      navigateable: t.templateOptions.navigateable,
 
-                itemCounter++;
-              }
-            });
-          }
+                      // should this item be checkable (e.g. for a config-view)
+                      checkable: t.templateOptions.checkable,
 
-          if(itemCounter == 0) {
-            curGroup.prev().remove();
-            curGroup.remove();
+                      // main app
+                      app: t.options.app
+                    }).render().$el);
+
+                    itemCounter++;
+                  }
+                }
+              });
+            }
+
+            if(itemCounter == 0) {
+              curGroup.prev().remove();
+              curGroup.remove();
+            }
           }
 
         });

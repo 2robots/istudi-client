@@ -21,6 +21,10 @@ define(['collections/_collection'], function(_collection) {
       });
 
       return ret;
+    },
+
+    comparator: function(m) {
+      return m.get("position");
     }
   });
 

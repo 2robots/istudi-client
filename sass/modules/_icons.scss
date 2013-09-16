@@ -46,6 +46,13 @@
   }
 }
 
+.icn.time {
+  background: url("img/icons/time.png") no-repeat center center;
+  @include background-size(contain);
+  width: 16px;
+  height: 16px;
+}
+
 .icn.loading {
   width: 16px;
   height: 16px;
