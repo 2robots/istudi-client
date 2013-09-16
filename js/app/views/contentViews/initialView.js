@@ -8,6 +8,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
     className: 'inner',
     status: undefined,
     r_counter: 0,
+    download_error: false,
 
     alterTemplateOptions: function(templateOptions) {
       return templateOptions;
@@ -49,6 +50,10 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
 
           //if this is the last download, we can finish the process
           t.finish_all_downloads();
+        }, error: function() {
+          t.download_error = true;
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.finish_all_downloads();
         }
       });
 
@@ -62,6 +67,10 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
           t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
 
           //if this is the last download, we can finish the process
+          t.finish_all_downloads();
+        }, error: function() {
+          t.download_error = true;
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
           t.finish_all_downloads();
         }
       });
@@ -90,6 +99,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
 
               // on error
               function(){
+                t.download_error = true;
                 //update status bar
                 t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
                 n.initializeContent();
@@ -99,6 +109,10 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
               }
             );
           });
+        }, error: function() {
+          t.download_error = true;
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.finish_all_downloads();
         }
       });
 
@@ -135,19 +149,34 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
               }
             );
           });
+        }, error: function() {
+          t.download_error = true;
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.finish_all_downloads();
         }
       });
 
       // send push notification token to server
       t.r_counter++;
 
-      $.post(t.options.app.endpoint + '/device_tokens', {
-        token: t.options.app.config.token(),
-        groups: t.options.app.config.active_groups()
-      }, function(){
-
-        //if this is the last download, we can finish the process
-        t.finish_all_downloads();
+      $.ajax({
+        type: 'POST',
+        url: t.options.app.endpoint + '/device_tokens',
+        data: {
+          token: t.options.app.config.token(),
+          groups: t.options.app.config.active_groups()
+        },
+        dataType: 'json',
+        contentType: 'application/json',
+        success: function(){
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.finish_all_downloads();
+        },
+        error: function(){
+          t.download_error = true;
+          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.finish_all_downloads();
+        },
       });
     },
 
@@ -162,6 +191,11 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
         this.options.app.nodes.save();
         this.options.app.maps.save();
         this.options.app.pocketcards.save();
+        if(this.download_error) {
+          setTimeout(function(){
+            alert("Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.");
+          }, 500);
+        }
 
         this.options.app.main.trigger("rightButtonSetActive");
       }

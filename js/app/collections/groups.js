@@ -5,6 +5,8 @@ define(['collections/_collection', 'models/group', 'models/menuItem'], function(
     model: Model,
     resource: 'groups',
     defaultView: 'index',
+    name_one: "Gruppe",
+    name_many: "Gruppen",
 
     addMenuItems: function() {
 
@@ -30,14 +32,16 @@ define(['collections/_collection', 'models/group', 'models/menuItem'], function(
       });
 
       // add menu item for global search
-      t.app.menuItems.add(
-        new menuItem({
-          key: 'search',
-          title: 'Volltextsuche',
-          left_button: "menu",
-          position: 1500
-        })
-      );
+      if(t.app.menuItems.where({key: "search"}).length == 0) {
+        t.app.menuItems.add(
+          new menuItem({
+            key: 'search',
+            title: 'Volltextsuche',
+            left_button: "menu",
+            position: 1500
+          })
+        );
+      }
     }
   });
 

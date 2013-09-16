@@ -24,7 +24,7 @@ define(function() {
       }
 
       if(typeof(this.since()) != "undefined" && !this.reset_next_fetch) {
-        ret += s + 'since=' + this.since();
+        ret += s + 'since=' + Math.round(new Date(this.since()).getTime()/1000);
       }
 
       this.reset_next_fetch = false;

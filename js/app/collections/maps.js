@@ -5,6 +5,8 @@ define(['collections/_contentCollection', 'models/map', 'models/menuItem'], func
     model: Model,
     resource: 'maps',
     defaultView: 'maps',
+    name_one: "Lageplan",
+    name_many: "Lagepläne",
 
     initialize: function(models, app) {
 

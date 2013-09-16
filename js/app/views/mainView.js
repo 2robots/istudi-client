@@ -175,6 +175,9 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
                 // do stuff, after the page was created
                 t.afterAddPage();
 
+                // make this page the current page
+                newPage.addClass("pt-page-current");
+
                 setTimeout(function(){
                   newPage.removeClass("pt-page-moveFromRight");
                   oldPage.remove();
@@ -194,6 +197,9 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
 
                 // do stuff, after the page was created
                 t.afterAddPage();
+
+                // make this page the current page
+                newPage.addClass("pt-page-current");
 
                 setTimeout(function(){
                   newPage.removeClass("pt-page-moveFromLeft");
@@ -216,11 +222,12 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
                 oldPage.remove();
               }
 
+              // make this page the current page
+              newPage.addClass("pt-page-current");
+
               break;
           }
 
-          // make this page the current page
-          newPage.addClass("pt-page-current");
           t.contentView.afterRender();
         });
 

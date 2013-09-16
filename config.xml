@@ -1,38 +1,45 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="at.vsstoe-wien.istudi" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap = "http://phonegap.com/ns/1.0">
+<widget id="at.vsstoe-wien.istudi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap = "http://phonegap.com/ns/1.0">
     <name>iStudi</name>
-    <description>
-        Alle Infos rund ums Studium.
-    </description>
-    <author email="callback-dev@incubator.apache.org" href="http://cordova.io">
-        Verband Sozialistischer Student_innen Wien
-    </author>
-    <icon height="512" src="res/icon/icon.png" width="512" />
-    <icon cdv:platform="android" height="96" src="res/icon/icon.png" width="96" />
-    <icon cdv:platform="blackberry" height="80" src="res/icon/icon.png" width="80" />
-    <icon cdv:platform="ios" height="144" src="res/icon/icon.png" width="144" />
-    <cdv:splash cdv:platform="android" height="480" src="splash.png" width="800" />
-    <cdv:splash cdv:platform="android" height="800" src="splash.png" width="480" />
-    <cdv:splash cdv:platform="android" height="200" src="splash.png" width="320" />
-    <cdv:splash cdv:platform="android" height="320" src="splash.png" width="200" />
-    <cdv:splash cdv:platform="android" height="320" src="splash.png" width="480" />
-    <cdv:splash cdv:platform="android" height="480" src="splash.png" width="320" />
-    <cdv:splash cdv:platform="android" height="720" src="splash.png" width="1280" />
-    <cdv:splash cdv:platform="android" height="1280" src="splash.png" width="720" />
-    <cdv:splash cdv:platform="ios" height="748" src="splash.png" width="1024" />
-    <cdv:splash cdv:platform="ios" height="1004" src="splash.png" width="768" />
-    <cdv:splash cdv:platform="ios" height="1496" src="splash.png" width="2048" />
-    <cdv:splash cdv:platform="ios" height="2008" src="splash.png" width="1536" />
-    <cdv:splash cdv:platform="ios" height="320" src="splash.png" width="480" />
-    <cdv:splash cdv:platform="ios" height="480" src="splash.png" width="320" />
-    <cdv:splash cdv:platform="ios" height="640" src="splash.png" width="960" />
-    <cdv:splash cdv:platform="ios" height="960" src="splash.png" width="640" />
+    <description>Alle Infos rund ums Studium.</description>
+    <author email="office@vsstoe-wien.at" href="http://vsstoe-wien.at">Verband Sozialistischer Student_innen Wien</author>
+
+    <icon src="res/icon/icon.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/icon/icon.png" gap:platform="ios" width="72" height="72" />
+    <icon src="res/icon/icon.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/icon/icon.png" gap:platform="ios" width="144" height="144" />
+
+    <icon src="res/icon/icon.png" gap:platform="android" gap:density="ldpi" />
+    <icon src="res/icon/icon.png" gap:platform="android" gap:density="mdpi" />
+    <icon src="res/icon/icon.png" gap:platform="android" gap:density="hdpi" />
+    <icon src="res/icon/icon.png" gap:platform="android" gap:density="xhdpi" />
+
+    <icon src="res/icon/icon.png" gap:platform="webos" />
+    <icon src="res/icon/icon.png" gap:platform="webos" gap:role="mini" />
+
+
+    <gap:splash src="splash.png" />
+
+    <gap:splash src="splash.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="splash.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="splash.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="splash.png" gap:platform="ios" width="1024" height="748" />
+    <gap:splash src="splash.png" gap:platform="ios" width="768" height="1004" />
+    <gap:splash src="splash.png" gap:platform="ios" width="2048" height="1496" />
+    <gap:splash src="splash.png" gap:platform="ios" width="1536" height="2008" />
+
+    <gap:splash src="splash.png" gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="splash.png" gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="splash.png" gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="splash.png" gap:platform="android" gap:density="xhdpi" />
 
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="prerendered-icon" value="true" />
     <access origin="*" />
 
     <gap:plugin name="com.adobe.plugins.pushplugin" />

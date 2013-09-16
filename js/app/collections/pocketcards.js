@@ -5,6 +5,8 @@ define(['collections/_contentCollection', 'models/pocketcard', 'models/menuItem'
     model: Model,
     resource: 'pocketcards',
     defaultView: 'pocketcards',
+    name_one: "Pocketcard",
+    name_many: "Pocketcards",
 
     initialize: function(models, app) {
 

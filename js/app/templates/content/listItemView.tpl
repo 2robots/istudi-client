@@ -1,4 +1,8 @@
 <div class="listInner">
+
+  <% if(typeof(model.get("date")) != "undefined") { %>
+    <div class="date"><%= new Date(model.get("date")).toLocaleDateString() %></div>
+  <% } %>
   <div class="title"><%= model.get("title") %></div>
 
   <% if(navigateable) { %>

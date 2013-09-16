@@ -5,8 +5,12 @@
   @include background-image(linear-gradient(#FFFFFF, #F6F6F6 97%, #C2C2C2 98%, #DFDFDF 98%));
 
   h2 {
-    margin: 13px 0;
+    padding: 5px 0;
+    margin: 8px 60px;
     @include user-select(none);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .button {

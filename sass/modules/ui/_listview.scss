@@ -14,12 +14,25 @@
       @include transition-duration(0.2s);
 
       .listInner {
-        padding: 18px 15px;
+        padding: 13px 15px;
 
         .title {
           font-size: 1.2em;
           font-weight: 200;
           color: #000000;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          margin-right: 25px;
+          padding: 5px 0;
+        }
+
+        .date {
+          float: left;
+          margin: 0 5px 0 0;
+          padding: 8px 0;
+          font-size: 0.9em;
+          color: #B3B3B3;
         }
 
         .navigation, .checkbox {

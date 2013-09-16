@@ -1,16 +1,17 @@
 
-define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'models/map', 'collections/maps', 'models/pocketcard', 'collections/pocketcards', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, menuItems, nodes, node, groups, newsArticle, newsArticles, map, maps, pocketcard, pocketcards, settings, setting, config) {
+define(['views/menuView', 'views/mainView', 'views/updateView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'models/map', 'collections/maps', 'models/pocketcard', 'collections/pocketcards', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, updateView, menuItems, nodes, node, groups, newsArticle, newsArticles, map, maps, pocketcard, pocketcards, settings, setting, config) {
 
   return Backbone.View.extend({
 
     name: 'iStudi',
     tagName: 'div',
     id: 'app',
-    // endpoint: 'http://localhost:3000',
+    //endpoint: 'http://localhost:3000',
+    endpoint: 'http://istudi.2robots.at',
     // endpoint: 'http://192.168.1.20:3000',
     // endpoint: 'http://192.168.0.52:3000',
     // endpoint: 'http://192.168.0.56:3000',
-    endpoint: 'http://istudi.herokuapp.com',
+    //endpoint: 'http://istudi.herokuapp.com',
     menuOpen: false,
 
     initialize: function() {
@@ -34,6 +35,15 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
 
       // add default settings
       this.settings.push(new setting({
+        title: "Update iStudi",
+        detailView: {
+          key: "update",
+          title: "Update iStudi",
+          id: "update"
+        }
+      }));
+
+      this.settings.push(new setting({
         title: "Meine Uni Gruppen",
         detailView: {
           key: "groups",
@@ -44,7 +54,7 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
         }
       }));
 
-      this.settings.push(new setting({title: "Push Einstellungen"}));
+      //this.settings.push(new setting({title: "Push Einstellungen"}));
     },
 
     render: function(){
@@ -53,9 +63,11 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
 
       this.menu = new menuView({ app: this });
       this.main = new mainView({ app: this });
+      this.updater = new updateView({ app: this });
 
       this.$el.html(this.menu.render().$el);
       this.$el.append(this.main.render().$el);
+      this.$el.append(this.updater.render().$el);
 
       // render news
       if(window.localStorage.getItem(t.name + "_config") != null) {
@@ -76,8 +88,10 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
         // initialize relationships
         t.nodes.each(function(n){ n.initializeRelationships(); });
 
-        t.openContent(this.menuItems.findWhere({key: "news"}));
-        t.lets_go();
+        t.updater.start(function(){
+          t.openContent(t.menuItems.findWhere({key: "news"}));
+          t.lets_go();
+        });
 
       // render initial-page-setup
       } else {
@@ -123,6 +137,10 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
 
     closeMenu: function() {
       this.snapper.close("left");
+    },
+
+    openUpdate: function() {
+      this.$el.append(this.updater.start());
     },
 
     menuOpen: function() {
@@ -180,7 +198,6 @@ define(['views/menuView', 'views/mainView', 'collections/menuItems', 'collection
     },
 
     lets_go: function() {
-
       // splash fade out
       $("#splash").animate({
         opacity: 0

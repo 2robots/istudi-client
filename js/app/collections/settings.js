@@ -4,6 +4,8 @@ define(['collections/_collection', 'models/setting', 'models/menuItem'], functio
   return _collection.extend({
     model: Model,
     defaultView: 'settings',
+    name_one: "Einstellung",
+    name_many: "Einstellungen",
 
     initialize: function(models, app) {
 
