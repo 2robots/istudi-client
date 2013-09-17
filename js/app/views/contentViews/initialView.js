@@ -1,5 +1,5 @@
 
-define(['text!templates/content/initialView.tpl'], function(Template) {
+define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, jQuery) {
 
   return Backbone.View.extend({
 
@@ -9,6 +9,9 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
     status: undefined,
     r_counter: 0,
     download_error: false,
+    events: {
+      "click .go_button": "rightButtonAction"
+    },
 
     alterTemplateOptions: function(templateOptions) {
       return templateOptions;
@@ -46,13 +49,14 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
           });
 
           //update status bar
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
 
           //if this is the last download, we can finish the process
           t.finish_all_downloads();
         }, error: function() {
+
           t.download_error = true;
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
         }
       });
@@ -64,13 +68,13 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
         success: function(){
 
           //update status bar
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
 
           //if this is the last download, we can finish the process
           t.finish_all_downloads();
         }, error: function() {
           t.download_error = true;
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
         }
       });
@@ -80,38 +84,44 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       t.options.app.maps.fetch({
         success: function(){
 
-          // initialize content and detailView
-          t.options.app.maps.each(function(n){
+          if(t.options.app.maps.length > 0) {
 
-            t.r_counter++;
+            // initialize content and detailView
+            t.options.app.maps.each(function(n){
 
-            n.downloadFile(
+              t.r_counter++;
 
-              // on success
-              function(){
-                //update status bar
-                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
-                n.initializeContent();
+              n.downloadFile(
 
-                //if this is the last download, we can finish the process
-                t.finish_all_downloads();
-              },
+                // on success
+                function(){
+                  //update status bar
+                  t.update_stauts(100/downloads_count/t.options.app.maps.length);
+                  n.initializeContent();
 
-              // on error
-              function(){
-                t.download_error = true;
-                //update status bar
-                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
-                n.initializeContent();
+                  //if this is the last download, we can finish the process
+                  t.finish_all_downloads();
+                },
 
-                //if this is the last download, we can finish the process
-                t.finish_all_downloads();
-              }
-            );
-          });
+                // on error
+                function(){
+                  t.download_error = true;
+                  //update status bar
+                  t.update_stauts(100/downloads_count/t.options.app.maps.length);
+                  n.initializeContent();
+
+                  //if this is the last download, we can finish the process
+                  t.finish_all_downloads();
+                }
+              );
+            });
+          } else {
+            t.update_stauts(100/downloads_count);
+            t.finish_all_downloads();
+          }
         }, error: function() {
           t.download_error = true;
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
         }
       });
@@ -131,7 +141,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
               // on success
               function(){
                 //update status bar
-                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
                 n.initializeContent();
 
                 //if this is the last download, we can finish the process
@@ -141,7 +151,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
               // on error
               function(){
                 //update status bar
-                t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count/t.options.app.maps.length) + "%");
+                t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
                 n.initializeContent();
 
                 //if this is the last download, we can finish the process
@@ -151,7 +161,7 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
           });
         }, error: function() {
           t.download_error = true;
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
+          t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
         }
       });
@@ -159,28 +169,32 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
       // send push notification token to server
       t.r_counter++;
 
-      $.ajax({
-        type: 'POST',
-        url: t.options.app.endpoint + '/device_tokens',
-        data: {
+      // zepto isn't working, use jQuery
+      jQuery.post(
+        t.options.app.endpoint + '/device_tokens',
+        {
           token: t.options.app.config.token(),
           groups: t.options.app.config.active_groups()
-        },
-        dataType: 'json',
-        contentType: 'application/json',
-        success: function(){
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
-          t.finish_all_downloads();
-        },
-        error: function(){
-          t.download_error = true;
-          t.status.css("width", (parseInt(t.status.css("width")) + 100/downloads_count) + "%");
-          t.finish_all_downloads();
-        },
+        }
+      ).done(function(){
+        // nothing on done
+      }).fail(function(){
+        setTimeout(function(){
+          t.options.app.alert("Verbindungs-Fehler", "Wir konnten dein Gerät nicht für Push-Nachrichten registrieren.", "ok");
+        }, 500);
+
+      }).always(function(){
+        t.update_stauts(100/downloads_count);
+        t.finish_all_downloads();
       });
     },
 
+    update_stauts: function(add) {
+      this.status.css("width", (parseInt(this.status.css("width")) + add) + "%");
+    },
+
     finish_all_downloads: function() {
+      var t = this;
       this.r_counter--;
       if(this.r_counter == 0) {
 
@@ -193,16 +207,18 @@ define(['text!templates/content/initialView.tpl'], function(Template) {
         this.options.app.pocketcards.save();
         if(this.download_error) {
           setTimeout(function(){
-            alert("Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.");
+            t.options.app.alert("Verbindungs-Fehler", "Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.", "ok");
           }, 500);
         }
 
+        this.$el.find(".go_button").show();
         this.options.app.main.trigger("rightButtonSetActive");
       }
     },
 
     rightButtonAction: function() {
       this.options.app.openMenu();
+      return false;
     }
   });
 });

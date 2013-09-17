@@ -179,3 +179,12 @@ form {
     height: 16px;
   }
 }
+
+.go_button {
+  display: none;
+  background: $main;
+  color: white;
+  padding: 15px 50px;
+  margin: 20px 0;
+  @include inline-block;
+}

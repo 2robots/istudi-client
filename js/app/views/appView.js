@@ -1,5 +1,5 @@
 
-define(['views/menuView', 'views/mainView', 'views/updateView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'models/map', 'collections/maps', 'models/pocketcard', 'collections/pocketcards', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, updateView, menuItems, nodes, node, groups, newsArticle, newsArticles, map, maps, pocketcard, pocketcards, settings, setting, config) {
+define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView', 'collections/menuItems', 'collections/nodes', 'models/node', 'collections/groups', 'models/newsArticle', 'collections/newsArticles', 'models/map', 'collections/maps', 'models/pocketcard', 'collections/pocketcards', 'collections/settings', 'models/setting', 'models/config'], function(menuView, mainView, updateView, alertView, menuItems, nodes, node, groups, newsArticle, newsArticles, map, maps, pocketcard, pocketcards, settings, setting, config) {
 
   return Backbone.View.extend({
 
@@ -64,10 +64,12 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'collections/men
       this.menu = new menuView({ app: this });
       this.main = new mainView({ app: this });
       this.updater = new updateView({ app: this });
+      this.alerter = new alertView({ app: this });
 
       this.$el.html(this.menu.render().$el);
       this.$el.append(this.main.render().$el);
       this.$el.append(this.updater.render().$el);
+      this.$el.append(this.alerter.render().$el);
 
       // render news
       if(window.localStorage.getItem(t.name + "_config") != null) {
@@ -128,6 +130,14 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'collections/men
         } else {
           t.$el.removeClass("menu_open");
         }
+      });
+    },
+
+    alert: function(title, message, button) {
+      this.alerter.open({
+        title: title,
+        message: message,
+        button: button
       });
     },
 

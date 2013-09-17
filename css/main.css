@@ -3291,6 +3291,8 @@ html, body {
 
 /* base */
 /* COLORS */
+/* BOX SHADOW */
+/* BORDER RADIUS */
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/_icons.scss */
 .icn {
   width: 22px;
@@ -3619,6 +3621,24 @@ form input {
   bottom: 50px;
   width: 16px;
   height: 16px;
+}
+
+/* line 183, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
+.go_button {
+  display: none;
+  background: #bf0000;
+  color: white;
+  padding: 15px 50px;
+  margin: 20px 0;
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+}
+/* line 7, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
+.go_button {
+  *display: inline;
 }
 
 /* ui elements */
@@ -4069,4 +4089,82 @@ form input {
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+/* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert {
+  position: fixed;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -moz-transition-property: opacity;
+  -ms-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  -ms-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+/* line 15, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert.active {
+  left: 0;
+  right: 0;
+}
+/* line 20, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert.open {
+  opacity: 1;
+}
+/* line 24, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert .box {
+  background: white;
+  width: 360px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin: -100px 0 0 -180px;
+  -webkit-box-shadow: 0px 0px 2pt rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 0px 2pt rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 0px 2pt rgba(0, 0, 0, 0.7);
+  -webkit-border-radius: 2pt;
+  -moz-border-radius: 2pt;
+  -ms-border-radius: 2pt;
+  -o-border-radius: 2pt;
+  border-radius: 2pt;
+}
+/* line 35, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert .box h2 {
+  text-align: center;
+  padding: 20px 0 10px;
+  margin: 0;
+}
+/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert .box p {
+  margin: 20px;
+  font-size: 90%;
+  color: #333;
+  text-align: center;
+}
+/* line 48, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+#alert .box .button {
+  position: absolute;
+  bottom: 10px;
+  background: #666;
+  padding: 10px 50px;
+  color: white;
+  text-decoration: none;
+  right: 10px;
+  text-transform: uppercase;
 }

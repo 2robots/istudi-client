@@ -26,6 +26,15 @@ define(['views/contentViews/_listView'], function(_listView) {
     },
 
     filter_action: function(pattern, item) {
+
+      if(this.filterQuery != "") {
+        this.$el.find("#search").next().hide();
+        this.$el.find("#search").next().next().hide();
+      } else {
+        this.$el.find("#search").next().show();
+        this.$el.find("#search").next().next().show();
+      }
+
       return (item.get("ancestry") != null && this.filterQuery != "" && (pattern.test(item.get("title")) || pattern.test(item.get("content"))));
     }
   });

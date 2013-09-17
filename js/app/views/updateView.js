@@ -115,7 +115,7 @@ define(['text!templates/update.tpl'], function(Template) {
 
       if(t.download_error) {
         setTimeout(function(){
-          alert("Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.");
+          t.options.app.alert("Verbindungs-Fehler", "Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.", "ok");
 
           setTimeout(function(){
             t.$el.height(0);
@@ -131,7 +131,7 @@ define(['text!templates/update.tpl'], function(Template) {
           this.options.app.maps.save();
           this.options.app.pocketcards.save();
 
-          alert("Es wurden: \n---------------\n" + this.update_log.substr(0, this.update_log.length -2) + " \n---------------\nupgedatet.");
+          this.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + this.update_log.substr(0, this.update_log.length -2) + "</strong> upgedatet.", "ok");
         }
 
         setTimeout(function(){
