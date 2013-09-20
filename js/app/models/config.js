@@ -46,6 +46,14 @@ define(function() {
       } else {
         return this.get("ios_token");
       }
+    },
+
+    token_type: function() {
+      if(typeof(this.get("android_token")) != "undefined") {
+        return 'android';
+      } else {
+        return 'ios';
+      }
     }
   });
 });

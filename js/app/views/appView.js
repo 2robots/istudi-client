@@ -177,7 +177,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
 
           }, function(error){
             alert(error);
-          }, {"senderID":"661780372179","ecb":"onNotificationGCM"});   // required!
+          }, {"senderID":"843747827764","ecb":"onNotificationGCM"});   // required!
 
         // IOS
         } else {
@@ -204,6 +204,13 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
     onNotificationAPN: function(e) {
       if (e.alert) {
         alert(e.alert);
+      }
+    },
+
+    // handle notifications for Android
+    onNotificationGCM: function(e) {
+      if (e.event.message) {
+        alert(e.event.message);
       }
     },
 

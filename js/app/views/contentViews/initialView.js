@@ -174,6 +174,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
         t.options.app.endpoint + '/device_tokens',
         {
           token: t.options.app.config.token(),
+          type: t.options.app.config.token_type(),
           groups: t.options.app.config.active_groups()
         }
       ).done(function(){
@@ -211,7 +212,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
           }, 500);
         }
 
-        this.$el.find(".go_button").show();
+        this.$el.find(".go_button").css("opacity", 1);
         this.options.app.main.trigger("rightButtonSetActive");
       }
     },
