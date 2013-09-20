@@ -24,7 +24,6 @@ define(function() {
     },
 
     load: function() {
-      alert(window.localStorage.getItem(this.app.name + "_config"));
       this.set(JSON.parse(window.localStorage.getItem(this.app.name + "_config")));
     },
 
