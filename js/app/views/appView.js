@@ -174,6 +174,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
           pushNotification.register(function(result){
 
             t.config.saveConfig("android_token", result);
+            t.options.app.alert("Push", "Token: " + result, "ok");
 
           }, function(error){
             alert(error);
@@ -185,6 +186,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
           pushNotification.register(function(token){
 
             t.config.saveConfig("ios_token", token);
+            t.options.app.alert("Push", "Token: " + token, "ok");
 
           }, function(error){
             alert(error);
