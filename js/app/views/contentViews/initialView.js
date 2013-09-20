@@ -169,9 +169,10 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
       // send push notification token to server
       t.r_counter++;
 
+      alert("REGISTER PUSH");
+      alert(t.options.app.config.token_type());
+      alert(t.options.app.config.token());
       // zepto isn't working, use jQuery
-      alert(this.r_counter);
-      alert("PUSH: " + t.options.app.config.token_type() + ", " + t.options.app.config.token());
       jQuery.post(
         t.options.app.endpoint + '/device_tokens',
         {
