@@ -163,15 +163,13 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
       try {
         pushNotification = window.plugins.pushNotification;
 
-        alert(device.platform);
-
         // ANDROID
         if (device.platform == 'android' || device.platform == 'Android') {
 
           pushNotification.register(function(result){
-            alert(result);
+            //alert(result);
           }, function(error){
-            alert(error);
+            //alert(error);
           }, {
             "senderID":"843747827764",
             "ecb":"window.app.onNotificationGCM"
@@ -185,7 +183,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
             t.config.saveConfig("ios_token", token);
 
           }, function(error){
-            alert(error);
+            //alert(error);
           }, {
             "badge":"true",
             "sound":"true",
