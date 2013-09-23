@@ -41,7 +41,5 @@
     <preference name="webviewbounce" value="false" />
     <preference name="prerendered-icon" value="true" />
     <access origin="*" />
-
-    <plugin name="PushPlugin" value="com.plugin.gcm.PushPlugin" />
     <gap:plugin name="com.adobe.plugins.pushplugin" />
 </widget>

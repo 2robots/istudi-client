@@ -163,19 +163,18 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
       try {
         pushNotification = window.plugins.pushNotification;
 
+        alert(device.platform);
+
         // ANDROID
         if (device.platform == 'android' || device.platform == 'Android') {
 
           pushNotification.register(function(result){
-
             alert(result);
-            t.config.saveConfig("android_token", result);
-
           }, function(error){
             alert(error);
           }, {
             "senderID":"843747827764",
-            "ecb":"onNotificationGCM"
+            "ecb":"window.app.onNotificationGCM"
           });   // required!
 
         // IOS
@@ -191,7 +190,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
             "badge":"true",
             "sound":"true",
             "alert":"true",
-            "ecb":"onNotificationAPN"
+            "ecb":"window.app.onNotificationAPN"
           });  // required!
         }
       }
@@ -213,6 +212,15 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
 
     // handle notifications for Android
     onNotificationGCM: function(e) {
+
+      switch(e.event) {
+        case 'registered':
+          if ( e.regid.length > 0 ) {
+            this.config.saveConfig("android_token", e.regid);
+          }
+        break;
+      }
+
       if (e.event.message) {
         alert(e.event.message);
       }
