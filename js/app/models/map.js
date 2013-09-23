@@ -10,7 +10,7 @@ define(function() {
       var remote_file_uri = encodeURI(this.collection.app.endpoint + this.get("absolute_url"));
 
       // local file url
-      var local_file_uri = "map_" + this.get("id") + ".svg";
+      var local_file_uri = "map_" + this.get("id") + ".png";
 
       if(typeof LocalFileSystem != "undefined") {
 
@@ -24,18 +24,18 @@ define(function() {
 
             // create a dummy file
             fileSystem.root.getFile(
-              "dummy.svg",
+              "dummy.png",
               {create: true, exclusive: true},
 
               // access the file
               function gotFileEntry(fileEntry){
 
                 // remove the file
-                var sPath = fileEntry.fullPath.replace("dummy.svg","");
+                var sPath = fileEntry.fullPath.replace("dummy.png","");
                 var fileTransfer = new FileTransfer();
                 fileEntry.remove();
 
-                // download real svg into the dummy file
+                // download real png into the dummy file
                 fileTransfer.download(
                   remote_file_uri,
                   sPath + local_file_uri,
