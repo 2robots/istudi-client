@@ -168,11 +168,15 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
 
           pushNotification.register(function(result){
 
+            alert(result);
             t.config.saveConfig("android_token", result);
 
           }, function(error){
             alert(error);
-          }, {"senderID":"843747827764","ecb":"onNotificationGCM"});   // required!
+          }, {
+            "senderID":"843747827764",
+            "ecb":"onNotificationGCM"
+          });   // required!
 
         // IOS
         } else {
@@ -183,7 +187,12 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
 
           }, function(error){
             alert(error);
-          }, {"badge":"true","sound":"true","alert":"true","ecb":"onNotificationAPN"});  // required!
+          }, {
+            "badge":"true",
+            "sound":"true",
+            "alert":"true",
+            "ecb":"onNotificationAPN"
+          });  // required!
         }
       }
 
