@@ -11,6 +11,7 @@ define(function() {
 
       // local file url
       var local_file_uri = "map_" + this.get("id") + ".png";
+      var dummy_local_file_uri = "dummy_" + dummy_local_file_uri;
 
       if(typeof LocalFileSystem != "undefined") {
 
@@ -24,14 +25,14 @@ define(function() {
 
             // create a dummy file
             fileSystem.root.getFile(
-              "dummy.png",
+              dummy_local_file_uri,
               {create: true, exclusive: true},
 
               // access the file
               function gotFileEntry(fileEntry){
 
                 // remove the file
-                var sPath = fileEntry.fullPath.replace("dummy.png","");
+                var sPath = fileEntry.fullPath.replace(dummy_local_file_uri,"");
                 var fileTransfer = new FileTransfer();
                 fileEntry.remove();
 
