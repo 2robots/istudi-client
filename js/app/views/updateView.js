@@ -90,38 +90,46 @@ define(['text!templates/update.tpl'], function(Template) {
             }
 
             if(typeof(o.downloadFile) != "undefined") {
-
               // push to the download_queue, later we will download all files
               t.download_queue.push(o);
             } else {
-              t.update_status_bar(new_ones.length);
+              t.update_status_bar(new_ones.length, true);
             }
           });
+
+          // after each item update counter
+          t.update_status_bar(1, false, true);
 
         // when there are no new ones
         } else {
           t.update_status_bar(1);
         }
-      } {
+      } else {
         t.update_status_bar(1);
       }
     },
 
-    update_status_bar: function(items_in_this_collection) {
+    update_status_bar: function(items_in_this_collection, nocounter, nostatus) {
       var t = this;
-      t.status.css("width", (parseInt(t.status.css("width")) + 100/(t.count * items_in_this_collection)) + "%");
-      t.counter = t.counter -1;
+
+      if(nostatus != true) {
+        t.status.css("width", (parseInt(t.status.css("width")) + 100/(t.count * items_in_this_collection)) + "%");
+      }
+
+      if(nocounter != true) {
+        t.counter = t.counter -1;
+      }
 
       // if it is the last, close updater
       if(this.counter == 0) {
         setTimeout(function(){
-          t.stop();
+          t.total_finish();
         }, 200);
 
       }
     },
 
-    stop: function() {
+    total_finish: function() {
       var t = this;
 
       t.synchronize_downloads(t.download_queue, function(){
@@ -137,11 +145,17 @@ define(['text!templates/update.tpl'], function(Template) {
           }
         }
 
-        setTimeout(function(){
-          t.$el.height(0);
-          t.callback();
-        }, 500);
+        t.stop();
       });
+    },
+
+    stop: function() {
+      var t = this;
+
+      setTimeout(function(){
+        t.$el.height(0);
+        t.callback();
+      }, 500);
     },
 
     afterRender: function() {
@@ -157,7 +171,6 @@ define(['text!templates/update.tpl'], function(Template) {
 
       if(typeof(model) != "undefined") {
 
-        t.r_counter++;
         model.downloadFile(
 
           // on success
@@ -165,7 +178,7 @@ define(['text!templates/update.tpl'], function(Template) {
             model.initializeContent();
 
             //update status bar
-            t.update_status_bar(item_step);
+            t.status.css("width", (parseInt(t.status.css("width")) + 100/(t.count * item_step)) + "%");
 
             // download next file
             t.synchronize_downloads_step(queue, item_step, finished);
@@ -178,7 +191,7 @@ define(['text!templates/update.tpl'], function(Template) {
             model.initializeContent();
 
             //update status bar
-            t.update_status_bar(item_step);
+            t.status.css("width", (parseInt(t.status.css("width")) + 100/(t.count * item_step)) + "%");
 
             // download next file
             t.synchronize_downloads_step(queue, item_step, finished);
