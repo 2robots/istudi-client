@@ -3645,17 +3645,14 @@ form input {
   transition-timing-function: ease-in;
   background: #bf0000;
   color: white;
-  padding: 15px 50px;
+  padding: 15px 0;
   margin: 20px 0;
-  display: -moz-inline-box;
-  -moz-box-orient: vertical;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-}
-/* line 7, /Applications/LiveReload.app/Contents/Resources/SASS.lrplugin/lib/compass/frameworks/compass/stylesheets/compass/css3/_inline-block.scss */
-.go_button {
-  *display: inline;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  z-index: 200;
+  width: 200px;
+  display: block;
 }
 
 /* ui elements */
@@ -3672,25 +3669,27 @@ form input {
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: hidden;
+  width: 100%;
 }
-/* line 15, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 17, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content {
   top: 50px;
-  overflow: auto;
+  overflow: scroll;
 }
-/* line 19, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 21, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner {
   width: 100%;
 }
 
-/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 27, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main {
   background: #EDEDED;
   -webkit-box-shadow: 0 0 10px black;
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
 }
-/* line 29, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 31, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main .inner {
   background: #EDEDED;
 }
@@ -3880,7 +3879,7 @@ form input {
 }
 /* line 16, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner, .content .inner ol.list li .listInner {
-  padding: 13px 15px;
+  padding: 0 15px;
 }
 /* line 19, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .title, .content .inner ol.list li .listInner .title {
@@ -3891,7 +3890,7 @@ form input {
   white-space: nowrap;
   overflow: hidden;
   margin-right: 25px;
-  padding: 5px 0;
+  padding: 18px 0;
 }
 /* line 30, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .date, .content .inner ol.list li .listInner .date {
@@ -3908,32 +3907,33 @@ form input {
 /* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner.withDate .title, .content .inner ol.list li .listInner.withDate .title {
   padding-top: 0;
+  padding-bottom: 5px;
   float: none;
 }
-/* line 46, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 47, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner.withDate .date, .content .inner ol.list li .listInner.withDate .date {
   padding-top: 5px;
   float: none;
 }
-/* line 50, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 51, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner.withDate .date .icn, .content .inner ol.list li .listInner.withDate .date .icn {
   width: 14px;
   height: 14px;
   margin-top: -2px;
   margin-right: 3px;
 }
-/* line 61, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 62, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation, .content .inner ul.list li .listInner .checkbox, .content .inner ol.list li .listInner .navigation, .content .inner ol.list li .listInner .checkbox {
   position: absolute;
   top: 50%;
   margin-top: -6px;
   right: 15px;
 }
-/* line 67, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 68, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li .listInner .navigation.checkbox, .content .inner ul.list li .listInner .checkbox.checkbox, .content .inner ol.list li .listInner .navigation.checkbox, .content .inner ol.list li .listInner .checkbox.checkbox {
   margin-top: -4px;
 }
-/* line 73, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 74, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active, .content .inner ol.list li:active {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
   background-image: -webkit-linear-gradient(#0099ff, #0089e7);
@@ -3942,17 +3942,21 @@ form input {
   background-image: -ms-linear-gradient(#0099ff, #0089e7);
   background-image: linear-gradient(#0099ff, #0089e7);
 }
-/* line 77, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
+/* line 78, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */
 .content .inner ul.list li:active .listInner .title, .content .inner ol.list li:active .listInner .title {
   color: white;
 }
 
 /* line 3, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_detailview.scss */
 .content .inner .article {
-  min-height: 100%;
+  /*min-height: 100%;*/
   overflow: hidden;
   background: white;
   padding: 15px;
+}
+/* line 10, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_detailview.scss */
+.content .inner .pinch-zoom-container {
+  background: url("img/icons/loading_small.gif") no-repeat center center;
 }
 
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
@@ -4043,16 +4047,6 @@ form input {
   display: block;
   height: 30px;
   width: 0;
-  -webkit-transition-property: width;
-  -moz-transition-property: width;
-  -ms-transition-property: width;
-  -o-transition-property: width;
-  transition-property: width;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -ms-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0099ff), color-stop(100%, #0089e7));
   background-image: -webkit-linear-gradient(#0099ff, #0089e7);
   background-image: -moz-linear-gradient(#0099ff, #0089e7);
@@ -4064,6 +4058,7 @@ form input {
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
 #update {
   display: block;
+  overflow: hidden;
   height: 100px;
   background: rgba(0, 0, 0, 0.9);
   position: fixed;
@@ -4087,18 +4082,19 @@ form input {
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
 }
-/* line 16, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
+/* line 17, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
 #update h2 {
   color: white;
   font-size: 0.9em;
   text-align: left;
   margin: 20px 20px 10px;
 }
-/* line 23, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
+/* line 24, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
 #update .loading {
   margin: 0 20px;
+  overflow: hidden;
 }
-/* line 27, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
+/* line 29, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_updater.scss */
 #update .close {
   position: absolute;
   top: 10px;
@@ -4130,17 +4126,18 @@ form input {
   -ms-transition-timing-function: ease-in;
   -o-transition-timing-function: ease-in;
   transition-timing-function: ease-in;
+  overflow: hidden;
 }
-/* line 15, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 16, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert.active {
   left: 0;
   right: 0;
 }
-/* line 20, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 21, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert.open {
   opacity: 1;
 }
-/* line 24, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 25, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert .box {
   background: white;
   width: 360px;
@@ -4158,20 +4155,20 @@ form input {
   -o-border-radius: 2pt;
   border-radius: 2pt;
 }
-/* line 35, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 36, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert .box h2 {
   text-align: center;
   padding: 20px 0 10px;
   margin: 0;
 }
-/* line 41, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 42, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert .box p {
   margin: 20px;
   font-size: 90%;
   color: #333;
   text-align: center;
 }
-/* line 48, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
+/* line 49, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_alert.scss */
 #alert .box .button {
   position: absolute;
   bottom: 10px;

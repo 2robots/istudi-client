@@ -35,11 +35,31 @@ define(['text!templates/update.tpl'], function(Template) {
       this.update_log = "";
 
       setTimeout(function(){
-        t.options.app.groups.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){ t.download_error = true; t.finished_step(); }, remove: false});
-        t.options.app.newsArticles.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){ t.download_error = true; t.finished_step(); }, remove: false});
-        t.options.app.nodes.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){ t.download_error = true; t.finished_step(); }, remove: false});
-        t.options.app.pocketcards.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){ t.download_error = true; t.finished_step(); }, remove: false});
-        t.options.app.maps.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){ t.download_error = true; t.finished_step(); }, remove: false});
+        t.options.app.groups.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){
+          t.download_error = true;
+          t.finished_step();
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Gruppen aktualisiert werden.", "ok");
+        }, remove: false});
+        t.options.app.newsArticles.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){
+          t.download_error = true;
+          t.finished_step();
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Neuigkeiten aktualisiert werden.", "ok");
+        }, remove: false});
+        t.options.app.nodes.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){
+          t.download_error = true;
+          t.finished_step();
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Artikel aktualisiert werden.", "ok");
+        }, remove: false});
+        t.options.app.pocketcards.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){
+          t.download_error = true;
+          t.finished_step();
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Pocketcards aktualisiert werden.", "ok");
+        }, remove: false});
+        t.options.app.maps.fetch({success: function(c, n){ t.finished_step(c, n); }, error: function(){
+          t.download_error = true;
+          t.finished_step();
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Lagepläne aktualisiert werden.", "ok");
+        }, remove: false});
       }, 300);
     },
 
@@ -70,20 +90,24 @@ define(['text!templates/update.tpl'], function(Template) {
             }
 
             if(typeof(o.downloadFile) != "undefined") {
-              o.downloadFile(
-                // on success
-                function(){
-                  o.initializeContent();
-                  t.update_status_bar(new_ones.length);
-                },
 
-                // on error
-                function(){
-                  o.initializeContent();
-                  t.update_status_bar(new_ones.length);
-                  t.download_error = true;
-                }
-              );
+              setTimeout(function(){
+                o.downloadFile(
+                  // on success
+                  function(){
+                    o.initializeContent();
+                    t.update_status_bar(new_ones.length);
+                  },
+
+                  // on error
+                  function(){
+                    t.options.app.alert("Verbindungs-Fehler", "Der/die " + collection.name_one + ": '" + o.get("title") + "'' konnte nicht heruntergeladen werden.", "ok");
+                    o.initializeContent();
+                    t.update_status_bar(new_ones.length);
+                    t.download_error = true;
+                  }
+                );
+              }, 200);
             } else {
               t.update_status_bar(new_ones.length);
             }
@@ -105,7 +129,10 @@ define(['text!templates/update.tpl'], function(Template) {
 
       // if it is the last, close updater
       if(this.counter == 0) {
-        this.stop();
+        setTimeout(function(){
+          t.stop();
+        }, 200);
+
       }
     },
 
@@ -113,17 +140,7 @@ define(['text!templates/update.tpl'], function(Template) {
 
       var t = this;
 
-      if(t.download_error) {
-        setTimeout(function(){
-          t.options.app.alert("Verbindungs-Fehler", "Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.", "ok");
-
-          setTimeout(function(){
-            t.$el.height(0);
-            t.callback();
-          }, 100);
-
-        }, 500);
-      } else {
+      if(!t.download_error) {
         if(this.update_log.length > 0) {
           this.options.app.groups.save();
           this.options.app.newsArticles.save();
@@ -133,12 +150,12 @@ define(['text!templates/update.tpl'], function(Template) {
 
           this.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + this.update_log.substr(0, this.update_log.length -2) + "</strong> upgedatet.", "ok");
         }
-
-        setTimeout(function(){
-          t.$el.height(0);
-          t.callback();
-        }, 500);
       }
+
+      setTimeout(function(){
+        t.$el.height(0);
+        t.callback();
+      }, 500);
     },
 
     afterRender: function() {

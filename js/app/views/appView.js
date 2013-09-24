@@ -49,6 +49,16 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
         }
       }));
 
+      this.settings.push(new setting({
+        title: "Impressum & Kontakt",
+        detailView: {
+          key: "imprint",
+          title: "Impressum",
+          id: "imprint",
+          left_button: "back"
+        }
+      }));
+
       //this.settings.push(new setting({title: "Push Einstellungen"}));
     },
 

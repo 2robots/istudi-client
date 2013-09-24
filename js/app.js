@@ -9,7 +9,7 @@ requirejs.config({
   }
 });
 
-require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'views/appView'], function(zepto, Underscore, Backbone, Snap, AppScroll, Fastclick, appView){
+require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'views/appView'], function(zepto, Underscore, backbone, Snap, AppScroll, Fastclick, appView){
 
 
 
@@ -58,6 +58,29 @@ require(['zepto', 'underscore', 'backbone', 'snap', 'AppScroll', 'fastclick', 'v
       $("body").append(window.app.render().$el);
       window.app.afterRender();
 
+    }, false);
+
+    document.addEventListener("backbutton", function(){
+      if(typeof(window.app.main.navigateBack) != "undefined") {
+
+        var item = window.app.main.currentContentSet.item;
+        var command = "";
+
+        if(item instanceof Backbone.Model) {
+          command = item.get("left_button");
+        } else {
+          command = item.left_button;
+        }
+
+        if(command == "back") {
+          window.app.main.navigateBack();
+        }
+
+        else if(command == "menu") {
+          window.app.openMenu();
+        }
+      }
+      return false;
     }, false);
 
     // invoke "deviceready" if there is no event (in a regular browser)

@@ -8,6 +8,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
     className: 'inner',
     status: undefined,
     r_counter: 0,
+    status_width: 0,
     download_error: false,
     events: {
       "click .go_button": "rightButtonAction"
@@ -55,6 +56,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
           t.finish_all_downloads();
         }, error: function() {
 
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Artikel heruntergeladen werden", "ok");
           t.download_error = true;
           t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
@@ -73,7 +75,10 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
           //if this is the last download, we can finish the process
           t.finish_all_downloads();
         }, error: function() {
+
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Neuigkeiten heruntergeladen werden", "ok");
           t.download_error = true;
+
           t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
         }
@@ -91,35 +96,42 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
 
               t.r_counter++;
 
-              n.downloadFile(
+              setTimeout(function(){
 
-                // on success
-                function(){
-                  //update status bar
-                  t.update_stauts(100/downloads_count/t.options.app.maps.length);
-                  n.initializeContent();
+                n.downloadFile(
 
-                  //if this is the last download, we can finish the process
-                  t.finish_all_downloads();
-                },
+                  // on success
+                  function(){
+                    //update status bar
+                    t.update_stauts(100/downloads_count/t.options.app.maps.length);
+                    n.initializeContent();
 
-                // on error
-                function(){
-                  t.download_error = true;
-                  //update status bar
-                  t.update_stauts(100/downloads_count/t.options.app.maps.length);
-                  n.initializeContent();
+                    //if this is the last download, we can finish the process
+                    t.finish_all_downloads();
+                  },
 
-                  //if this is the last download, we can finish the process
-                  t.finish_all_downloads();
-                }
-              );
+                  // on error
+                  function(){
+
+                    t.options.app.alert("Verbindungs-Fehler", "Der Lageplan: '" + n.get("title") + "' konnte nicht heruntergeladen werden", "ok");
+                    t.download_error = true;
+                    //update status bar
+                    t.update_stauts(100/downloads_count/t.options.app.maps.length);
+                    n.initializeContent();
+
+                    //if this is the last download, we can finish the process
+                    t.finish_all_downloads();
+                  }
+                );
+              }, 200);
             });
           } else {
             t.update_stauts(100/downloads_count);
             t.finish_all_downloads();
           }
         }, error: function() {
+
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Lagepläne heruntergeladen werden", "ok");
           t.download_error = true;
           t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
@@ -133,33 +145,38 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
 
           // initialize content and detailView
           t.options.app.pocketcards.each(function(n){
-
             t.r_counter++;
 
-            n.downloadFile(
+            setTimeout(function(){
+              n.downloadFile(
 
-              // on success
-              function(){
-                //update status bar
-                t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
-                n.initializeContent();
+                // on success
+                function(){
+                  //update status bar
+                  t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
+                  n.initializeContent();
 
-                //if this is the last download, we can finish the process
-                t.finish_all_downloads();
-              },
+                  //if this is the last download, we can finish the process
+                  t.finish_all_downloads();
+                },
 
-              // on error
-              function(){
-                //update status bar
-                t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
-                n.initializeContent();
+                // on error
+                function(){
 
-                //if this is the last download, we can finish the process
-                t.finish_all_downloads();
-              }
-            );
+                  t.options.app.alert("Verbindungs-Fehler", "Die Pocketcard: '" + n.get("title") + "' konnte nicht heruntergeladen werden", "ok");
+
+                  //update status bar
+                  t.update_stauts(100/downloads_count/t.options.app.pocketcards.length);
+                  n.initializeContent();
+
+                  //if this is the last download, we can finish the process
+                  t.finish_all_downloads();
+                }
+              );
+            }, 200);
           });
         }, error: function() {
+          t.options.app.alert("Verbindungs-Fehler", "Es konnten möglicherweise nicht alle Pocketcards heruntergeladen werden", "ok");
           t.download_error = true;
           t.update_stauts(100/downloads_count);
           t.finish_all_downloads();
@@ -168,6 +185,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
 
       // send push notification token to server
       t.r_counter++;
+
 
       // zepto isn't working, use jQuery
       jQuery.post(
@@ -191,7 +209,8 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
     },
 
     update_stauts: function(add) {
-      this.status.css("width", (parseInt(this.status.css("width")) + add) + "%");
+      this.status_width = this.status_width + add;
+      this.status.css("width", this.status_width + "%");
     },
 
     finish_all_downloads: function() {
@@ -206,11 +225,11 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
         this.options.app.nodes.save();
         this.options.app.maps.save();
         this.options.app.pocketcards.save();
-        if(this.download_error) {
+        /*if(this.download_error) {
           setTimeout(function(){
             t.options.app.alert("Verbindungs-Fehler", "Bei der Verbindung zum Server ist ein Fehler aufgetreten. Möglicherweise konnten nicht alle Inhalte heruntergeladen werden.", "ok");
           }, 500);
-        }
+        }*/
 
         this.$el.find(".go_button").css("opacity", 1);
         this.options.app.main.trigger("rightButtonSetActive");

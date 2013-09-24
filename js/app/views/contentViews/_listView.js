@@ -11,7 +11,8 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
     templateOptions: {},
     filterQuery: "",
     events: {
-      "keyup #search input": "searchChanged"
+      "keyup #search input": "searchChanged",
+      "submit form": "searchFinished"
     },
 
     alterTemplateOptions: function(templateOptions) {
@@ -37,6 +38,12 @@ define(['views/contentViews/_listItemView', 'text!templates/content/listHeaderVi
       };
 
       this.templateOptions = this.alterTemplateOptions(this.templateOptions);
+    },
+
+    searchFinished: function(obj) {
+      obj.preventDefault();
+      document.activeElement.blur();
+      return false;
     },
 
     searchChanged: function(obj) {
