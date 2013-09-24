@@ -3,6 +3,7 @@ define(['text!templates/content/detailZoomView.tpl', 'views/contentViews/_detail
 
   return _detailView.extend({
 
+    className: 'inner loadable',
     template: _.template(Template),
 
     afterRender: function() {

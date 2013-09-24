@@ -3954,9 +3954,11 @@ form input {
   background: white;
   padding: 15px;
 }
-/* line 10, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_detailview.scss */
-.content .inner .pinch-zoom-container {
-  background: url("img/icons/loading_small.gif") no-repeat center center;
+
+/* line 11, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_detailview.scss */
+#main .inner.loadable {
+  min-height: 100px;
+  background: #ededed url("img/icons/loading_small.gif") no-repeat center 50px;
 }
 
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_menu.scss */
