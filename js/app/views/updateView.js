@@ -14,6 +14,7 @@ define(['text!templates/update.tpl'], function(Template) {
     template: _.template(Template),
     status: undefined,
     download_error: false,
+    download_queue: new Backbone.Collection(),
 
     initialize: function() {
     },
@@ -72,7 +73,6 @@ define(['text!templates/update.tpl'], function(Template) {
         if(new_ones.length > 0) {
 
           this.update_log += new_ones.length + " ";
-          abc = new_ones;
           if(new_ones.length == 1) {
             this.update_log += collection.name_one;
           } else {
@@ -91,23 +91,8 @@ define(['text!templates/update.tpl'], function(Template) {
 
             if(typeof(o.downloadFile) != "undefined") {
 
-              setTimeout(function(){
-                o.downloadFile(
-                  // on success
-                  function(){
-                    o.initializeContent();
-                    t.update_status_bar(new_ones.length);
-                  },
-
-                  // on error
-                  function(){
-                    t.options.app.alert("Verbindungs-Fehler", "Der/die " + collection.name_one + ": '" + o.get("title") + "'' konnte nicht heruntergeladen werden.", "ok");
-                    o.initializeContent();
-                    t.update_status_bar(new_ones.length);
-                    t.download_error = true;
-                  }
-                );
-              }, 200);
+              // push to the download_queue, later we will download all files
+              t.download_queue.push(o);
             } else {
               t.update_status_bar(new_ones.length);
             }
@@ -137,28 +122,71 @@ define(['text!templates/update.tpl'], function(Template) {
     },
 
     stop: function() {
-
       var t = this;
 
-      if(!t.download_error) {
-        if(this.update_log.length > 0) {
-          this.options.app.groups.save();
-          this.options.app.newsArticles.save();
-          this.options.app.nodes.save();
-          this.options.app.maps.save();
-          this.options.app.pocketcards.save();
+      t.synchronize_downloads(t.download_queue, function(){
+        if(!t.download_error) {
+          if(this.update_log.length > 0) {
+            this.options.app.groups.save();
+            this.options.app.newsArticles.save();
+            this.options.app.nodes.save();
+            this.options.app.maps.save();
+            this.options.app.pocketcards.save();
 
-          this.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + this.update_log.substr(0, this.update_log.length -2) + "</strong> upgedatet.", "ok");
+            this.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + this.update_log.substr(0, this.update_log.length -2) + "</strong> upgedatet.", "ok");
+          }
         }
-      }
 
-      setTimeout(function(){
-        t.$el.height(0);
-        t.callback();
-      }, 500);
+        setTimeout(function(){
+          t.$el.height(0);
+          t.callback();
+        }, 500);
+      });
     },
 
     afterRender: function() {
+    },
+
+    synchronize_downloads: function(queue, finished) {
+      this.synchronize_downloads_step(queue, queue.length, finished);
+    },
+
+    synchronize_downloads_step: function(queue, item_step, finished) {
+      var model = queue.pop();
+      var t = this;
+
+      if(typeof(model) != "undefined") {
+
+        t.r_counter++;
+        model.downloadFile(
+
+          // on success
+          function() {
+            model.initializeContent();
+
+            //update status bar
+            t.update_status_bar(item_step);
+
+            // download next file
+            t.synchronize_downloads_step(queue, item_step, finished);
+          },
+
+          // on error
+          function() {
+            t.options.app.alert("Verbindungs-Fehler", "'" + model.get("title") + "' konnte nicht heruntergeladen werden", "ok");
+            t.download_error = true;
+            model.initializeContent();
+
+            //update status bar
+            t.update_status_bar(item_step);
+
+            // download next file
+            t.synchronize_downloads_step(queue, item_step, finished);
+          }
+        );
+      } else {
+        finished();
+      }
     }
 
   });

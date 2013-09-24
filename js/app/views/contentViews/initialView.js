@@ -193,6 +193,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
     },
 
     synchronize_downloads: function(queue) {
+      this.r_counter++;
       this.synchronize_downloads_step(queue, 100/this.downloads_count/queue.length);
     },
 
@@ -233,6 +234,8 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
             t.synchronize_downloads_step(queue, item_step);
           }
         );
+      } else {
+        t.finish_all_downloads();
       }
     }
   });
