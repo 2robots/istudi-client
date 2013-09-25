@@ -44,6 +44,7 @@
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="prerendered-icon" value="true" />
-    <access origin="*" />
+    <preference name="stay-in-webview" value="false" />
+    <access origin="http://istudi.2robots.at" />
     <gap:plugin name="com.adobe.plugins.pushplugin" />
 </widget>

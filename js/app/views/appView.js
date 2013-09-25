@@ -206,7 +206,7 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
       catch(err) {
         txt="There was an error on this page.\n\n";
         txt+="Error description: " + err.message + "\n\n";
-        alert(txt);
+        t.alert("Fehler", txt, "ok");
       }
 
     },
@@ -214,23 +214,22 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
     // handle APNS notifications for iOS
     onNotificationAPN: function(e) {
       if (e.alert) {
-        alert(e.alert);
+        this.alert("Push-Nachricht", e.alert, "ok");
       }
     },
 
     // handle notifications for Android
     onNotificationGCM: function(e) {
-
       switch(e.event) {
         case 'registered':
           if ( e.regid.length > 0 ) {
             this.config.saveConfig("android_token", e.regid);
           }
         break;
-      }
 
-      if (e.event.message) {
-        alert(e.event.message);
+        case 'message':
+          this.alert("Push-Nachricht", e.payload.message, "ok");
+        break;
       }
     },
 

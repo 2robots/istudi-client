@@ -201,7 +201,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
       var model = queue.pop();
       var t = this;
 
-      if(typeof(model) != "undefined") {
+      if(typeof(model) != "undefined" && model.get("active")) {
 
         t.r_counter++;
         model.downloadFile(
