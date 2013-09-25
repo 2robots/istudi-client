@@ -89,7 +89,7 @@ define(['text!templates/update.tpl'], function(Template) {
               o.initializeRelationships();
             }
 
-            if(typeof(o.downloadFile) != "undefined") {
+            if(o.get("active") && typeof(o.downloadFile) != "undefined") {
               // push to the download_queue, later we will download all files
               t.download_queue.push(o);
             } else {
@@ -134,14 +134,14 @@ define(['text!templates/update.tpl'], function(Template) {
 
       t.synchronize_downloads(t.download_queue, function(){
         if(!t.download_error) {
-          if(this.update_log.length > 0) {
-            this.options.app.groups.save();
-            this.options.app.newsArticles.save();
-            this.options.app.nodes.save();
-            this.options.app.maps.save();
-            this.options.app.pocketcards.save();
+          if(t.update_log.length > 0) {
+            t.options.app.groups.save();
+            t.options.app.newsArticles.save();
+            t.options.app.nodes.save();
+            t.options.app.maps.save();
+            t.options.app.pocketcards.save();
 
-            this.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + this.update_log.substr(0, this.update_log.length -2) + "</strong> upgedatet.", "ok");
+            t.options.app.alert("iStudi wurde aktualisiert!", "Es wurden: <strong>" + t.update_log.substr(0, t.update_log.length -2) + "</strong> upgedatet.", "ok");
           }
         }
 
@@ -186,7 +186,7 @@ define(['text!templates/update.tpl'], function(Template) {
 
           // on error
           function() {
-            t.options.app.alert("Verbindungs-Fehler", "'" + model.get("title") + "' konnte nicht heruntergeladen werden", "ok");
+            t.options.app.alert("Verbindungs-Fehler", "'" + model.get("title") + "' konnte nicht heruntergeladen werden und ist nur mit einer Internetverbindung zugänglich.", "ok");
             t.download_error = true;
             model.initializeContent();
 
@@ -198,8 +198,6 @@ define(['text!templates/update.tpl'], function(Template) {
           }
         );
       } else {
-        console.log(finished);
-        alert(finished);
         finished();
       }
     }
