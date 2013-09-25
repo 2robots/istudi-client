@@ -6,6 +6,9 @@ define(['text!templates/content/detailView.tpl'], function(Template) {
     tagName: 'div',
     className: 'inner',
     templateOptions: {},
+    events: {
+      "click .content .inner a": "open_link_external"
+    },
 
     alterTemplateOptions: function(templateOptions) {
       return templateOptions;
@@ -34,6 +37,12 @@ define(['text!templates/content/detailView.tpl'], function(Template) {
 
     navigateBack: function() {
       this.options.app.main.navigateBack();
+    },
+
+    open_link_external: function(e) {
+      e.preventDefault();
+      window.open(e.target.href, "_system");
+      return false;
     }
   });
 });

@@ -11,6 +11,9 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
 
     initialize: function() {
 
+      // create alerter
+      this.alerter = new alertView({ app: this });
+
       // initialize config
       this.config = new config({}, this);
 
@@ -69,7 +72,6 @@ define(['views/menuView', 'views/mainView', 'views/updateView', 'views/alertView
       this.menu = new menuView({ app: this });
       this.main = new mainView({ app: this });
       this.updater = new updateView({ app: this });
-      this.alerter = new alertView({ app: this });
 
       this.$el.html(this.menu.render().$el);
       this.$el.append(this.main.render().$el);

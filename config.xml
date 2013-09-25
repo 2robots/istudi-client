@@ -37,6 +37,8 @@
     <gap:splash src="res/screen/splash_768_1004.png" gap:platform="android" gap:density="hdpi" />
     <gap:splash src="res/screen/splash_1536_2008.png" gap:platform="android" gap:density="xhdpi" />
 
+    <access origin="*" />
+
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="phonegap-version" value="2.9.0" />
     <preference name="orientation" value="portrait" />
@@ -44,7 +46,6 @@
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="false" />
-    <access origin="http://istudi.2robots.at" />
+
     <gap:plugin name="com.adobe.plugins.pushplugin" />
 </widget>
