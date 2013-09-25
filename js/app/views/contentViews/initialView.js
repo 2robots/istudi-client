@@ -201,39 +201,50 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
       var model = queue.pop();
       var t = this;
 
-      if(typeof(model) != "undefined" && model.get("active")) {
+      if(typeof(model) != "undefined") {
 
         t.r_counter++;
-        model.downloadFile(
 
-          // on success
-          function() {
-            //update status bar
-            t.update_stauts(item_step);
-            model.initializeContent();
+        // if this an active model
+        if(model.get("active")) {
 
-            //if this is the last download, we can finish the process
-            t.finish_all_downloads();
+          model.downloadFile(
 
-            // download next file
-            t.synchronize_downloads_step(queue, item_step);
-          },
+            // on success
+            function() {
+              //update status bar
+              t.update_stauts(item_step);
+              model.initializeContent();
 
-          // on error
-          function() {
-            t.options.app.alert("Verbindungs-Fehler", "'" + model.get("title") + "' konnte nicht heruntergeladen werden", "ok");
-            t.download_error = true;
-            //update status bar
-            t.update_stauts(item_step);
-            model.initializeContent();
+              //if this is the last download, we can finish the process
+              t.finish_all_downloads();
 
-            //if this is the last download, we can finish the process
-            t.finish_all_downloads();
+              // download next file
+              t.synchronize_downloads_step(queue, item_step);
+            },
 
-            // download next file
-            t.synchronize_downloads_step(queue, item_step);
-          }
-        );
+            // on error
+            function() {
+              t.options.app.alert("Verbindungs-Fehler", "'" + model.get("title") + "' konnte nicht heruntergeladen werden", "ok");
+              t.download_error = true;
+              //update status bar
+              t.update_stauts(item_step);
+              model.initializeContent();
+
+              //if this is the last download, we can finish the process
+              t.finish_all_downloads();
+
+              // download next file
+              t.synchronize_downloads_step(queue, item_step);
+            }
+          );
+
+        // if this is not active, do next
+        } else {
+          t.update_stauts(item_step);
+          t.finish_all_downloads();
+          t.synchronize_downloads_step(queue, item_step);
+        }
       } else {
         t.finish_all_downloads();
       }
