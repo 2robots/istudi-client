@@ -198,6 +198,8 @@ define(['text!templates/update.tpl'], function(Template) {
           }
         );
       } else {
+        console.log(finished);
+        alert(finished);
         finished();
       }
     }
