@@ -3655,6 +3655,11 @@ form input {
   display: block;
 }
 
+/* line 200, /Users/franzwilding/Sites/istudi/www/sass/base/_defaults.scss */
+.height_100 {
+  height: 100%;
+}
+
 /* ui elements */
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app {
@@ -3853,6 +3858,11 @@ form input {
 /* line 80, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner em {
   font-style: italic;
+}
+
+/* line 88, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
+.pinch-zoom-container {
+  min-height: 100% !important;
 }
 
 /* line 3, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */

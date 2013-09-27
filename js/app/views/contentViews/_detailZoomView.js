@@ -3,10 +3,12 @@ define(['text!templates/content/detailZoomView.tpl', 'views/contentViews/_detail
 
   return _detailView.extend({
 
-    className: 'inner loadable',
+    className: 'inner loadable height_100',
     template: _.template(Template),
 
     afterRender: function() {
+
+      //this.$el.find(".height_100").height($(".pt-page-current .content").height());
       new PinchZoom(this.$el.find("#zoomview"));
     }
 
