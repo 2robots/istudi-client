@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="at.vsstoe-wien.istudi" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap = "http://phonegap.com/ns/1.0">
+<widget id="at.vsstoe-wien.istudi" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap = "http://phonegap.com/ns/1.0">
     <name>iStudi</name>
     <description>Alle Infos rund ums Studium.</description>
     <author email="office@vsstoe-wien.at" href="http://vsstoe-wien.at">Verband Sozialistischer Student_innen Wien</author>
@@ -7,13 +7,12 @@
     <gap:platform name="ios" />
     <gap:platform name="android" />
 
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="57" height="57" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="72" height="72" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="114" height="114" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="144" height="144" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="320" height="320" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="320" height="320" />
-    <icon src="res/icon/icon_ios.png" gap:platform="ios" width="512" height="512" />
+    <icon src="res/icon/icon_57.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/icon/icon_72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="res/icon/icon_114.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/icon/icon_144.png" gap:platform="ios" width="144" height="144" />
+    <icon src="res/icon/icon_320.png" gap:platform="ios" width="320" height="320" />
+    <icon src="res/icon/icon_512.png" gap:platform="ios" width="512" height="512" />
 
     <icon src="res/icon/icon_ldpi.png" gap:platform="android" gap:density="ldpi" />
     <icon src="res/icon/icon_mdpi.png" gap:platform="android" gap:density="mdpi" />
