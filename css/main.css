@@ -3680,21 +3680,26 @@ form input {
 /* line 17, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content {
   top: 50px;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 /* line 21, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner {
   width: 100%;
+  padding-bottom: 10px;
+}
+/* line 26, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+#app .content .inner .article img {
+  width: 100%;
 }
 
-/* line 27, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 34, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main {
   background: #EDEDED;
   -webkit-box-shadow: 0 0 10px black;
   -moz-box-shadow: 0 0 10px black;
   box-shadow: 0 0 10px black;
 }
-/* line 31, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
+/* line 38, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #main .inner {
   background: #EDEDED;
 }
@@ -3858,11 +3863,6 @@ form input {
 /* line 80, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
 .content .inner em {
   font-style: italic;
-}
-
-/* line 88, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_content.scss */
-.pinch-zoom-container {
-  min-height: 100% !important;
 }
 
 /* line 3, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_listview.scss */

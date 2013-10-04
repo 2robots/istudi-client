@@ -2,6 +2,7 @@
 define(function() {
   return Backbone.Model.extend({
     idAttribute: "id",
+    zoomable: true,
 
     downloadFile: function(success_cb, error_cb) {
       var t = this;
@@ -73,7 +74,7 @@ define(function() {
     },
 
     initializeContent: function() {
-      this.set("detailView", { key: "_detailZoom", title: this.get("title"), id: "_details_" + this.cid, left_button: "back" });
+      this.set("detailView", { key: "_detail", title: this.get("title"), id: "_details_" + this.cid, left_button: "back" });
       this.set("content", '<img src="' + this.get("absolute_url") + '" />');
     }
   });

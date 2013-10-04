@@ -11,15 +11,18 @@ define(['collections/nodes'], function(nodes) {
 
       // add this to a group
       var group = this.collection.app.groups.get(this.get("group_id"));
-      var an = group.get("all_nodes");
-      var rn = group.get("root_nodes");
 
-      if(typeof(an) == "undefined" || typeof(an.each) == "undefined") {
-        an = new Backbone.Collection();
-      }
+      if(typeof(group) != "undefined") {
+        var an = group.get("all_nodes");
+        var rn = group.get("root_nodes");
 
-      if(typeof(rn) == "undefined" || typeof(rn.each) == "undefined") {
-        rn = new Backbone.Collection();
+        if(typeof(an) == "undefined" || typeof(an.each) == "undefined") {
+          an = new Backbone.Collection();
+        }
+
+        if(typeof(rn) == "undefined" || typeof(rn.each) == "undefined") {
+          rn = new Backbone.Collection();
+        }
       }
 
       // add this to it's parent, if there is one
@@ -37,12 +40,16 @@ define(['collections/nodes'], function(nodes) {
 
       // if this is a root_node, add it to the group
       } else {
-        rn.push(this);
-        group.set("root_nodes", rn);
+        if(typeof(group) != "undefined") {
+          rn.push(this);
+          group.set("root_nodes", rn);
+        }
       }
 
-      an.push(this);
-      group.set("all_nodes", an);
+      if(typeof(group) != "undefined") {
+        an.push(this);
+        group.set("all_nodes", an);
+      }
     }
   });
 });

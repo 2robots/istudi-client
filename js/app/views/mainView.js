@@ -1,5 +1,5 @@
 
-define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/contentViews/newsView'], function(Template) {
+define(['text!templates/main.tpl', 'iScroll'], function(Template) {
 
   return Backbone.View.extend({
 
@@ -60,11 +60,6 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
         toolbar: this.header[0],
         scroller: this.content[0]
       });
-
-      // scroll to the correct position
-      if(typeof(this.scrollPosition[this.old_id]) != "undefined") {
-        this.content[0].scrollTop = this.scrollPosition[this.old_id];
-      }
     },
 
     leftButtonAction: function() {
@@ -100,6 +95,31 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
         this.options.app.closeMenu();
       } else {
         this.options.app.openMenu();
+      }
+    },
+
+    initIScroll: function(newPage, model) {
+
+      var t = this;
+
+      // remove scroll id
+      $(".content").attr("id", "");
+      newPage.find(".content").attr("id", "scroll");
+
+      // enable iScroll on this page and disable snapper on drag
+      if(typeof(model) != "undefined" && model.zoomable === true) {
+        t.scroll = new iScroll('scroll', { zoom: true, zoomMax: 4, zoomMin: 1 });
+        t.options.app.snapper.settings({touchToDrag: false});
+
+      } else {
+        t.scroll = new iScroll('scroll');
+        t.options.app.snapper.settings({touchToDrag: true});
+      }
+
+      // scroll to the correct position
+      if(typeof(t.scrollPosition[t.old_id]) != "undefined") {
+        t.scroll.scrollTo(0, t.scrollPosition[t.old_id]);
+        //this.content[0].scrollTop = this.scrollPosition[this.old_id];
       }
     },
 
@@ -177,6 +197,7 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
 
                 // make this page the current page
                 newPage.addClass("pt-page-current");
+                t.initIScroll(newPage, model);
 
                 setTimeout(function(){
                   newPage.removeClass("pt-page-moveFromRight");
@@ -200,6 +221,7 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
 
                 // make this page the current page
                 newPage.addClass("pt-page-current");
+                t.initIScroll(newPage, model);
 
                 setTimeout(function(){
                   newPage.removeClass("pt-page-moveFromLeft");
@@ -224,6 +246,7 @@ define(['text!templates/main.tpl', 'views/contentViews/indexView', 'views/conten
 
               // make this page the current page
               newPage.addClass("pt-page-current");
+              t.initIScroll(newPage, model);
 
               break;
           }
