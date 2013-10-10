@@ -1,5 +1,5 @@
 
-define(['text!templates/main.tpl', 'iscroll-min'], function(Template) {
+define(['text!templates/main.tpl', 'iscroll'], function(Template) {
 
   return Backbone.View.extend({
 
@@ -106,21 +106,22 @@ define(['text!templates/main.tpl', 'iscroll-min'], function(Template) {
       $(".content").attr("id", "");
       newPage.find(".content").attr("id", "scroll");
 
-      // scroll to the correct position
-      if(typeof(t.scrollPosition[t.old_id]) == "undefined") {
-        t.scrollPosition[t.old_id] = 0;
-      }
-
       // enable iScroll on this page and disable snapper on drag
       if(typeof(model) != "undefined" && model.zoomable === true) {
         //t.scroll = new iScroll('scroll', { zoom: true, zoomMax: 4, zoomMin: 1 });
-        t.scroll = new IScroll('#scroll', { zoom: true, zoomMax: 4, zoomMin: 1, startY: t.scrollPosition[t.old_id] });
+        t.scroll = new iScroll('scroll', { zoom: true, zoomMax: 4, zoomMin: 1});
         t.options.app.snapper.settings({touchToDrag: false});
 
       } else {
         //t.scroll = new iScroll('scroll');
-        t.scroll = new IScroll('#scroll', { startY: t.scrollPosition[t.old_id] });
+        t.scroll = new iScroll('scroll');
         t.options.app.snapper.settings({touchToDrag: true});
+      }
+
+      // scroll to the correct position
+      if(typeof(t.scrollPosition[t.old_id]) != "undefined") {
+        t.scroll.scrollTo(0, t.scrollPosition[t.old_id]);
+        //this.content[0].scrollTop = this.scrollPosition[this.old_id];
       }
     },
 
@@ -173,7 +174,7 @@ define(['text!templates/main.tpl', 'iscroll-min'], function(Template) {
             var oldPageInner = t.content.first();
 
             // save old scrollPosition
-            t.scrollPosition[t.old_id] = t.scroll.y
+            t.scrollPosition[t.old_id] = t.scroll.y;
           }
 
           // add new page
