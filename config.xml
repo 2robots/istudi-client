@@ -45,6 +45,7 @@
     <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="false" />
     <preference name="prerendered-icon" value="true" />
+    <preference name="BackupWebStorage" value="local" />
 
     <gap:plugin name="com.adobe.plugins.pushplugin" />
 </widget>
