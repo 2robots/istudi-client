@@ -3685,7 +3685,7 @@ form input {
 /* line 21, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner {
   width: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 1px;
 }
 /* line 26, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content .inner .article img {

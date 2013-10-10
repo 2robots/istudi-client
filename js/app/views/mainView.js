@@ -1,5 +1,5 @@
 
-define(['text!templates/main.tpl', 'iScroll'], function(Template) {
+define(['text!templates/main.tpl', 'iscroll-min'], function(Template) {
 
   return Backbone.View.extend({
 
@@ -108,11 +108,13 @@ define(['text!templates/main.tpl', 'iScroll'], function(Template) {
 
       // enable iScroll on this page and disable snapper on drag
       if(typeof(model) != "undefined" && model.zoomable === true) {
-        t.scroll = new iScroll('scroll', { zoom: true, zoomMax: 4, zoomMin: 1 });
+        //t.scroll = new iScroll('scroll', { zoom: true, zoomMax: 4, zoomMin: 1 });
+        t.scroll = new IScroll('#scroll', { zoom: true, zoomMax: 4, zoomMin: 1 });
         t.options.app.snapper.settings({touchToDrag: false});
 
       } else {
-        t.scroll = new iScroll('scroll');
+        //t.scroll = new iScroll('scroll');
+        t.scroll = new IScroll('#scroll');
         t.options.app.snapper.settings({touchToDrag: true});
       }
 
