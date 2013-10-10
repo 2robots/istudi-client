@@ -3679,7 +3679,7 @@ form input {
 }
 /* line 17, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
 #app .content {
-  top: 50px;
+  top: 70px;
   /*overflow: scroll;*/
 }
 /* line 21, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_app.scss */
@@ -3706,7 +3706,7 @@ form input {
 
 /* line 2, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header {
-  height: 50px;
+  height: 70px;
   text-align: center;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(97%, #f6f6f6), color-stop(98%, #c2c2c2), color-stop(98%, #dfdfdf));
   background-image: -webkit-linear-gradient(#ffffff, #f6f6f6 97%, #c2c2c2 98%, #dfdfdf 98%);
@@ -3718,7 +3718,7 @@ form input {
 /* line 7, /Users/franzwilding/Sites/istudi/www/sass/modules/ui/_header.scss */
 .header h2 {
   padding: 5px 0;
-  margin: 8px 60px;
+  margin: 28px 60px 8px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -3735,7 +3735,7 @@ form input {
   display: block;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 20px;
   bottom: 2px;
   -webkit-transition-property: opacity;
   -moz-transition-property: opacity;

@@ -183,6 +183,7 @@ define(['text!templates/content/initialView.tpl', 'jquery'], function(Template, 
         }*/
 
         this.$el.find(".go_button").css("opacity", 1);
+        this.options.app.main.scroll.refresh();
         this.options.app.main.trigger("rightButtonSetActive");
       }
     },
