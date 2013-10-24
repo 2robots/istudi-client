@@ -1,0 +1,12 @@
+<div data-options="dxView : { name: 'unis' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    <div data-bind="dxList: { dataSource: dataSource, pullRefreshEnabled: true, autoPagingEnabled: false }">
+      <div class="checkboxField" data-options="dxTemplate : { name: 'item' } " >
+
+          <div class="text" data-bind="text: title"></div>
+          <div class="checkbox" data-bind="dxCheckBox: { checked: checked }"></div>
+
+      </div>
+    </div>
+  </div>
+</div>

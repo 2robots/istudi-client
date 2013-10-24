@@ -1,0 +1,7 @@
+<div data-options="dxView : { name: 'maps' } " >
+  <div data-options="dxContent : { targetPlaceholder: 'content' } " >
+    <div data-bind="dxList: { dataSource: dataSource, pullRefreshEnabled: true, autoPagingEnabled: false }">
+      <div data-options="dxTemplate : { name: 'item' }" data-bind="text: title, dxAction: '#maps/{id}'" ></div>
+    </div>
+  </div>
+</div>
