@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+ Licensed to the Apache Software Foundation (ASF) under one
+ or more contributor license agreements.  See the NOTICE file
+ distributed with this work for additional information
+ regarding copyright ownership.  The ASF licenses this file
+ to you under the Apache License, Version 2.0 (the
+ "License"); you may not use this file except in compliance
+ with the License.  You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing,
+ software distributed under the License is distributed on an
+ "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ KIND, either express or implied.  See the License for the
+ specific language governing permissions and limitations
+ under the License.
+ -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="stylesheet" type="text/css" href="shared/css/lib/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="css/lib/dx.desktop.default.css" />
+    <link rel="stylesheet" type="text/css" href="shared/css/istudi.css" />
+
+    <script type="text/javascript" src="shared/js/lib/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="shared/js/lib/globalize.min.js"></script>
+    <script type="text/javascript" src="shared/js/lib/knockout-2.2.1.js"></script>
+    <script type="text/javascript" src="shared/js/lib/knockout.localStorage.min.js"></script>
+    <script type="text/javascript" src="shared/js/lib/dx.phonejs.js"></script>
+
+    <!-- APPLICATION STARTING POINT -->
+    <script type="text/javascript" src="shared/js/main.js"></script>
+
+    <!-- MODELS -->
+    <script type="text/javascript" src="shared/js/models/news.js"></script>
+    <script type="text/javascript" src="shared/js/models/nodes.js"></script>
+    <script type="text/javascript" src="shared/js/models/cards.js"></script>
+    <script type="text/javascript" src="shared/js/models/maps.js"></script>
+    <script type="text/javascript" src="shared/js/models/unis.js"></script>
+
+    <!-- LAYOUTS -->
+    <link rel="dx-template" type="text/html" href="shared/js/layouts/SlideOut/SlideOutLayout.html"/>
+    <link rel="stylesheet" type="text/css" href="shared/js/layouts/SlideOut/SlideOutLayout.css"/>
+    <script type="text/javascript" src="shared/js/layouts/SlideOut/SlideOutLayout.js"></script>
+
+    <!-- VIEWS -->
+    <link rel="dx-template" type="text/html" href="shared/js/views/news.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/onenews.html"/>
+
+    <link rel="dx-template" type="text/html" href="shared/js/views/nodes.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/node.html"/>
+
+    <link rel="dx-template" type="text/html" href="shared/js/views/maps.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/map.html"/>
+
+    <link rel="dx-template" type="text/html" href="shared/js/views/cards.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/card.html"/>
+
+    <link rel="dx-template" type="text/html" href="shared/js/views/search.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/settings.html"/>
+
+    <link rel="dx-template" type="text/html" href="shared/js/views/about.html"/>
+    <link rel="dx-template" type="text/html" href="shared/js/views/unis.html"/>
+    <title>iStudi</title>
+  </head>
+  <body>
+    <div class="dx-viewport"></div>
+
+    <script type="text/javascript">
+      var event = new Event('deviceready');
+      document.dispatchEvent(event);
+    </script>
+  </body>
+</html>
