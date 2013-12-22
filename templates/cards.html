@@ -6,9 +6,9 @@
 
       <!-- display the list of news items -->
       <div class="list" ng-if="cards.length > 0">
-        <a style="opacity: {{0.5 + item.download_status/200}};" ng-repeat="item in cards | orderBy:'position'" class="item" ng-click="click_cb($event)" href="#cards/{{item.id}}">
+        <a style="opacity: {{0.5 + item.download_status/200}};" ng-repeat="item in cards | orderBy:'position' | filter:inMyGroups" class="item" ng-click="click_cb($event)" href="#cards/{{item.id}}">
           {{ item.title }}
-          <span ng-if='item.download_status < 100' class="item-note">{{item.download_status}}%</span>
+          <span ng-if='item.download_status < 100' class="item-note">{{item.download_status | number:0 }}%</span>
         </a>
       </div>
       

@@ -70,13 +70,15 @@
             
             <div class="item item-divider">Allgemein:</div>
             <a ng-repeat="item in menu" class="item item-icon-left" href="{{item.reference}}" ng-click="toggleMenu()">
-              <i class="icon ion-{{item.icon}}"></i>
+              <i style="color: #666;" class="icon ion-{{item.icon}}">
+              </i>
               {{item.title}}
             </a>
             
             <div class="item item-divider">Dein(e) Standort(e):</div>
             <a ng-if="group.value" ng-repeat="group in groups" class="item item-icon-left" href="#nodes/{{group.id}}" ng-click="toggleMenu()">
-              <i class="icon ion-grid"></i>
+              <i style="color: #666;" class="icon ion-flag">
+              </i>
               {{group.title}}
             </a>
             

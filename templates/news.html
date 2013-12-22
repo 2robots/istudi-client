@@ -6,7 +6,7 @@
 
       <!-- display the list of news items -->
     <div class="list" ng-if="news.length > 0">
-      <a ng-repeat="item in news | orderBy:'+date'" class="item" href="#news/{{item.id}}">
+      <a ng-repeat="item in news | orderBy:'+date' | filter:inMyGroups" class="item" href="#news/{{item.id}}">
         <h2>{{ item.title }}</h2>
         <p>{{ item.date | date: 'dd.MM. yyyy' }}</p>
       </a>

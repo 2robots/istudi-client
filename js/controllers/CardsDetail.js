@@ -25,7 +25,7 @@ angular.module('istudi.CardsDetailCtrl', [])
   if(item != undefined) {
     $scope.id = $routeParams.id;
     $scope.title = item.title;
-    $scope.url = item.local_url;
+    $scope.url = 'file://' + item.local_url;
   } else {
     $scope.title = "Not found";
   }
