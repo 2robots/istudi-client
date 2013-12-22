@@ -1,0 +1,27 @@
+
+.hello .scroll, .hello .slider {
+  height: 100%;
+}
+.hello .slider-slide {
+  padding-top: 80px;
+  color: #000;
+  background-color: #fff;
+  text-align: center;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+.hello .slider-slide.slide-1 {
+  background: #0B405F;
+  color: #FFF;
+}
+
+.hello .slider-slide.slide-2 {
+  background: #F76B6C;
+  color: #000;
+}
+
+.hello .slider-slide.slide-3 {
+  background: #69C5B8;
+  color: #000;
+}
