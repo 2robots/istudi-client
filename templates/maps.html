@@ -1,0 +1,20 @@
+<nav-page id="news-page" ng-controller="MapsCtrl">
+	<content has-header="true" on-refresh="onRefresh()">
+  		
+  		<!-- for pull to refresh -->
+	    <refresher></refresher>
+
+	    <!-- display the list of news items -->
+		  <div class="list" ng-if="maps.length > 0">
+	    	<a style="opacity: {{0.5 + item.download_status/200}};" ng-repeat="item in maps | orderBy:'position'" class="item" ng-click="click_cb($event)" href="#maps/{{item.id}}">
+	    		{{ item.title }}
+	    		<span ng-if='item.download_status < 100' class="item-note">{{item.download_status}}%</span>
+	    	</a>
+	  	</div>
+	  	
+	  	<div style="text-align: center;" class="padding" ng-if="maps.length == 0">
+        <p class="icon-left ion-arrow-down-c" style="margin-top: 20px; font-size: 16px; color: #aaa;"> Nach unten swipen, um Lagepläne zu laden.</p>
+      </div>
+
+	</content>
+</nav-page>

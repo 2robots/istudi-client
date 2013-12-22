@@ -1,0 +1,13 @@
+<nav-page id="settings-page" ng-controller="SettingsCtrl">
+
+  <content has-header="true">     
+    <div ng-if="loading" style="text-align: center; font-size: 30px;" class="padding">
+      <i class="icon ion-loading-d icon-refreshing"></i>
+    </div>
+
+    <ul class="list">
+      <li class="item item-divider">Wähle deine Universität(en) aus</li>
+      <checkbox ng-repeat="group in groups | orderBy:'position'" ng-model="group.value" ng-change="groupsChnaged()">{{group.title}}</checkbox>
+  </ul>
+  </content>
+</nav-page>
