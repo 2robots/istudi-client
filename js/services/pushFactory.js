@@ -32,14 +32,14 @@ angular.module('istudi.push', [], function($provide){
            * get called by cordova, when receiving Google Push message. 
            */
           window.onNotificationGCM = function(e) {
-            console.log(e);
+            //console.log(e);
           };
           
           /**
            * get called by cordova, when receiving iOS Push message. 
            */
           window.onNotificationAPN = function(e) {
-            console.log(e);
+            //console.log(e);
           };
         }, 
         
@@ -47,7 +47,7 @@ angular.module('istudi.push', [], function($provide){
          * Successhandler, when requesting the deivceToken on iOS
          */
         iOSSuccess: function(result) {
-          console.log(result);
+          //console.log(result);
           
           // set token
           this.status.type = "ios";
@@ -61,14 +61,14 @@ angular.module('istudi.push', [], function($provide){
          * Errorhandler, when requesting the deivceToken on iOS
          */
         iOSError: function(error) {
-          console.log(error);
+          //console.log(error);
         }, 
         
         /**
          * Successhandler, when requesting the deivceToken on Android
          */
         AndroidSuccess: function(result) {
-          console.log(result);
+          //console.log(result);
           
           // set token
           this.status.type = "android";
@@ -82,7 +82,7 @@ angular.module('istudi.push', [], function($provide){
          * Errorhandler, when requesting the deivceToken on Android
          */
         AndroidError: function(error) {
-          console.log(result);
+          //console.log(result);
         }, 
         
         /**
@@ -133,7 +133,7 @@ angular.module('istudi.push', [], function($provide){
                 t.save();
               })
               .error(function(data, status, headers, config) {
-                console.log("ERROR: pushServoce.registerServer");
+                //console.log("ERROR: pushServoce.registerServer");
               });
             }
           }

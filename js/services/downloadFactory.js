@@ -30,7 +30,7 @@ angular.module('istudi.download', [], function($provide){
             this.queue.push({resource: resource, object: object});
             this.run(cb);
           } else {
-            console.log("there is no local filepath avaiable");
+            //console.log("there is no local filepath avaiable");
           }
         }, 
         
@@ -39,7 +39,7 @@ angular.module('istudi.download', [], function($provide){
          */
         addAll: function(resource, objects, cb) {
           if(this.filePath != null) {
-            console.log("add all files to download queue");
+            //console.log("add all files to download queue");
             
             var t = this;
             this.objects = objects;
@@ -54,7 +54,7 @@ angular.module('istudi.download', [], function($provide){
             
             this.run(cb);
           } else {
-            console.log("there is no local filepath avaiable");
+            //console.log("there is no local filepath avaiable");
           }
         }, 
         
@@ -63,14 +63,14 @@ angular.module('istudi.download', [], function($provide){
          */
         run: function(cb) {
           
-          console.log("*NEXT RUN, QUEUE-SIZE: " + this.queue.length + "*");
+          //console.log("*NEXT RUN, QUEUE-SIZE: " + this.queue.length + "*");
           
           var t = this;
 
           // if there are items in the queue
           if(this.filePath != null && this.queue.length > 0) {
             
-            console.log("Start downloading file...");
+            //console.log("Start downloading file...");
             
             setTimeout(function(){
               
@@ -94,7 +94,7 @@ angular.module('istudi.download', [], function($provide){
          */
         getFilePath: function(cb) {
           
-          console.log("trying to get getFilePath...");
+          //console.log("trying to get getFilePath...");
           
           // trying to access file system
           if(window.requestFileSystem) {
@@ -103,7 +103,7 @@ angular.module('istudi.download', [], function($provide){
               // On success callback
               function(parent_dir){
                 
-                console.log("successfully accessing LocalFileSystem.TEMPORARY");
+                //console.log("successfully accessing LocalFileSystem.TEMPORARY");
                 
                 // creating an iStudi direcotry
                 parent_dir.root.getDirectory("at.vsstoe-wien.istudi", {create: true, exclusive: false}, 
@@ -111,7 +111,7 @@ angular.module('istudi.download', [], function($provide){
                 // On create directory success
                 function(dir){
                   
-                  console.log("successfully created directory: " + dir.fullPath);
+                  //console.log("successfully created directory: " + dir.fullPath);
                   
                   // telling iOS, that we DONT want to backup the file in icloud  
                   dir.setMetadata(
@@ -119,7 +119,7 @@ angular.module('istudi.download', [], function($provide){
                     // On set Metadata Success
                     function(){
                       
-                      console.log("successfully setting the directories metadata.MobileBackup to 1");
+                      //console.log("successfully setting the directories metadata.MobileBackup to 1");
                       
                       // when everything work's fine, we can call the callback function
                       cb(dir.fullPath);
@@ -127,26 +127,26 @@ angular.module('istudi.download', [], function($provide){
                     // On set Metaata Error
                     }, function(){
                       
-                      console.log("error on setting the directories metadata.MobileBackup to 1");
+                      //console.log("error on setting the directories metadata.MobileBackup to 1");
                     }, { "com.apple.MobileBackup": 1}
                   );
                 
                 // On create directory error
                 }, function(){
                   
-                  console.log("error on creating directory");
+                  //console.log("error on creating directory");
                   
                 });             
               
               // On error callback    
               }, function(){
                 
-                console.log("cannot access LocalFileSystem.TEMPORARY");
+                //console.log("cannot access LocalFileSystem.TEMPORARY");
                 
               }
             );
           } else {
-            console.log("window.requestFileSystem is not set");
+            //console.log("window.requestFileSystem is not set");
           }
         }, 
         
@@ -162,7 +162,7 @@ angular.module('istudi.download', [], function($provide){
             
             //@TODO: DOWNLOAD FILE
             if(FileTransfer) {
-              console.log("FileTransfer is avaiable!");
+              //console.log("FileTransfer is avaiable!");
               
               // create a new fileTransfer object
               var fileTransfer = new FileTransfer();
@@ -186,7 +186,7 @@ angular.module('istudi.download', [], function($provide){
                     // On set Metadata Success
                     function(){
                       
-                      console.log("successfully setting the directories metadata.MobileBackup to 0");
+                      //console.log("successfully setting the directories metadata.MobileBackup to 0");
                       
                       // when everything work's fine, we can call the callback function
                       callback();
@@ -194,14 +194,14 @@ angular.module('istudi.download', [], function($provide){
                     // On set Metaata Error
                     }, function(){
                       
-                      console.log("error on setting the directories metadata.MobileBackup to 0");
+                      //console.log("error on setting the directories metadata.MobileBackup to 0");
                     }, { "com.apple.MobileBackup": 1}
                   );
                 }, 
                 
                 // on download error
                 function(error){
-                  console.log("ERROR on file download: " + error.code);
+                  //console.log("ERROR on file download: " + error.code);
                 }
               );
               
